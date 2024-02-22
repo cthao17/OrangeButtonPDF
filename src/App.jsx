@@ -10,7 +10,6 @@ function App() {
       <Container>
         <Home/>
       </Container>
-      
     </>
   )
 }
