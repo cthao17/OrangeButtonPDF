@@ -19,6 +19,9 @@ function OBNavbar(props) {
                             <Nav.Link href = "https://productregistry.myorangebutton.com/product/" id = "link" target="_blank">
                                 Product Registry
                                 </Nav.Link>
+                            <Nav.Link href = "https://openobeditor.sunspec.org/#/" id="link" target="_blank">
+                                Open OB Editor
+                            </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
             </Container>
