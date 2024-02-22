@@ -1,0 +1,641 @@
+PD-5-401-04-3 | September 2018
+First Solar, Inc.
+ 
+| firstsolar.com | info@firstsolar.com
+
+First Solar Series 4™
+PV Module
+
+ADVANCED THIN FILM SOLAR TECHNOLOGY
+
+INDUSTRY BENCHMARK SOLAR MODULES
+
+As a global leader in PV energy, First Solar’s advanced thin film solar modules
+have set the industry benchmark with over 17 gigawatts (GW) installed worldwide
+and a proven performance advantage over conventional crystalline silicon solar
+modules. Generating more energy than competing modules with the same power
+rating, First Solar’s Series 4™ and Series 4A™ PV Modules deliver superior
+performance and reliability to our customers.
+
+CERTIFICATIONS & TESTS
+
+•
+ 
+PID-Free, Thresher Test, Long-Term Sequential Test, and ATLAS 25+
+1
+•
+ 
+IEC 61215/61646 1500V, IEC 61730 1500V, CE
+•
+ 
+IEC 61701 Salt Mist Corrosion, IEC 60068-2-68 Dust and Sand Resistance
+•
+ 
+ISO 9001:2015 and ISO 14001:2015
+•
+ 
+UL 1703 Listed Fire Performance PV Module Type 10
+2
+•
+ 
+CSI Eligible, FSEC, MCS, CEC Listed (Australia), SII, InMetro
+
+ADVANCED PERFORMANCE & RELIABILITY
+
+•
+ 
+Compatible with advanced 1500V plant architectures
+•
+ 
+Independently certified for reliable performance in high temperature, high
+humidity, extreme desert and coastal environments
+•
+ 
+Visit PlantPredict.com - The only Energy Prediction Software designed for
+Utility Scale PV
+
+PROVEN ENERGY YIELD ADVANTAGE
+
+•
+ 
+Generates more energy than conventional crystalline silicon solar
+modules with the same power due to superior temperature coefficient and
+superior spectral response
+•
+ 
+Anti-reflective coated glass (Series 4A™) enhances energy production
+
+END-OF-LIFE RECYCLING
+
+•
+ 
+Recycling services available through First Solar’s industry-leading
+recycling program or customer-selected third party.
+
+MODULE WARRANTY
+ 
+3
+
+•
+ 
+25-Year Linear
+Performance
+Warranty
+4
+•
+ 
+10-Year Limited
+Product Warranty
+
+86.0%
+90.0%
+94.0%
+98.0%
+100.0%
+0
+ 
+5
+ 
+10
+ 
+15
+ 
+20
+ 
+25
+
+Years
+Power Output
+
+122.5 WATT MODULE
+EFFICIENCY OF 17.0%
+75
+80
+90
+85
+95
+105
+100
+20
+ 
+30
+ 
+40
+ 
+50
+ 
+60
+ 
+70
+
+Linear (First Solar)
+Linear (Multicrystalline Si)
+
+firstsolar.com | info@firstsolar.com
+
+MODULE NUMBERS AND RATINGS AT STANDARD TEST CONDITIONS (1000W/m
+ 
+2
+ 
+, AM 1.5, 25°C)
+ 
+5
+NOMINAL VALUES
+ 
+FS-4110-3
+FS-4110A-3
+FS-4112-3
+FS-4112A-3
+FS-4115-3
+FS-4115A-3
+FS-4117-3
+FS-4117A-3
+FS-4120-3
+FS-4120A-3
+FS-4122-3
+FS-4122A-3
+
+Nominal Power
+ 
+6
+ 
+(-0/+5W)
+ 
+P
+ 
+MPP
+ 
+(W)
+ 
+110.0
+ 
+112.5
+ 
+115.0
+ 
+117.5
+ 
+120.0
+ 
+122.5
+Voltage at P
+ 
+MAX
+ 
+V
+ 
+MPP
+ 
+(V)
+ 
+67.8
+ 
+68.5
+ 
+69.3
+ 
+70.1
+ 
+70.8
+ 
+71.5
+Current at P
+ 
+MAX
+ 
+I
+ 
+MPP
+ 
+(A)
+ 
+1.62
+ 
+1.64
+ 
+1.66
+ 
+1.68
+ 
+1.70
+ 
+1.71
+Open Circuit Voltage
+ 
+V
+ 
+OC
+ 
+(V)
+ 
+86.4
+ 
+87.0
+ 
+87.6
+ 
+88.1
+ 
+88.7
+ 
+88.7
+Short Circuit Current
+ 
+I
+ 
+SC
+ 
+(A)
+ 
+1.82
+ 
+1.83
+ 
+1.83
+ 
+1.83
+ 
+1.84
+ 
+1.85
+Module Efficiency
+ 
+%
+ 
+15.3
+ 
+15.6
+ 
+16.0
+ 
+16.3
+ 
+16.7
+ 
+17.0
+Maximum System Voltage
+ 
+V
+ 
+SYS
+ 
+(V)
+ 
+1500
+ 
+7,8
+Limiting Reverse Current
+ 
+I
+ 
+R
+ 
+(A)
+ 
+4.0
+Maximum Series Fuse
+ 
+I
+ 
+CF
+ 
+(A)
+ 
+4.0
+
+RATINGS AT NOMINAL OPERATING CELL TEMPERATURE OF 45°C (800W/m
+ 
+2
+ 
+, 20°C air temperature, AM 1.5, 1m/s wind speed)
+ 
+5
+
+Nominal Power
+ 
+P
+ 
+MPP
+ 
+(W)
+ 
+83.2
+ 
+85.1
+ 
+87.0
+ 
+89.0
+ 
+90.8
+ 
+92.7
+Voltage at P
+ 
+MAX
+ 
+V
+ 
+MPP
+ 
+(V)
+ 
+63.5
+ 
+64.5
+ 
+64.9
+ 
+65.9
+ 
+66.3
+ 
+67.2
+Current at P
+ 
+MAX
+ 
+I
+ 
+MPP
+ 
+(A)
+ 
+1.31
+ 
+1.32
+ 
+1.34
+ 
+1.35
+ 
+1.37
+ 
+1.38
+Open Circuit Voltage
+ 
+V
+ 
+OC
+ 
+(V)
+ 
+81.6
+ 
+82.1
+ 
+82.7
+ 
+83.2
+ 
+83.7
+ 
+83.7
+Short Circuit Current
+ 
+I
+ 
+SC
+ 
+(A)
+ 
+1.47
+ 
+1.47
+ 
+1.48
+ 
+1.48
+ 
+1.48
+ 
+1.49
+
+TEMPERATURE CHARACTERISTICS
+
+Module Operating Temperature Range
+ 
+(°C)
+ 
+-40 to +85
+Temperature Coefficient of P
+ 
+MPP
+ 
+T
+K
+ 
+(P
+ 
+MPP
+)
+ 
+-0.28%/°C
+ 
+[Temperature Range: 25°C to 75°C]
+Temperature Coefficient of V
+ 
+OC
+ 
+T
+K
+ 
+(V
+ 
+OC
+)
+ 
+-0.28%/°C
+Temperature Coefficient of I
+ 
+SC
+ 
+T
+K
+ 
+(I
+ 
+SC
+)
+ 
++0.04%/°C
+
+MECHANICAL DESCRIPTION
+
+Length
+ 
+1200mm
+Width
+ 
+600mm
+Weight
+ 
+12kg
+Thickness
+ 
+6.8mm
+Area
+ 
+0.72m
+ 
+2
+Individual
+Leadwire
+2.5mm
+ 
+2
+ 
+, 657mm
+(minimum from strain
+relief to connector
+mating surface)
+Connectors
+ 
+MC4 or MC4-EVO 2
+ 
+9
+Bypass Diode
+ 
+None
+Cell Type
+ 
+Thin-film CdTe
+semiconductor,
+up to 216 cells
+Frame Material
+ 
+None
+Front Glass
+ 
+3.2mm heat
+strengthened
+Series 4A
+ 
+TM
+ 
+includes
+anti-reflective coating
+Back Glass
+ 
+3.2mm
+tempered
+Encapsulation
+ 
+Laminate material
+with edge seal
+Load Rating
+ 
+2400Pa
+10
+
+FIRST SOLAR SERIES 4
+™
+
+PV MODULE
+SUPERIOR TEMPERATURE COEFFICIENT
+MECHANICAL DRAWING
+SUPERIOR SPECTRAL RESPONSE
+
+DC Power Output Relative to
+Power at STC (%)
+CdTe Relative Energy Gain over c-Si
+Module Temperature (°C)
+Relative Humidity (%) at 30° C
+
+More Energy for Same
+Nameplate Watts
+Typical Field
+Operating Temperatures
+STC
+
+Disclaimer
+
+The information included in this Module Datasheet is subject to change without notice and is provided for informational purposes only.
+ 
+No contractual rights are established or should be
+inferred because of user’s reliance on the information contained in this Module Datasheet. Please refer to the appropriate Module User Guide and Module Product Specification document for
+more detailed technical information regarding module performance, installation and use.
+The First Solar logo, First Solar™, and all products denoted with ® are registered trademarks, and those denoted with a ™ are trademarks of First Solar, Inc.
+1
+ 
+Device package meets Atlas 25+
+2
+ 
+Class A Spread of Flame / Class B Burning Brand. Roof mounted fire rating is
+established by assessing rack and solar module as a unit
+3
+ 
+Limited power output and product warranties subject to warranty terms and conditions
+4
+ 
+Ensures 98% rated power in first year, -0.5%/year through year 25
+5
+ 
+All ratings ± 10%, unless specified otherwise. Specifications are subject to change
+6
+ 
+Measurement uncertainty applies
+7
+ 
+UL 1703 1500V Listed / ULC 1703 1000V Listed
+8
+ 
+Application Class A for 1000V (class II), Application Class B for 1500V (class 0) with
+MC4; Application Class A for 1000V and 1500V (class II) with MC4-EVO 2
+9
+ 
+Multi-Contact: MC4 (PV-KST4/PV-KBT4) or MC4-EVO 2 (PV-KST-EVO 2 / PV-KBT-EVO 2).
+10
+ 
+Higher load ratings can be met with additional clips or wider clips, subject to testing
+
+-2.0%
+-1.0%
+0.0%
+1.0%
+2.0%
+3.0%
+4.0%
+5.0%
+0
+ 
+10
+ 
+20
+ 
+30
+ 
+40
+ 
+50
+ 
+60
+ 
+70
+ 
+80
+ 
+90
+0
+20
+40
+60
+80
+100
+300
+ 
+500
+ 
+700
+ 
+900
+
+Wavelength (nm)
+Frankfurt, Germany
+Atlanta, USA
+Dubai, UAE
+Durban, South Africa
+Chennai, India
+Quantum Efficiency (%)
+External Quantum Efficiency
+FS Series 4V3 PV Module Type
