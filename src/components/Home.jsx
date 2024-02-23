@@ -1,10 +1,12 @@
 import "./styles.css";
 import { useState } from "react";
 import {Toast, ToastContainer} from "react-bootstrap";
+import {useNavigate} from 'react-router-dom'
 
 function Home(props) {
     const [showSuccess, setShowSuccess] = useState(false);
     const [showInvalid, setShowInvalid] = useState(false);
+    const navigate = useNavigate();
     // https://www.npmjs.com/package/react-pdf
     // find way to handle/view pdfs in react (look for good packages: well maintained with not too many dependencies)
     const [fileState, setFileState] = useState( {
@@ -30,8 +32,9 @@ function Home(props) {
         e.preventDefault();
         // parse form, get results
         // redirect to results
-
+        navigate('/results');
     }
+
     console.log(fileState.selectedFile);
     return (<>
         <ToastContainer position="top-end">
