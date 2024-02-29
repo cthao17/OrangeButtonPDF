@@ -1,0 +1,1 @@
+#TODO: take from output.txt and extract just the data that is needed. Can probably format into a json for now.
