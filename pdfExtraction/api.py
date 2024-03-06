@@ -1,11 +1,11 @@
 from flask import Flask, request, jsonify
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 import os
 from tempfile import NamedTemporaryFile
 from langchain_community.document_loaders import PyPDFLoader
 
 app = Flask(__name__)
-CORS(app, resources={"/upload": {"origins": "*"}})
+CORS(app, resources={"/upload": {"origins": "*"}}) # https://flask-cors.readthedocs.io/en/latest/
 
 @app.route('/upload', methods=['POST'])
 def upload_pdf():

@@ -30,16 +30,11 @@ function Home(props) {
         }
     }
     // https://stackoverflow.com/questions/53132236/file-upload-with-reactjs-and-flask
-    // https://stackoverflow.com/questions/26980713/solve-cross-origin-resource-sharing-with-flask
-    // https://flask-cors.readthedocs.io/en/latest/
     // https://stackoverflow.com/questions/60544939/cors-issues-for-flask-api-call-from-react-both-in-localhost 
-    // https://medium.com/@eric.hung0404/deal-with-cors-without-flask-cors-an-example-of-react-and-flask-5832c44108a7 
-    // 
     const uploadFile = () => {
         let file = fileState.selectedFile;
         const formData = new FormData();
         formData.append("file", file);
-        // CORS error with Chrome, two local host at different ports trying to communicate
         axios.post("http://127.0.0.1:5000/upload", formData) 
             .then(res => console.log(res))
             .catch(err => console.error(err));
