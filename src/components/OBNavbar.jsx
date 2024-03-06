@@ -1,18 +1,16 @@
 import { Navbar, Container, NavDropdown, Nav, Row } from "react-bootstrap";
 import "./styles.css"
+import { Link } from "react-router-dom";
 function OBNavbar(props) {
     // logo png (should eventually host our images locally): 
     // https://www.myorangebutton.com/wp-content/uploads/2023/05/cropped-Orange-button-logo-512.png
     
     // Reloads ot home page when clicking on OB Icon
-    const reloadHome = () => {
-        window.location.reload();
-    };
 
     return (
         <Navbar expand="lg">
             <Container>
-                <Navbar.Brand onClick={reloadHome}>
+                <Navbar.Brand as={Link} to="/">
                         <img id = "logo" src="https://www.myorangebutton.com/wp-content/uploads/2023/05/cropped-Orange-button-logo-512.png" alt="ob logo" />
                     </Navbar.Brand>
                 <Navbar.Text id="navbar-text">
