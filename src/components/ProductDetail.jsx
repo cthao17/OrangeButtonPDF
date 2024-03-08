@@ -1,0 +1,61 @@
+import React from 'react';
+import { useLocation } from 'react-router-dom';
+import FieldsTables from './FieldsTables';
+
+const ProductDetail = () => {
+    // Extract product details from location state
+    const { state } = useLocation();
+    const product = state && state.product;
+
+    if (!product) {
+        return <div>Loading...</div>;
+    }
+
+    const form = [
+        {
+            groupName: 'Product Information',
+            fieldNames: [
+                'ProdType',
+                'ProdMfr',
+                'ProdName',
+                'Description',
+                'ProdDatasheet',
+                'FileFolderURL',
+                'ProdCode',
+                'ProdID'
+            ]
+        },
+        {
+            groupName: 'Certifications',
+            fieldNames: [
+                'IsCECListed',
+                'CECListingDate',
+                'CECNotes',
+                'JunctionBoxProtectionCertification'
+            ]
+        },
+        {
+            groupName: 'Power/Product Warranties',
+            fieldNames: [
+                'PowerWarranty',
+                'ProductWarranty'
+            ]
+        }
+    ];
+    return (
+        <div>
+            <div className='container'>
+                <h2>
+                    {product.ProdMfr}
+                    {product.ProdName && `: ${product.ProdName}`}
+                </h2>
+                <h6>ProdCode: {product.ProdCode}</h6>
+            </div>
+            <div className='container' style={{ marginTop: '2rem' }}>
+                <FieldsTables form={form} />
+            </div>
+        </div>
+    );
+}
+
+export default ProductDetail;
