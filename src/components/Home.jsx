@@ -1,3 +1,4 @@
+import axios from "axios";
 import "./styles.css";
 import { useState } from "react";
 import {Toast, ToastContainer} from "react-bootstrap";
@@ -28,10 +29,21 @@ function Home(props) {
             }
         }
     }
+    // https://stackoverflow.com/questions/53132236/file-upload-with-reactjs-and-flask
+    // https://stackoverflow.com/questions/60544939/cors-issues-for-flask-api-call-from-react-both-in-localhost 
+    const uploadFile = () => {
+        let file = fileState.selectedFile;
+        const formData = new FormData();
+        formData.append("file", file);
+        axios.post("http://127.0.0.1:5000/upload", formData) 
+            .then(res => console.log(res))
+            .catch(err => console.error(err));
+    }
     const handleSubmit = (e) => {
         e.preventDefault();
         // parse form, get results
         // redirect to results
+        uploadFile();
         navigate('/results');
     }
 
@@ -63,7 +75,7 @@ function Home(props) {
                             <input type="file" accept="pdf" id = "file" onChange={(e)=> fileSelected(e)}/>
                         </div>
                         
-                        <button type = "submit" id="submit-btn">Submit</button>
+                        <button type = "submit" id="submit-btn" disabled={fileState.selectedFile === null}>Submit</button>
                     </div>
                 </form>
             </div>
