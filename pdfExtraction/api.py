@@ -8,21 +8,18 @@ app = Flask(__name__)
 
 @app.route('/upload', methods=['POST'])
 def pdf_to_images():
-    # Check if a file is present in the request
     if 'pdf' not in request.files:
         return jsonify({'error': 'No file part'})
 
     pdf_file = request.files['pdf']
 
-    # Save the PDF file to a temporary location
     temp_pdf_path = tempfile.NamedTemporaryFile(suffix='.pdf', delete=False).name
     pdf_file.save(temp_pdf_path)
 
     try:
-        # Convert the PDF to images
         images_paths = convert_pdf_to_images(temp_pdf_path)
         image_names = []
-        # Upload images to Google Cloud Storage
+
         bucket_name = 'sample-bucket-1234532'
         for index, image_path in enumerate(images_paths):
             print(image_path)
@@ -32,7 +29,6 @@ def pdf_to_images():
         return jsonify({'message': 'Images uploaded successfully', 'images': image_names})
 
     finally:
-        # Delete the temporary PDF file
         os.unlink(temp_pdf_path)
 
 def convert_pdf_to_images(pdf_path, resolution=300):
