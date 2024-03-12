@@ -21,14 +21,15 @@ def pdf_to_images():
     try:
         # Convert the PDF to images
         images_paths = convert_pdf_to_images(temp_pdf_path)
-
+        image_names = []
         # Upload images to Google Cloud Storage
         bucket_name = 'sample-bucket-1234532'
         for index, image_path in enumerate(images_paths):
             print(image_path)
             upload_blob(bucket_name, image_path, f"output_images/page_{index + 1}.png")
+            image_names.append(f"page_{index + 1}.png")
 
-        return jsonify({'message': 'Images uploaded successfully'})
+        return jsonify({'message': 'Images uploaded successfully', 'images': image_names})
 
     finally:
         # Delete the temporary PDF file
