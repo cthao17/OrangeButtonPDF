@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import MultiWidget from './MultiWidget';
 
 const FieldsTables = ({ form }) => {
-
     const { state } = useLocation();
     const product = state && state.product;
+
+    const [expandedFields, setExpandedFields] = useState({});
+
+    const toggleField = (fieldName) => {
+        setExpandedFields(prevState => ({
+            ...prevState,
+            [fieldName]: !prevState[fieldName]
+        }));
+    };
+
     if (!product) {
         return <div>Loading...</div>;
     }
@@ -25,16 +35,35 @@ const FieldsTables = ({ form }) => {
                         </thead>
                         <tbody>
                             {Array.isArray(fieldNames) && fieldNames.map(fieldName => {
-                                const fieldValue = product.fieldName;// Assuming product is passed as 'products'
+                                const fieldValue = product[fieldName];
+                                const isExpanded = expandedFields[fieldName];
+
                                 return (
-                                    <tr key={fieldName}>
-                                        <th scope='row'>{fieldName}</th>
-                                        <td>{fieldValue}</td>
-                                        <td>{/* Add unit if available */}</td>
-                                        <td>
-                                            {/* Show More button logic */}
-                                        </td>
-                                    </tr>
+                                    <React.Fragment key={fieldName}>
+                                        <tr>
+                                            <th scope='row'>{fieldName}</th>
+                                            <td>{fieldValue}</td>
+                                            <td>{/* Add unit if available */}</td>
+                                            <td>
+                                                <button 
+                                                    className='btn btn-secondary' 
+                                                    type='button' 
+                                                    onClick={() => toggleField(fieldName)}
+                                                >
+                                                    {isExpanded ? 'Show Less' : 'Show More'}
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        {isExpanded && (
+                                            <tr>
+                                                <td colSpan='4'>
+                                                    <div className='card'>
+                                                        <MultiWidget />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        )}
+                                    </React.Fragment>
                                 );
                             })}
                         </tbody>

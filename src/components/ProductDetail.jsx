@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import FieldsTables from './FieldsTables';
+import FieldsForms from './FieldsForms';
 
 const ProductDetail = () => {
     // Extract product details from location state
@@ -40,6 +41,41 @@ const ProductDetail = () => {
                 'PowerWarranty',
                 'ProductWarranty'
             ]
+        },
+        {
+            groupName: 'Details',
+            fieldNames: [
+                'BacksheetColor',
+                'BacksheetMaterial',
+                'BypassDiodeQuantity',
+                'CableConnector',
+                'CableCrossSectionArea',
+                'CableLength',
+                'CellCount',
+                'CellStringsParallelQuantity',
+                'CellsInSeries',
+                'FrameColor',
+                'FrameMaterialType',
+                'FuseSeriesRating',
+                'IsBIPV',
+                'IsBifacial',
+                'ModuleArea',
+                'ModuleBusbarDescription',
+                'ModuleEfficiency',
+                'PowerSTC',
+                'PowerToleranceMax',
+                'PowerToleranceMin',
+                'ShadeResponse',
+                'TemperatureCoefficientMaxPowerCurrent',
+                'TemperatureCoefficientMaxPowerVoltage',
+                'TemperatureCoefficientMaximumPower',
+                'TemperatureCoefficientOpenCircuitVoltage',
+                'TemperatureCoefficientShortCircuitCurrent',
+                'TemperatureMaximumOperating',
+                'TemperatureMinimumOperating',
+                'TemperatureNOCT',
+                'VoltageMaximumSystem'
+            ]
         }
     ];
     return (
@@ -53,7 +89,9 @@ const ProductDetail = () => {
             </div>
             <div className='container' style={{ marginTop: '2rem' }}>
                 <FieldsTables form={form} />
+                <FieldsForms form={form}/>
             </div>
+            <div style={{ marginBottom: '2rem' }}></div> {/* Add space here */}
         </div>
     );
 }

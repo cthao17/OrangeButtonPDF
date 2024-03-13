@@ -7,19 +7,69 @@ const ProductList = ({ pageProducts, searchQuery }) => {
     if (!pageProducts) {
         pageProducts = [
             {
-                ProdType: 'Type 1',
+                ProdType: 'Module',
                 ProdMfr: 'Manufacturer A',
                 ProdName: 'Product 1',
+                Description:'500 W Module',
+                ProdDatasheet:'',
+                FileFolderURL:'',
                 ProdCode: 'P001',
-                ProdID: '1'
+                ProdID: '1',
+                IsCECListed:'Yes',
+                CECListingDate:'',
+                CECNotes:'',
+                JunctionBoxProtectionCertification:'',
+                PowerWarranty:'',
+                ProductWarranty:''
             },
             {
-                ProdType: 'Type 2',
+                ProdType: 'Module',
                 ProdMfr: 'Manufacturer B',
                 ProdName: 'Product 2',
-                ProdCode: 'P002',
-                ProdID: '2'
-            }
+                Description:'500 W Module',
+                ProdDatasheet:'',
+                FileFolderURL:'',
+                ProdCode: 'P001',
+                ProdID: '2',
+                IsCECListed:'Yes',
+                CECListingDate:'',
+                CECNotes:'',
+                JunctionBoxProtectionCertification:'',
+                PowerWarranty:'',
+                ProductWarranty:''
+            },
+            {
+                ProdType: 'Module',
+                ProdMfr: 'Manufacturer C',
+                ProdName: 'Product 3',
+                Description:'500 W Module',
+                ProdDatasheet:'',
+                FileFolderURL:'',
+                ProdCode: 'P001',
+                ProdID: '3',
+                IsCECListed:'Yes',
+                CECListingDate:'',
+                CECNotes:'',
+                JunctionBoxProtectionCertification:'',
+                PowerWarranty:'',
+                ProductWarranty:''
+            },
+            {
+                ProdType: 'Module',
+                ProdMfr: 'Manufacturer D',
+                ProdName: 'Product 4',
+                Description:'500 W Module',
+                ProdDatasheet:'',
+                FileFolderURL:'',
+                ProdCode: 'P001',
+                ProdID: '4',
+                IsCECListed:'Yes',
+                CECListingDate:'',
+                CECNotes:'',
+                JunctionBoxProtectionCertification:'',
+                PowerWarranty:'',
+                ProductWarranty:''
+            },
         ];
     }
 
