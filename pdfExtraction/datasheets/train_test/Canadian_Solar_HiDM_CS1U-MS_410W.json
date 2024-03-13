@@ -445,17 +445,17 @@
     },
     "ModuleEfficiency": {
       "Unit": "decimal_percent",
-      "Value": 0.194
+      "Value": 0.199
     },
     "ModuleElectRatings": [
       {
         "CurrentAtMaximumPower": {
           "Unit": "A",
-          "Value": 9.08
+          "Value": 9.23
         },
         "CurrentShortCircuit": {
           "Unit": "A",
-          "Value": 9.6
+          "Value": 9.7
         },
         "ModuleRatingCondition": {
           "Value": "STC"
@@ -466,16 +466,16 @@
         },
         "VoltageAtMaximumPower": {
           "Unit": "V",
-          "Value": 44.1
+          "Value": 44.5
         },
         "VoltageOpenCircuit": {
           "Unit": "V",
-          "Value": 53.4
+          "Value": 53.6
         }
       }
     ],
     "PowerSTC": {
-      "Value": 400,
+      "Value": 410,
       "Unit": "W"
     },
     "PowerToleranceMax": {
