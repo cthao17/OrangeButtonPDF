@@ -32,6 +32,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     min-height: 90vh;
     /* background-color: #f0f0f0; */
 }
@@ -118,4 +119,66 @@
 }
 #show-more-btn:hover{
     background-color: #818181;
+}
+
+/*HERE is the Drag and Drop CSS */
+#list {
+    width: 50%;
+    padding: 15px;
+    color: black;
+    min-height: 300px;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  #form {
+    background-color: #121d2f;
+    width: 60%;
+    padding: 200px;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    align-self: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  
+  #form i,
+  #form p {
+    color: white;
+    width: 100%;
+    text-align: center;
+
+  }
+
+  #removeButton {
+    margin-bottom: 5px;
+    margin-left: 10px;
+    background-color:#ff0909bd;
+    border-radius: 10px;
+    border: 1.4px solid black;
+    color: white;
+}
+
+  #form button {
+    background: #0d5eba;
+    color: white;
+    border: 1px solid black;
+    padding: 2px 8px;
+    width: 100%;
+    border-radius: 10px;
+
+  }
+  
+  #submit {
+    width: 20%;
+    margin: auto;  
+    border-radius: 10px;
+    align-self: center;
+    background-color:#0d5eba;
+    transition: background-color 0.3s;
+    color: white;
 }

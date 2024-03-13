@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@langchain/mistralai": "^0.0.11",
+    "axios": "^1.6.7",
     "bootstrap": "^5.3.3",
     "pdf.js-extract": "^0.2.1",
     "react": "^18.2.0",

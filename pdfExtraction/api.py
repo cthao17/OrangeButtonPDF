@@ -1,9 +1,12 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import os
+import json
 from tempfile import NamedTemporaryFile
 from langchain_community.document_loaders import PyPDFLoader
 
 app = Flask(__name__)
+CORS(app, resources={"/upload": {"origins": "*"}}) # https://flask-cors.readthedocs.io/en/latest/
 
 @app.route('/upload', methods=['POST'])
 def upload_pdf():
@@ -19,7 +22,13 @@ def upload_pdf():
         file.save(temp_file.name)
         loader = PyPDFLoader(temp_file.name)
         pages = loader.load_and_split()
+
         print(pages)
+
+        output_file_path = os.path.join(os.path.dirname(__file__), 'sample', 'output.txt')
+        with open(output_file_path, 'w') as output_file:
+            for page_number, content in enumerate(pages, start=1):
+                output_file.write(f"Page {page_number}:\n{content}\n\n")
 
     os.unlink(temp_file.name)
 
