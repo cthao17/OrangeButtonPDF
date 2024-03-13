@@ -2,7 +2,6 @@ import Home from "./components/Home";
 import OBNavbar from "./components/OBNavbar";
 import ProductList from "./components/ProductList";
 import ProductDetail from "./components/ProductDetail";
-import Results from "./components/Results";
 import {Container} from "react-bootstrap";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
