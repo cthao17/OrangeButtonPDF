@@ -437,7 +437,7 @@
       "Value": "IP 68"
     },
     "ModuleArea": {
-      "Value": 1.5,
+      "Value": -1,
       "Unit": "sqm"
     },
     "ModuleBusbarDescription": {
