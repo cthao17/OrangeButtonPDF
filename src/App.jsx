@@ -15,7 +15,6 @@ function App() {
         <Container>
           <Routes>
             <Route path="/" element={<Home/>} />
-            <Route path="/results" element={<Results/>} />
             <Route path="/productList" element={<ProductList/>}/>
             <Route path="/product/:id" element={<ProductDetail />} />
           </Routes>

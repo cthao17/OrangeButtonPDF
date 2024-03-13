@@ -34,7 +34,7 @@ function Home(props) {
         // parse form, get results
         // redirect to results
         uploadFile();
-        navigate('/results');
+        navigate('/productList');
     }
 
     const [files, setFiles] = useState([])
