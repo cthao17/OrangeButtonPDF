@@ -908,10 +908,10 @@
       "Value": ""
     },
     "TemperatureCoefficientMaxPowerCurrent": {
-      "Value": 0.05
+      "Value": -1
     },
     "TemperatureCoefficientMaxPowerVoltage": {
-      "Value": -0.304
+      "Value": -1
     },
     "TemperatureCoefficientMaximumPower": {
       "Value": -0.37

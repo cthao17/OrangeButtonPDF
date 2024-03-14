@@ -22,11 +22,11 @@
     "Dimension": {
       "Height": {
         "Unit": "mm",
-        "Value": 35
+        "Value": 40
       },
       "Length": {
         "Unit": "mm",
-        "Value": 2078
+        "Value": 1765
       },
       "Mass": {
         "Unit": "kg",
@@ -34,11 +34,11 @@
       },
       "Weight": {
         "Unit": "lb",
-        "Value": 51.6
+        "Value": 46.5
       },
       "Width": {
         "Unit": "mm",
-        "Value": 992
+        "Value": 1048
       }
     },
     "FileFolderURL": {
@@ -412,7 +412,7 @@
     },
     "CableLength": {
       "Unit": "mm",
-      "Value": 1000
+      "Value": 500
     },
     "CellCount": {
       "Value": -1
@@ -445,17 +445,17 @@
     },
     "ModuleEfficiency": {
       "Unit": "decimal_percent",
-      "Value": 0.201
+      "Value": 0.187
     },
     "ModuleElectRatings": [
       {
         "CurrentAtMaximumPower": {
           "Unit": "A",
-          "Value": 9.30
+          "Value": 10.52
         },
         "CurrentShortCircuit": {
           "Unit": "A",
-          "Value": 9.75
+          "Value": 11.06
         },
         "ModuleRatingCondition": {
           "Value": "STC"
@@ -466,25 +466,25 @@
         },
         "VoltageAtMaximumPower": {
           "Unit": "V",
-          "Value": 44.7
+          "Value": 32.8
         },
         "VoltageOpenCircuit": {
           "Unit": "V",
-          "Value": 53.7
+          "Value": 39.8
         }
       }
     ],
     "PowerSTC": {
-      "Value": 415,
+      "Value": 345,
       "Unit": "W"
     },
     "PowerToleranceMax": {
       "Unit": "decimal_percent",
-      "Value": 0.024
+      "Value": 0.029
     },
     "PowerToleranceMin": {
       "Unit": "decimal_percent",
-      "Value": 0.024
+      "Value": 0.029
     },
     "ProdCell": {
       "AlternativeIdentifiers": [
@@ -886,7 +886,7 @@
         "Value": ""
       },
       "CellTechnologyType": {
-        "Value": "Mono-crystalline"
+        "Value": "Poly-crystalline"
       }
     },
     "ProdGlazing": {
@@ -914,10 +914,10 @@
       "Value": -1
     },
     "TemperatureCoefficientMaximumPower": {
-      "Value": -0.37
+      "Value": -0.36
     },
     "TemperatureCoefficientOpenCircuitVoltage": {
-      "Value": -0.29
+      "Value": -0.28
     },
     "TemperatureCoefficientShortCircuitCurrent": {
       "Value": 0.05
