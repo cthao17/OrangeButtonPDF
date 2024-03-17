@@ -22,23 +22,23 @@
     "Dimension": {
       "Height": {
         "Unit": "mm",
-        "Value": -1
+        "Value": 35
       },
       "Length": {
         "Unit": "mm",
-        "Value": -1
+        "Value": 2384
       },
       "Mass": {
         "Unit": "kg",
         "Value": -1
       },
       "Weight": {
-        "Unit": "lb",
-        "Value": -1
+        "Unit": "kg",
+        "Value": 38.7
       },
       "Width": {
         "Unit": "mm",
-        "Value": -1
+        "Value": 1303
       }
     },
     "FileFolderURL": {
@@ -305,7 +305,7 @@
       }
     ],
     "ProdCode": {
-      "Value": ""
+      "Value": "TWMPF-66HD670"
     },
     "ProdDatasheet": {
       "Value": ""
@@ -319,7 +319,7 @@
       }
     ],
     "ProdMfr": {
-      "Value": ""
+      "Value": "TongWei Solar"
     },
     "ProdName": {
       "Value": ""
@@ -408,14 +408,14 @@
     },
     "CableCrossSectionArea": {
       "Unit": "sqft",
-      "Value": -1
+      "Value": 0.01
     },
     "CableLength": {
       "Unit": "mm",
-      "Value": -1
+      "Value": 400
     },
     "CellCount": {
-      "Value": -1
+      "Value": 132
     },
     "CellStringsParallelQuantity": {},
     "CellsInSeries": {},
@@ -423,7 +423,7 @@
       "Value": ""
     },
     "FrameMaterialType": {
-      "Value": ""
+      "Value": "Anodized Aluminum"
     },
     "FuseSeriesRating": {
       "Unit": "",
@@ -434,7 +434,7 @@
     },
     "IsBifacial": {},
     "JunctionBoxProtectionCertification": {
-      "Value": ""
+      "Value": "IP 68"
     },
     "ModuleArea": {
       "Value": -1,
@@ -445,17 +445,17 @@
     },
     "ModuleEfficiency": {
       "Unit": "decimal_percent",
-      "Value": -1
+      "Value": 0.216
     },
     "ModuleElectRatings": [
       {
         "CurrentAtMaximumPower": {
           "Unit": "A",
-          "Value": -1
+          "Value": 17.45
         },
         "CurrentShortCircuit": {
           "Unit": "A",
-          "Value": -1
+          "Value": 18.41
         },
         "ModuleRatingCondition": {
           "Value": "STC"
@@ -466,16 +466,16 @@
         },
         "VoltageAtMaximumPower": {
           "Unit": "V",
-          "Value": -1
+          "Value": 38.40
         },
         "VoltageOpenCircuit": {
           "Unit": "V",
-          "Value": -1
+          "Value": 46.20
         }
       }
     ],
     "PowerSTC": {
-      "Value": -1,
+      "Value": 670,
       "Unit": "W"
     },
     "PowerToleranceMax": {
@@ -914,21 +914,21 @@
       "Value": -1
     },
     "TemperatureCoefficientMaximumPower": {
-      "Value": -1
+      "Value": -0.33
     },
     "TemperatureCoefficientOpenCircuitVoltage": {
-      "Value": -1
+      "Value": -0.27
     },
     "TemperatureCoefficientShortCircuitCurrent": {
-      "Value": -1
+      "Value": 0.05
     },
     "TemperatureMaximumOperating": {
       "Unit": "Cel",
-      "Value": -1
+      "Value": 85
     },
     "TemperatureMinimumOperating": {
       "Unit": "Cel",
-      "Value": -1
+      "Value": -40
     },
     "TemperatureNOCT": {
       "Unit": "Cel",
@@ -936,7 +936,7 @@
     },
     "VoltageMaximumSystem": {
       "Unit": "V",
-      "Value": -1
+      "Value": 1500
     }
   }
 }

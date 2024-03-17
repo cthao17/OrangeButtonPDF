@@ -22,11 +22,11 @@
     "Dimension": {
       "Height": {
         "Unit": "mm",
-        "Value": -1
+        "Value": 40
       },
       "Length": {
         "Unit": "mm",
-        "Value": -1
+        "Value": 2000
       },
       "Mass": {
         "Unit": "kg",
@@ -34,11 +34,11 @@
       },
       "Weight": {
         "Unit": "lb",
-        "Value": -1
+        "Value": 50.7
       },
       "Width": {
         "Unit": "mm",
-        "Value": -1
+        "Value": 992
       }
     },
     "FileFolderURL": {
@@ -305,7 +305,7 @@
       }
     ],
     "ProdCode": {
-      "Value": ""
+      "Value": "TSM-DE14H(II)355"
     },
     "ProdDatasheet": {
       "Value": ""
@@ -319,7 +319,7 @@
       }
     ],
     "ProdMfr": {
-      "Value": ""
+      "Value": "Trina Solar"
     },
     "ProdName": {
       "Value": ""
@@ -408,14 +408,14 @@
     },
     "CableCrossSectionArea": {
       "Unit": "sqft",
-      "Value": -1
+      "Value": 0.01
     },
     "CableLength": {
       "Unit": "mm",
-      "Value": -1
+      "Value": 140
     },
     "CellCount": {
-      "Value": -1
+      "Value": 144
     },
     "CellStringsParallelQuantity": {},
     "CellsInSeries": {},
@@ -423,7 +423,7 @@
       "Value": ""
     },
     "FrameMaterialType": {
-      "Value": ""
+      "Value": "Anodized Aluminum"
     },
     "FuseSeriesRating": {
       "Unit": "",
@@ -434,7 +434,7 @@
     },
     "IsBifacial": {},
     "JunctionBoxProtectionCertification": {
-      "Value": ""
+      "Value": "IP 68"
     },
     "ModuleArea": {
       "Value": -1,
@@ -445,17 +445,17 @@
     },
     "ModuleEfficiency": {
       "Unit": "decimal_percent",
-      "Value": -1
+      "Value": 0.179
     },
     "ModuleElectRatings": [
       {
         "CurrentAtMaximumPower": {
           "Unit": "A",
-          "Value": -1
+          "Value": 9.21
         },
         "CurrentShortCircuit": {
           "Unit": "A",
-          "Value": -1
+          "Value": 9.68
         },
         "ModuleRatingCondition": {
           "Value": "STC"
@@ -466,25 +466,25 @@
         },
         "VoltageAtMaximumPower": {
           "Unit": "V",
-          "Value": -1
+          "Value": 38.6
         },
         "VoltageOpenCircuit": {
           "Unit": "V",
-          "Value": -1
+          "Value": 46.9
         }
       }
     ],
     "PowerSTC": {
-      "Value": -1,
+      "Value": 355,
       "Unit": "W"
     },
     "PowerToleranceMax": {
       "Unit": "decimal_percent",
-      "Value": -1
+      "Value": 0.014
     },
     "PowerToleranceMin": {
       "Unit": "decimal_percent",
-      "Value": -1
+      "Value": 0.014
     },
     "ProdCell": {
       "AlternativeIdentifiers": [
@@ -886,7 +886,7 @@
         "Value": ""
       },
       "CellTechnologyType": {
-        "Value": ""
+        "Value": "Monocrystalline"
       }
     },
     "ProdGlazing": {
@@ -914,21 +914,21 @@
       "Value": -1
     },
     "TemperatureCoefficientMaximumPower": {
-      "Value": -1
+      "Value": -0.37
     },
     "TemperatureCoefficientOpenCircuitVoltage": {
-      "Value": -1
+      "Value": -0.29
     },
     "TemperatureCoefficientShortCircuitCurrent": {
-      "Value": -1
+      "Value": 0.05
     },
     "TemperatureMaximumOperating": {
       "Unit": "Cel",
-      "Value": -1
+      "Value": 85
     },
     "TemperatureMinimumOperating": {
       "Unit": "Cel",
-      "Value": -1
+      "Value": -40
     },
     "TemperatureNOCT": {
       "Unit": "Cel",
@@ -936,7 +936,7 @@
     },
     "VoltageMaximumSystem": {
       "Unit": "V",
-      "Value": -1
+      "Value": 1500
     }
   }
 }
