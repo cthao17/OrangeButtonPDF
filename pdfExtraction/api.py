@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from google.cloud import storage
+from flask_cors import CORS, cross_origin
 import fitz
 import tempfile
 import os
@@ -9,6 +10,7 @@ import json
 from vertexai.generative_models import GenerativeModel, Part, GenerationConfig
 
 app = Flask(__name__)
+
 CORS(app, resources={"/upload": {"origins": "*"}}) # https://flask-cors.readthedocs.io/en/latest/
 
 @app.route('/upload', methods=['POST'])
@@ -39,7 +41,6 @@ def pdf_to_images():
         if successful:
             delete_from_blob(bucket_name)
            
-
         return jsonify({'message': 'Images uploaded successfully', 'images': image_names, 'output': output, 'successful': successful})
 
     finally:
@@ -81,7 +82,6 @@ def delete_from_blob(bucket_name):
     for blob in blobs:
         blob.delete()
 
-
 def runGemini(image_names, successful: bool, project_id: str, location: str):
     if successful:
         # Initialize Vertex AI
@@ -121,9 +121,6 @@ def runGemini(image_names, successful: bool, project_id: str, location: str):
                 gem_responses[image] = {"error": "Failed to decode JSON response"}
         
         return gem_responses, True
-
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)
