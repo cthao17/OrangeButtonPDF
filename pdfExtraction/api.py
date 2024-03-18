@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from google.cloud import storage
 from flask_cors import CORS, cross_origin
 import fitz
@@ -9,7 +10,8 @@ import json
 from vertexai.generative_models import GenerativeModel, Part, GenerationConfig
 
 app = Flask(__name__)
-CORS(app, resources={"/upload": {"origins": "*"}})
+
+CORS(app, resources={"/upload": {"origins": "*"}}) # https://flask-cors.readthedocs.io/en/latest/
 
 @app.route('/upload', methods=['POST'])
 def pdf_to_images():
