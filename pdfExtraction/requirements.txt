@@ -16,7 +16,6 @@ dataclasses-json==0.6.4
 etelemetry==0.3.1
 exceptiongroup==1.2.0
 filelock==3.13.1
-fitz==0.0.1.dev2
 Flask==3.0.2
 frozenlist==1.4.1
 google-api-core==2.17.1

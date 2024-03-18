@@ -37,7 +37,6 @@ def pdf_to_images():
         if successful:
             delete_from_blob(bucket_name)
            
-
         return jsonify({'message': 'Images uploaded successfully', 'images': image_names, 'output': output, 'successful': successful})
 
     finally:
@@ -79,7 +78,6 @@ def delete_from_blob(bucket_name):
     for blob in blobs:
         blob.delete()
 
-
 def runGemini(image_names, successful: bool, project_id: str, location: str):
     if successful:
         # Initialize Vertex AI
@@ -119,9 +117,6 @@ def runGemini(image_names, successful: bool, project_id: str, location: str):
                 gem_responses[image] = {"error": "Failed to decode JSON response"}
         
         return gem_responses, True
-
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)
