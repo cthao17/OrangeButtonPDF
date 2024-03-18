@@ -1,0 +1,942 @@
+{
+  "ProdModule": {
+    "AlternativeIdentifiers": [
+      {
+        "Description": {
+          "Value": ""
+        },
+        "Identifier": {
+          "Value": ""
+        },
+        "IdentifierType": {
+          "Value": "UUID"
+        },
+        "SourceName": {
+          "Value": ""
+        }
+      }
+    ],
+    "Description": {
+      "Value": ""
+    },
+    "Dimension": {
+      "Height": {
+        "Unit": "mm",
+        "Value": 35
+      },
+      "Length": {
+        "Unit": "mm",
+        "Value": 2172
+      },
+      "Mass": {
+        "Unit": "kg",
+        "Value": -1
+      },
+      "Weight": {
+        "Unit": "lb",
+        "Value": 68.34
+      },
+      "Width": {
+        "Unit": "mm",
+        "Value": 1303
+      }
+    },
+    "FileFolderURL": {
+      "Value": ""
+    },
+    "ManufacturerUPC": {
+      "Value": ""
+    },
+    "Packages": [
+      {
+        "Description": {
+          "Value": ""
+        },
+        "Dimension": {
+          "Height": {
+            "Unit": "mm",
+            "Value": -1
+          },
+          "Length": {
+            "Unit": "mm",
+            "Value": -1
+          },
+          "Mass": {
+            "Unit": "kg",
+            "Value": -1
+          },
+          "Weight": {
+            "Unit": "lb",
+            "Value": -1
+          },
+          "Width": {
+            "Unit": "mm",
+            "Value": -1
+          }
+        },
+        "Quantity": {
+          "Value": -1
+        }
+      }
+    ],
+    "ProdCertifications": [
+      {
+        "CertificateValue": {
+          "Value": ""
+        },
+        "CertificationAgency": {
+          "Addresses": [
+            {
+              "AddrLine1": {
+                "Value": ""
+              },
+              "AddrLine2": {
+                "Value": ""
+              },
+              "AddrLine3": {
+                "Value": ""
+              },
+              "AddressID": {
+                "Value": ""
+              },
+              "AddressType": {
+                "Value": ""
+              },
+              "City": {
+                "Value": ""
+              },
+              "Country": {
+                "Value": ""
+              },
+              "County": {
+                "Value": ""
+              },
+              "Description": {
+                "Value": ""
+              },
+              "Location": {
+                "Altitude": {
+                  "Unit": "ft",
+                  "Value": -1
+                },
+                "Description": {
+                  "Value": ""
+                },
+                "Elevation": {
+                  "Unit": "ft",
+                  "Value": -1
+                },
+                "Latitude": {
+                  "Unit": "Degree",
+                  "Value": -1
+                },
+                "LocationDeterminationMethod": {
+                  "Value": "AddressGeocoding"
+                },
+                "LocationID": {
+                  "Value": ""
+                },
+                "LocationType": {
+                  "Value": ""
+                },
+                "Longitude": {
+                  "Unit": "Degree",
+                  "Value": -1
+                }
+              },
+              "StateProvince": {
+                "Value": ""
+              },
+              "ZipPostalCode": {
+                "Value": ""
+              }
+            }
+          ],
+          "CertificationAgencyName": {
+            "Value": ""
+          },
+          "Contacts": [
+            {
+              "Address": {
+                "AddrLine1": {
+                  "Value": ""
+                },
+                "AddrLine2": {
+                  "Value": ""
+                },
+                "AddrLine3": {
+                  "Value": ""
+                },
+                "AddressID": {
+                  "Value": ""
+                },
+                "AddressType": {
+                  "Value": ""
+                },
+                "City": {
+                  "Value": ""
+                },
+                "Country": {
+                  "Value": ""
+                },
+                "County": {
+                  "Value": ""
+                },
+                "Description": {
+                  "Value": ""
+                },
+                "Location": {
+                  "Altitude": {
+                    "Unit": "ft",
+                    "Value": -1
+                  },
+                  "Description": {
+                    "Value": ""
+                  },
+                  "Elevation": {
+                    "Unit": "ft",
+                    "Value": -1
+                  },
+                  "Latitude": {
+                    "Unit": "Degree",
+                    "Value": -1
+                  },
+                  "LocationDeterminationMethod": {
+                    "Value": "AddressGeocoding"
+                  },
+                  "LocationID": {
+                    "Value": ""
+                  },
+                  "LocationType": {
+                    "Value": ""
+                  },
+                  "Longitude": {
+                    "Unit": "Degree",
+                    "Value": -1
+                  }
+                },
+                "StateProvince": {
+                  "Value": ""
+                },
+                "ZipPostalCode": {
+                  "Value": ""
+                }
+              },
+              "ContactID": {
+                "Value": ""
+              },
+              "ContactTimezone": {
+                "Value": ""
+              },
+              "ContactType": {
+                "Value": ""
+              },
+              "Description": {
+                "Value": ""
+              },
+              "Email": {
+                "Value": ""
+              },
+              "FirstName": {
+                "Value": ""
+              },
+              "HomePhone": {
+                "Value": ""
+              },
+              "LastName": {
+                "Value": ""
+              },
+              "MiddleName": {
+                "Value": ""
+              },
+              "MobilePhone": {
+                "Value": ""
+              },
+              "PreferredContactMethod": {
+                "Value": ""
+              },
+              "Title": {
+                "Value": ""
+              },
+              "URL": {
+                "Value": ""
+              },
+              "WorkPhone": {
+                "Value": ""
+              }
+            }
+          ],
+          "Description": {
+            "Value": ""
+          }
+        },
+        "CertificationDate": {
+          "Value": ""
+        },
+        "CertificationExpirationDate": {
+          "Value": ""
+        },
+        "CertificationName": {
+          "Value": ""
+        },
+        "CertificationStandard": {
+          "Value": ""
+        },
+        "Description": {
+          "Value": ""
+        },
+        "FileFolderURL": {
+          "Value": ""
+        },
+        "Firmware": {
+          "Checksum": {
+            "ChecksumDetail": {},
+            "ChecksumKey": {
+              "Value": ""
+            },
+            "ChecksumType": {
+              "Value": ""
+            }
+          },
+          "FirmwareVersion": {
+            "Value": ""
+          }
+        }
+      }
+    ],
+    "ProdCode": {
+      "Value": "TWMPF-60HS605"
+    },
+    "ProdDatasheet": {
+      "Value": ""
+    },
+    "ProdID": {
+      "Value": ""
+    },
+    "ProdInstructions": [
+      {
+        "Value": ""
+      }
+    ],
+    "ProdMfr": {
+      "Value": "TongWei Solar"
+    },
+    "ProdName": {
+      "Value": ""
+    },
+    "ProdSpecifications": [
+      {
+        "Description": {
+          "Value": ""
+        },
+        "SpecificationName": {
+          "Value": ""
+        },
+        "SpecificationType": {},
+        "SpecificationUnit": {
+          "Value": "mm"
+        },
+        "SpecificationValue": {
+          "Value": ""
+        }
+      }
+    ],
+    "ProdType": {
+      "Value": "Module"
+    },
+    "SubstituteProducts": [
+      {
+        "ProdCode": {
+          "Value": ""
+        },
+        "ProdID": {
+          "Value": ""
+        },
+        "ProdMfr": {
+          "Value": ""
+        },
+        "ProdName": {
+          "Value": ""
+        },
+        "ProdType": {
+          "Value": ""
+        }
+      }
+    ],
+    "Warranties": [
+      {
+        "Description": {
+          "Value": ""
+        },
+        "FileFolderURL": {
+          "Value": ""
+        },
+        "WarrantyDuration": {
+          "Value": "",
+          "Unit": "Y"
+        },
+        "WarrantyEffectiveDate": {
+          "Value": ""
+        },
+        "WarrantyExpirationDate": {
+          "Value": ""
+        },
+        "WarrantyID": {
+          "Value": ""
+        },
+        "WarrantyName": {
+          "Value": ""
+        },
+        "WarrantyType": {
+          "Value": ""
+        }
+      }
+    ],
+    "BacksheetColor": {
+      "Value": ""
+    },
+    "BacksheetMaterial": {
+      "Value": ""
+    },
+    "BypassDiodeQuantity": {},
+    "CECListingDate": {
+      "Value": ""
+    },
+    "CECNotes": {},
+    "CableConnector": {
+      "Value": ""
+    },
+    "CableCrossSectionArea": {
+      "Unit": "sqft",
+      "Value": -1
+    },
+    "CableLength": {
+      "Unit": "mm",
+      "Value": 400
+    },
+    "CellCount": {
+      "Value": 120
+    },
+    "CellStringsParallelQuantity": {},
+    "CellsInSeries": {},
+    "FrameColor": {
+      "Value": ""
+    },
+    "FrameMaterialType": {
+      "Value": "Anodized Aluminum"
+    },
+    "FuseSeriesRating": {
+      "Unit": "",
+      "Value": -1
+    },
+    "IsBIPV": {
+      "Value": true
+    },
+    "IsBifacial": {},
+    "JunctionBoxProtectionCertification": {
+      "Value": "IP 68"
+    },
+    "ModuleArea": {
+      "Value": -1,
+      "Unit": "sqm"
+    },
+    "ModuleBusbarDescription": {
+      "Value": ""
+    },
+    "ModuleEfficiency": {
+      "Unit": "decimal_percent",
+      "Value": 0.216
+    },
+    "ModuleElectRatings": [
+      {
+        "CurrentAtMaximumPower": {
+          "Unit": "A",
+          "Value": 17.55
+        },
+        "CurrentShortCircuit": {
+          "Unit": "A",
+          "Value": 18.66
+        },
+        "ModuleRatingCondition": {
+          "Value": "STC"
+        },
+        "PowerDC": {
+          "Unit": "W",
+          "Value": -1
+        },
+        "VoltageAtMaximumPower": {
+          "Unit": "V",
+          "Value": 34.76
+        },
+        "VoltageOpenCircuit": {
+          "Unit": "V",
+          "Value": 41.85
+        }
+      }
+    ],
+    "PowerSTC": {
+      "Value": 610,
+      "Unit": "W"
+    },
+    "PowerToleranceMax": {
+      "Unit": "decimal_percent",
+      "Value": 0.03
+    },
+    "PowerToleranceMin": {
+      "Unit": "decimal_percent",
+      "Value": 0.03
+    },
+    "ProdCell": {
+      "AlternativeIdentifiers": [
+        {
+          "Description": {
+            "Value": ""
+          },
+          "Identifier": {
+            "Value": ""
+          },
+          "IdentifierType": {
+            "Value": "UUID"
+          },
+          "SourceName": {
+            "Value": ""
+          }
+        }
+      ],
+      "Description": {
+        "Value": ""
+      },
+      "Dimension": {
+        "Height": {
+          "Unit": "mm",
+          "Value": -1
+        },
+        "Length": {
+          "Unit": "mm",
+          "Value": -1
+        },
+        "Mass": {
+          "Unit": "kg",
+          "Value": -1
+        },
+        "Weight": {
+          "Unit": "lb",
+          "Value": -1
+        },
+        "Width": {
+          "Unit": "mm",
+          "Value": -1
+        }
+      },
+      "FileFolderURL": {
+        "Value": ""
+      },
+      "ManufacturerUPC": {
+        "Value": ""
+      },
+      "Packages": [
+        {
+          "Description": {
+            "Value": ""
+          },
+          "Dimension": {
+            "Height": {
+              "Unit": "mm",
+              "Value": -1
+            },
+            "Length": {
+              "Unit": "mm",
+              "Value": -1
+            },
+            "Mass": {
+              "Unit": "kg",
+              "Value": -1
+            },
+            "Weight": {
+              "Unit": "lb",
+              "Value": -1
+            },
+            "Width": {
+              "Unit": "mm",
+              "Value": -1
+            }
+          },
+          "Quantity": {
+            "Value": -1
+          }
+        }
+      ],
+      "ProdCertifications": [
+        {
+          "CertificateValue": {
+            "Value": ""
+          },
+          "CertificationAgency": {
+            "Addresses": [
+              {
+                "AddrLine1": {
+                  "Value": ""
+                },
+                "AddrLine2": {
+                  "Value": ""
+                },
+                "AddrLine3": {
+                  "Value": ""
+                },
+                "AddressID": {
+                  "Value": ""
+                },
+                "AddressType": {
+                  "Value": ""
+                },
+                "City": {
+                  "Value": ""
+                },
+                "Country": {
+                  "Value": ""
+                },
+                "County": {
+                  "Value": ""
+                },
+                "Description": {
+                  "Value": ""
+                },
+                "Location": {
+                  "Altitude": {
+                    "Unit": "ft",
+                    "Value": -1
+                  },
+                  "Description": {
+                    "Value": ""
+                  },
+                  "Elevation": {
+                    "Unit": "ft",
+                    "Value": -1
+                  },
+                  "Latitude": {
+                    "Unit": "Degree",
+                    "Value": -1
+                  },
+                  "LocationDeterminationMethod": {
+                    "Value": "AddressGeocoding"
+                  },
+                  "LocationID": {
+                    "Value": ""
+                  },
+                  "LocationType": {
+                    "Value": ""
+                  },
+                  "Longitude": {
+                    "Unit": "Degree",
+                    "Value": -1
+                  }
+                },
+                "StateProvince": {
+                  "Value": ""
+                },
+                "ZipPostalCode": {
+                  "Value": ""
+                }
+              }
+            ],
+            "CertificationAgencyName": {
+              "Value": ""
+            },
+            "Contacts": [
+              {
+                "Address": {
+                  "AddrLine1": {
+                    "Value": ""
+                  },
+                  "AddrLine2": {
+                    "Value": ""
+                  },
+                  "AddrLine3": {
+                    "Value": ""
+                  },
+                  "AddressID": {
+                    "Value": ""
+                  },
+                  "AddressType": {
+                    "Value": ""
+                  },
+                  "City": {
+                    "Value": ""
+                  },
+                  "Country": {
+                    "Value": ""
+                  },
+                  "County": {
+                    "Value": ""
+                  },
+                  "Description": {
+                    "Value": ""
+                  },
+                  "Location": {
+                    "Altitude": {
+                      "Unit": "ft",
+                      "Value": -1
+                    },
+                    "Description": {
+                      "Value": ""
+                    },
+                    "Elevation": {
+                      "Unit": "ft",
+                      "Value": -1
+                    },
+                    "Latitude": {
+                      "Unit": "Degree",
+                      "Value": -1
+                    },
+                    "LocationDeterminationMethod": {
+                      "Value": "AddressGeocoding"
+                    },
+                    "LocationID": {
+                      "Value": ""
+                    },
+                    "LocationType": {
+                      "Value": ""
+                    },
+                    "Longitude": {
+                      "Unit": "Degree",
+                      "Value": -1
+                    }
+                  },
+                  "StateProvince": {
+                    "Value": ""
+                  },
+                  "ZipPostalCode": {
+                    "Value": ""
+                  }
+                },
+                "ContactID": {
+                  "Value": ""
+                },
+                "ContactTimezone": {
+                  "Value": ""
+                },
+                "ContactType": {
+                  "Value": ""
+                },
+                "Description": {
+                  "Value": ""
+                },
+                "Email": {
+                  "Value": ""
+                },
+                "FirstName": {
+                  "Value": ""
+                },
+                "HomePhone": {
+                  "Value": ""
+                },
+                "LastName": {
+                  "Value": ""
+                },
+                "MiddleName": {
+                  "Value": ""
+                },
+                "MobilePhone": {
+                  "Value": ""
+                },
+                "PreferredContactMethod": {
+                  "Value": ""
+                },
+                "Title": {
+                  "Value": ""
+                },
+                "URL": {
+                  "Value": ""
+                },
+                "WorkPhone": {
+                  "Value": ""
+                }
+              }
+            ],
+            "Description": {
+              "Value": ""
+            }
+          },
+          "CertificationDate": {
+            "Value": ""
+          },
+          "CertificationExpirationDate": {
+            "Value": ""
+          },
+          "CertificationName": {
+            "Value": ""
+          },
+          "CertificationStandard": {
+            "Value": ""
+          },
+          "Description": {
+            "Value": ""
+          },
+          "FileFolderURL": {
+            "Value": ""
+          },
+          "Firmware": {
+            "Checksum": {
+              "ChecksumDetail": {},
+              "ChecksumKey": {
+                "Value": ""
+              },
+              "ChecksumType": {
+                "Value": ""
+              }
+            },
+            "FirmwareVersion": {
+              "Value": ""
+            }
+          }
+        }
+      ],
+      "ProdCode": {
+        "Value": ""
+      },
+      "ProdDatasheet": {
+        "Value": "f"
+      },
+      "ProdID": {
+        "Value": ""
+      },
+      "ProdInstructions": [
+        {
+          "Value": ""
+        }
+      ],
+      "ProdMfr": {
+        "Value": ""
+      },
+      "ProdName": {
+        "Value": ""
+      },
+      "ProdSpecifications": [
+        {
+          "Description": {
+            "Value": ""
+          },
+          "SpecificationName": {
+            "Value": ""
+          },
+          "SpecificationType": {},
+          "SpecificationUnit": {
+            "Value": "mm"
+          },
+          "SpecificationValue": {
+            "Value": ""
+          }
+        }
+      ],
+      "ProdType": {
+        "Value": "Module"
+      },
+      "SubstituteProducts": [
+        {
+          "ProdCode": {
+            "Value": ""
+          },
+          "ProdID": {
+            "Value": ""
+          },
+          "ProdMfr": {
+            "Value": ""
+          },
+          "ProdName": {
+            "Value": ""
+          },
+          "ProdType": {
+            "Value": "Module"
+          }
+        }
+      ],
+      "Warranties": [
+        {
+          "Description": {
+            "Value": ""
+          },
+          "FileFolderURL": {
+            "Value": ""
+          },
+          "WarrantyDuration": {
+            "Value": -1,
+            "Unit": "Y"
+          },
+          "WarrantyEffectiveDate": {
+            "Value": ""
+          },
+          "WarrantyExpirationDate": {
+            "Value": ""
+          },
+          "WarrantyID": {
+            "Value": ""
+          },
+          "WarrantyName": {
+            "Value": ""
+          },
+          "WarrantyType": {
+            "Value": ""
+          }
+        }
+      ],
+      "CellColor": {
+        "Value": ""
+      },
+      "CellCutType": {
+        "Value": ""
+      },
+      "CellTechnologyType": {
+        "Value": "P-PERC"
+      }
+    },
+    "ProdGlazing": {
+      "Description": {
+        "Value": ""
+      },
+      "FileFolderURL": {
+        "Value": ""
+      },
+      "GlazingMaterial": {
+        "Value": ""
+      },
+      "Height": {
+        "Unit": "mm",
+        "Value": -1
+      }
+    },
+    "ShadeResponse": {
+      "Value": ""
+    },
+    "TemperatureCoefficientMaxPowerCurrent": {
+      "Value": -1
+    },
+    "TemperatureCoefficientMaxPowerVoltage": {
+      "Value": -1
+    },
+    "TemperatureCoefficientMaximumPower": {
+      "Value": -0.33
+    },
+    "TemperatureCoefficientOpenCircuitVoltage": {
+      "Value": -0.27
+    },
+    "TemperatureCoefficientShortCircuitCurrent": {
+      "Value": 0.05
+    },
+    "TemperatureMaximumOperating": {
+      "Unit": "Cel",
+      "Value": 85
+    },
+    "TemperatureMinimumOperating": {
+      "Unit": "Cel",
+      "Value": -40
+    },
+    "TemperatureNOCT": {
+      "Unit": "Cel",
+      "Value": -1
+    },
+    "VoltageMaximumSystem": {
+      "Unit": "V",
+      "Value": 1500
+    }
+  }
+}
