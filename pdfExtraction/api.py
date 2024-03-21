@@ -34,9 +34,17 @@ def upload_default():
                     if "Value" in d["ProdModule"][key].keys() and (d["ProdModule"][key]["Value"] == "" or d["ProdModule"][key]["Value"] == -1):
                         del d["ProdModule"][key]["Value"]
             # previous step leaves us with key: {<empty dictionary>}, we want to remove those k:v pairs
+            not_needed = ["AlternativeIdentifiers","Packages", "ProdCertifications", "ProdInstructions", "ProdSpecifications", "SubstituteProducts", "Warranties", "FuseSeriesRating", "IsBIPV"]
             for key in d["ProdModule"].copy():
+                 # if "not_needed" or if value is empty, delete from dict
+                if key in not_needed:
+                    del d["ProdModule"][key]
+                    continue
                 if d["ProdModule"][key] == {}:
                     del d["ProdModule"][key]
+                for cell_key in d["ProdModule"]["ProdCell"].copy():
+                    if cell_key in not_needed: # cleanup ProdCell fields that we don't plan on displaying to the user
+                        del d["ProdModule"]["ProdCell"][cell_key]
             data.append(d)
     return jsonify(data)
 
