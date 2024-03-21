@@ -33,7 +33,7 @@ def upload_default():
                 if type(d["ProdModule"][key]) == dict:
                     if "Value" in d["ProdModule"][key].keys() and (d["ProdModule"][key]["Value"] == "" or d["ProdModule"][key]["Value"] == -1):
                         del d["ProdModule"][key]["Value"]
-            # previous step leaves us with key: {<empty dictionary>}, we want to remove those k:v pairs
+            # previous step leaves us with key: {<empty dictionary>}, remove those k:v pairs
             not_needed = ["AlternativeIdentifiers","Packages", "ProdCertifications", "ProdInstructions", "ProdSpecifications", "SubstituteProducts", "Warranties", "FuseSeriesRating", "IsBIPV"]
             for key in d["ProdModule"].copy():
                  # if "not_needed" or if value is empty, delete from dict
@@ -50,10 +50,13 @@ def upload_default():
 
 @app.route('/upload', methods=['POST'])
 def pdf_to_images():
-    if 'pdf' not in request.files:
-        return jsonify({'error': 'No file part'})
+    file = request.files.get("file") # https://werkzeug.palletsprojects.com/en/3.0.x/datastructures/#werkzeug.datastructures.FileStorage
+    print("filename: ", file.filename)
+    print("type of file obj: ", type(file))
+    if 'file' not in request.files: 
+        return jsonify({'error': 'No file part'}), 400
 
-    pdf_file = request.files['pdf']
+    pdf_file = file
 
     file_name = pdf_file.filename
     file_name = file_name.split('.')[0]

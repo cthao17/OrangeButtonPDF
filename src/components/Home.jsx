@@ -12,16 +12,13 @@ function Home(props) {
 
     // https://www.npmjs.com/package/react-pdf
     // find way to handle/view pdfs in react (look for good packages: well maintained with not too many dependencies)
-    const [fileState, setFileState] = useState( {
-        selectedFile: null,
-        numPages: null,
-        pageNumber: 1
-    })
 
     // https://stackoverflow.com/questions/53132236/file-upload-with-reactjs-and-flask
     // https://stackoverflow.com/questions/60544939/cors-issues-for-flask-api-call-from-react-both-in-localhost 
     const uploadFile = () => {
-        let file = fileState.selectedFile;
+        // let file = fileState.selectedFile;
+        let file = files[0]
+        console.log(file)
         const formData = new FormData();
         formData.append("file", file);
         axios.post("http://127.0.0.1:5000/upload", formData) 
@@ -31,6 +28,8 @@ function Home(props) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        // console.log(e.target.files[0]);
+        console.log(files);
         // parse form, get results
         // redirect to results
         uploadFile();
@@ -49,6 +48,8 @@ function Home(props) {
         }
     
         Array.from(fileList).forEach(file => {
+            console.log(file);
+            console.log(typeof(file));
             if (!file.name.toUpperCase().endsWith(".PDF")) {
                 setShowInvalid(true);
                 return;
@@ -58,7 +59,7 @@ function Home(props) {
                 setShowDuplicate(true);
                 return;
             }
-    
+            
             setShowSuccess(true);
             if (mode === 'a') {
                 // Add file to the existing files list if mode is 'a'
@@ -80,7 +81,6 @@ function Home(props) {
         e.preventDefault()
     }
 
-    console.log(fileState.selectedFile);
     return (<>
         <ToastContainer position="top-end">
             <Toast onClose={() => setShowSuccess(false)} show={showSuccess} delay={3000} bg = "success" animation={true} autohide>
