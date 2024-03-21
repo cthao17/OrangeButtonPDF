@@ -13,6 +13,33 @@ app = Flask(__name__)
 
 CORS(app, resources={"/upload": {"origins": "*"}}) # https://flask-cors.readthedocs.io/en/latest/
 
+@app.route("/upload-default", methods=["POST"])
+def upload_default():
+    def getJSONFilePaths():
+        paths = []
+        for file in os.listdir("./datasheets/train_test/Sheet1/output"):
+            if file.endswith(".json"):
+                paths.append(f"./datasheets/train_test/Sheet1/output/{file}")
+        return paths
+
+    filepaths = getJSONFilePaths()
+
+    data = []
+    for file in filepaths:
+        with open(file, "r") as f:
+            d = json.load(f)
+            # removes the "Value" key from the dictionary if it is empty or -1
+            for key in d["ProdModule"]:
+                if type(d["ProdModule"][key]) == dict:
+                    if "Value" in d["ProdModule"][key].keys() and (d["ProdModule"][key]["Value"] == "" or d["ProdModule"][key]["Value"] == -1):
+                        del d["ProdModule"][key]["Value"]
+            # previous step leaves us with key: {<empty dictionary>}, we want to remove those k:v pairs
+            for key in d["ProdModule"].copy():
+                if d["ProdModule"][key] == {}:
+                    del d["ProdModule"][key]
+            data.append(d)
+    return jsonify(data)
+
 @app.route('/upload', methods=['POST'])
 def pdf_to_images():
     if 'pdf' not in request.files:
