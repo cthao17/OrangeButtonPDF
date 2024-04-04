@@ -11,7 +11,7 @@ from vertexai.generative_models import GenerativeModel, Part, GenerationConfig
 
 app = Flask(__name__)
 
-CORS(app, resources={"/upload": {"origins": "*"}}) # https://flask-cors.readthedocs.io/en/latest/
+CORS(app, resources={"/upload-default": {"origins": "*"}}) # https://flask-cors.readthedocs.io/en/latest/
 
 @app.route("/upload-default", methods=["POST"])
 def upload_default():
