@@ -19,7 +19,7 @@ function PreviewModal(props){
                         <Modal.Title>Preview</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <PDFView pdfData={props.pdfData}/>
+                        <PDFView pdfdata={props.pdfdata}/>
                     </Modal.Body>
                 </Modal>
             </Col>

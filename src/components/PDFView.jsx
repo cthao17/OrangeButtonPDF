@@ -1,8 +1,10 @@
 import {Document, Page, pdfjs } from 'react-pdf';
 import { useState } from 'react';
-
-function PDFView({pdfData}) {
-    const [pdf, setPdf] = useState(null);
+import 'react-pdf/dist/Page/AnnotationLayer.css';
+import 'react-pdf/dist/Page/TextLayer.css';
+// https://github.com/wojtekmaj/react-pdf#support-for-text-layer
+// 
+function PDFView({pdfdata}) {
     const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1);
 
@@ -13,7 +15,7 @@ function PDFView({pdfData}) {
     }
     return (
         <div id = "display-pdf" style={{maxWidth: "100%"}}>
-            <Document file={pdfData} onLoadSuccess={onDocumentLoadSuccess}>
+            <Document file={pdfdata} onLoadSuccess={onDocumentLoadSuccess}>
                 <Page pageNumber={pageNumber} />
             </Document>
             <p>

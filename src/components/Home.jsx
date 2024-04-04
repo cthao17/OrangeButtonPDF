@@ -8,7 +8,7 @@ function Home(props) {
     const [showSuccess, setShowSuccess] = useState(false);
     const [showInvalid, setShowInvalid] = useState(false);
     const [showDuplicate, setShowDuplicate] = useState(false);
-    const [pdfData, setPdfData] = useState(null);
+    const [pdfdata, setpdfdata] = useState(null);
     // for popup preview modal
     const [modalVisible, setModalVisible] = useState(false);
     const handleClose = () => setModalVisible(false);
@@ -31,9 +31,7 @@ function Home(props) {
         formData.append("file", file);
         axios.post("http://127.0.0.1:5000/upload-default", formData) 
             .then(res => () => {
-                console.log(res);
                 setData(res.data);
-                console.log(data);
             })
             .catch(err => console.error(err));
     }
@@ -60,8 +58,6 @@ function Home(props) {
         }
     
         Array.from(fileList).forEach(file => {
-            console.log(file);
-            console.log(typeof(file));
             if (!file.name.toUpperCase().endsWith(".PDF")) {
                 setShowInvalid(true);
                 return;
@@ -95,11 +91,7 @@ function Home(props) {
 
     const onFileLoad = (e) => {
         const file = e.target.files[0];
-        console.log(e)
-        console.log(e.target);
-        console.log(e.target.files[0]);
-        setPdfData(file);
-        console.log("file: " + file);
+        setpdfdata(file);
     }
 
     return (<>
@@ -173,8 +165,7 @@ function Home(props) {
             <PreviewModal 
                 show = {modalVisible}
                 onHide={handleClose}
-                pdfData={pdfData}
-                files={files}
+                pdfdata={pdfdata}
             />
             <button id="submit" onClick={handleSubmit}>
                 Submit
