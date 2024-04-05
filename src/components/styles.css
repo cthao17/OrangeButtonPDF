@@ -30,7 +30,6 @@
 }
 #wrapper{
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     min-height: 90vh;
@@ -123,18 +122,18 @@
 
 /*HERE is the Drag and Drop CSS */
 #list {
-    width: 50%;
+    width: 100%;
     padding: 15px;
     color: black;
-    min-height: 300px;
+    min-height: 150px;
     max-height: 300px;
     overflow-y: auto;
-  }
-  
-  #form {
+}
+
+#form {
     background-color: #121d2f;
-    width: 60%;
-    padding: 200px;
+    width: 75%;
+    padding: 10vw;
     max-height: 400px;
     display: flex;
     flex-direction: column;
@@ -144,17 +143,17 @@
     align-self: center;
     box-sizing: border-box;
     border-radius: 10px;
-  }
+    margin-top: 50px;
+}
   
   #form i,
   #form p {
     color: white;
     width: 100%;
     text-align: center;
+}
 
-  }
-
-  #removeButton {
+#removeButton {
     margin-bottom: 5px;
     margin-left: 10px;
     background-color:#ff0909bd;
@@ -163,19 +162,19 @@
     color: white;
 }
 
-  #form button {
+#form button {
     background: #0d5eba;
     color: white;
     border: 1px solid black;
-    padding: 2px 8px;
-    width: 100%;
+    padding: 6px 20px;
+    width: 60%;
     border-radius: 10px;
+}
 
-  }
-  
-  #submit {
+#submit {
     width: 20%;
-    margin: auto;  
+    margin-top: 150px;
+    margin-bottom: 20px;  
     border-radius: 10px;
     align-self: center;
     background-color:#0d5eba;
