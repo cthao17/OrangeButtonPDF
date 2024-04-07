@@ -14,8 +14,8 @@ function PDFView({pdfdata}) {
         setNumPages(numPages);
     }
     return (
-        <div id = "display-pdf" style={{maxWidth: "100%"}}>
-            <Document file={pdfdata} onLoadSuccess={onDocumentLoadSuccess}>
+        <div id = "display-pdf" style={{width: "100%"}}>
+            <Document file={pdfdata} onLoadSuccess={onDocumentLoadSuccess} style={{maxWidth: "100%"}}>
                 <Page pageNumber={pageNumber} />
             </Document>
             <p>
