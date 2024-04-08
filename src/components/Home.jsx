@@ -159,6 +159,7 @@ function Home(props) {
                     event.preventDefault();
                     handleShow(true);
                 }}
+                disabled={files.length === 0}
                 >
                 preview
             </button>

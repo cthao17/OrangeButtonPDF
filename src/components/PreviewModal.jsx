@@ -1,4 +1,3 @@
-import PDFView from "./PDFView";
 import { Modal, Row, Col } from "react-bootstrap";
 import {Document, Page, pdfjs } from 'react-pdf';
 // import {Document, Page} from '@react-pdf/renderer';
@@ -12,6 +11,7 @@ function PreviewModal(props){
     const [pageNumber, setPageNumber] = useState(1);
 
     const handleClose = () => {
+        setPageNumber(1);
         props.onHide();
     }
     const nextPage = () => {
