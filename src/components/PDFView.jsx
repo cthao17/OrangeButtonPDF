@@ -1,4 +1,5 @@
 import {Document, Page, pdfjs } from 'react-pdf';
+// import {Document, Page} from '@react-pdf/renderer';
 import { useState } from 'react';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
@@ -10,14 +11,15 @@ function PDFView({pdfdata}) {
 
     pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
-    function onDocumentLoadSuccess({numPages}) {
-        setNumPages(numPages);
-    }
     return (
-        <div id = "display-pdf" style={{width: "100%"}}>
-            <Document file={pdfdata} onLoadSuccess={onDocumentLoadSuccess} style={{maxWidth: "100%"}}>
-                <Page pageNumber={pageNumber} />
-            </Document>
+        <div id = "display-pdf" style={{width: "100%", height: "70vh", overflow: "scroll"}}>
+                <Document file={pdfdata} 
+                    onLoadSuccess={(data) => {
+                        setNumPages(data.numPages);
+                        }}
+                >
+                    <Page pageNumber={pageNumber} />
+                </Document>
             <p>
                 Page {pageNumber} of {numPages}
             </p>
