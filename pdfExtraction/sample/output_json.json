@@ -1,0 +1,625 @@
+{
+    "0": {
+        "ProdModule": {
+            "AlternativeIdentifiers": [],
+            "Description": null,
+            "Dimension": {
+                "Height": {
+                    "Unit": "mm",
+                    "Value": -1
+                },
+                "Length": {
+                    "Unit": "mm",
+                    "Value": -1
+                },
+                "Mass": {
+                    "Unit": "kg",
+                    "Value": -1
+                },
+                "Weight": {
+                    "Unit": "lb",
+                    "Value": -1
+                },
+                "Width": {
+                    "Unit": "mm",
+                    "Value": -1
+                }
+            },
+            "FileFolderURL": null,
+            "ManufacturerUPC": null,
+            "Packages": [],
+            "ProdCertifications": [
+                {
+                    "CertificateValue": null,
+                    "CertificationAgency": {
+                        "Addresses": [],
+                        "CertificationAgencyName": null,
+                        "Contacts": [],
+                        "Description": null
+                    },
+                    "CertificationDate": null,
+                    "CertificationExpirationDate": null,
+                    "CertificationName": "PID-Free",
+                    "CertificationStandard": null,
+                    "Description": null,
+                    "FileFolderURL": null,
+                    "Firmware": null
+                },
+                {
+                    "CertificateValue": null,
+                    "CertificationAgency": {
+                        "Addresses": [],
+                        "CertificationAgencyName": null,
+                        "Contacts": [],
+                        "Description": null
+                    },
+                    "CertificationDate": null,
+                    "CertificationExpirationDate": null,
+                    "CertificationName": "Thresher Test",
+                    "CertificationStandard": null,
+                    "Description": null,
+                    "FileFolderURL": null,
+                    "Firmware": null
+                },
+                {
+                    "CertificateValue": null,
+                    "CertificationAgency": {
+                        "Addresses": [],
+                        "CertificationAgencyName": null,
+                        "Contacts": [],
+                        "Description": null
+                    },
+                    "CertificationDate": null,
+                    "CertificationExpirationDate": null,
+                    "CertificationName": "Long-Term Sequential Test",
+                    "CertificationStandard": null,
+                    "Description": null,
+                    "FileFolderURL": null,
+                    "Firmware": null
+                },
+                {
+                    "CertificateValue": null,
+                    "CertificationAgency": {
+                        "Addresses": [],
+                        "CertificationAgencyName": null,
+                        "Contacts": [],
+                        "Description": null
+                    },
+                    "CertificationDate": null,
+                    "CertificationExpirationDate": null,
+                    "CertificationName": "ATLAS 25+1",
+                    "CertificationStandard": null,
+                    "Description": null,
+                    "FileFolderURL": null,
+                    "Firmware": null
+                },
+                {
+                    "CertificateValue": null,
+                    "CertificationAgency": {
+                        "Addresses": [],
+                        "CertificationAgencyName": null,
+                        "Contacts": [],
+                        "Description": null
+                    },
+                    "CertificationDate": null,
+                    "CertificationExpirationDate": null,
+                    "CertificationName": "IEC 61215/61646 1500V",
+                    "CertificationStandard": null,
+                    "Description": null,
+                    "FileFolderURL": null,
+                    "Firmware": null
+                },
+                {
+                    "CertificateValue": null,
+                    "CertificationAgency": {
+                        "Addresses": [],
+                        "CertificationAgencyName": null,
+                        "Contacts": [],
+                        "Description": null
+                    },
+                    "CertificationDate": null,
+                    "CertificationExpirationDate": null,
+                    "CertificationName": "IEC 61730 1500V",
+                    "CertificationStandard": null,
+                    "Description": null,
+                    "FileFolderURL": null,
+                    "Firmware": null
+                },
+                {
+                    "CertificateValue": null,
+                    "CertificationAgency": {
+                        "Addresses": [],
+                        "CertificationAgencyName": null,
+                        "Contacts": [],
+                        "Description": null
+                    },
+                    "CertificationDate": null,
+                    "CertificationExpirationDate": null,
+                    "CertificationName": "CE",
+                    "CertificationStandard": null,
+                    "Description": null,
+                    "FileFolderURL": null,
+                    "Firmware": null
+                },
+                {
+                    "CertificateValue": null,
+                    "CertificationAgency": {
+                        "Addresses": [],
+                        "CertificationAgencyName": null,
+                        "Contacts": [],
+                        "Description": null
+                    },
+                    "CertificationDate": null,
+                    "CertificationExpirationDate": null,
+                    "CertificationName": "IEC 61701 Salt Mist Corrosion",
+                    "CertificationStandard": null,
+                    "Description": null,
+                    "FileFolderURL": null,
+                    "Firmware": null
+                },
+                {
+                    "CertificateValue": null,
+                    "CertificationAgency": {
+                        "Addresses": [],
+                        "CertificationAgencyName": null,
+                        "Contacts": [],
+                        "Description": null
+                    },
+                    "CertificationDate": null,
+                    "CertificationExpirationDate": null,
+                    "CertificationName": "IEC 60068-2-68 Dust and Sand Resistance",
+                    "CertificationStandard": null,
+                    "Description": null,
+                    "FileFolderURL": null,
+                    "Firmware": null
+                },
+                {
+                    "CertificateValue": null,
+                    "CertificationAgency": {
+                        "Addresses": [],
+                        "CertificationAgencyName": null,
+                        "Contacts": [],
+                        "Description": null
+                    },
+                    "CertificationDate": null,
+                    "CertificationExpirationDate": null,
+                    "CertificationName": "ISO 9001:2015",
+                    "CertificationStandard": null,
+                    "Description": null,
+                    "FileFolderURL": null,
+                    "Firmware": null
+                },
+                {
+                    "CertificateValue": null,
+                    "CertificationAgency": {
+                        "Addresses": [],
+                        "CertificationAgencyName": null,
+                        "Contacts": [],
+                        "Description": null
+                    },
+                    "CertificationDate": null,
+                    "CertificationExpirationDate": null,
+                    "CertificationName": "ISO 14001:2015",
+                    "CertificationStandard": null,
+                    "Description": null,
+                    "FileFolderURL": null,
+                    "Firmware": null
+                },
+                {
+                    "CertificateValue": null,
+                    "CertificationAgency": {
+                        "Addresses": [],
+                        "CertificationAgencyName": null,
+                        "Contacts": [],
+                        "Description": null
+                    },
+                    "CertificationDate": null,
+                    "CertificationExpirationDate": null,
+                    "CertificationName": "UL 1703 Listed Fire Performance PV Module Type 102",
+                    "CertificationStandard": null,
+                    "Description": null,
+                    "FileFolderURL": null,
+                    "Firmware": null
+                },
+                {
+                    "CertificateValue": null,
+                    "CertificationAgency": {
+                        "Addresses": [],
+                        "CertificationAgencyName": null,
+                        "Contacts": [],
+                        "Description": null
+                    },
+                    "CertificationDate": null,
+                    "CertificationExpirationDate": null,
+                    "CertificationName": "CSI Eligible",
+                    "CertificationStandard": null,
+                    "Description": null,
+                    "FileFolderURL": null,
+                    "Firmware": null
+                },
+                {
+                    "CertificateValue": null,
+                    "CertificationAgency": {
+                        "Addresses": [],
+                        "CertificationAgencyName": null,
+                        "Contacts": [],
+                        "Description": null
+                    },
+                    "CertificationDate": null,
+                    "CertificationExpirationDate": null,
+                    "CertificationName": "FSEC",
+                    "CertificationStandard": null,
+                    "Description": null,
+                    "FileFolderURL": null,
+                    "Firmware": null
+                },
+                {
+                    "CertificateValue": null,
+                    "CertificationAgency": {
+                        "Addresses": [],
+                        "CertificationAgencyName": null,
+                        "Contacts": [],
+                        "Description": null
+                    },
+                    "CertificationDate": null,
+                    "CertificationExpirationDate": null,
+                    "CertificationName": "MCS",
+                    "CertificationStandard": null,
+                    "Description": null,
+                    "FileFolderURL": null,
+                    "Firmware": null
+                },
+                {
+                    "CertificateValue": null,
+                    "CertificationAgency": {
+                        "Addresses": [],
+                        "CertificationAgencyName": null,
+                        "Contacts": [],
+                        "Description": null
+                    },
+                    "CertificationDate": null,
+                    "CertificationExpirationDate": null,
+                    "CertificationName": "CEC Listed (Australia)",
+                    "CertificationStandard": null,
+                    "Description": null,
+                    "FileFolderURL": null,
+                    "Firmware": null
+                },
+                {
+                    "CertificateValue": null,
+                    "CertificationAgency": {
+                        "Addresses": [],
+                        "CertificationAgencyName": null,
+                        "Contacts": [],
+                        "Description": null
+                    },
+                    "CertificationDate": null,
+                    "CertificationExpirationDate": null,
+                    "CertificationName": "SII",
+                    "CertificationStandard": null,
+                    "Description": null,
+                    "FileFolderURL": null,
+                    "Firmware": null
+                },
+                {
+                    "CertificateValue": null,
+                    "CertificationAgency": {
+                        "Addresses": [],
+                        "CertificationAgencyName": null,
+                        "Contacts": [],
+                        "Description": null
+                    },
+                    "CertificationDate": null,
+                    "CertificationExpirationDate": null,
+                    "CertificationName": "InMetro",
+                    "CertificationStandard": null,
+                    "Description": null,
+                    "FileFolderURL": null,
+                    "Firmware": null
+                },
+                {
+                    "CertificateValue": null,
+                    "CertificationAgency": {
+                        "Addresses": [],
+                        "CertificationAgencyName": null,
+                        "Contacts": [],
+                        "Description": null
+                    },
+                    "CertificationDate": null,
+                    "CertificationExpirationDate": null,
+                    "CertificationName": "CULUS",
+                    "CertificationStandard": null,
+                    "Description": null,
+                    "FileFolderURL": null,
+                    "Firmware": null
+                },
+                {
+                    "CertificateValue": null,
+                    "CertificationAgency": {
+                        "Addresses": [],
+                        "CertificationAgencyName": null,
+                        "Contacts": [],
+                        "Description": null
+                    },
+                    "CertificationDate": null,
+                    "CertificationExpirationDate": null,
+                    "CertificationName": "CE",
+                    "CertificationStandard": null,
+                    "Description": null,
+                    "FileFolderURL": null,
+                    "Firmware": null
+                },
+                {
+                    "CertificateValue": null,
+                    "CertificationAgency": {
+                        "Addresses": [],
+                        "CertificationAgencyName": null,
+                        "Contacts": [],
+                        "Description": null
+                    },
+                    "CertificationDate": null,
+                    "CertificationExpirationDate": null,
+                    "CertificationName": "CELEC",
+                    "CertificationStandard": null,
+                    "Description": null,
+                    "FileFolderURL": null,
+                    "Firmware": null
+                }
+            ],
+            "End-of-Life Recycling": "Recycling services available through First Solar's industry-leading recycling program or customer-selected third party.",
+            "Warranty": {
+                "Linear Performance Warranty": "25 Years",
+                "Product Warranty": "10 Years"
+            }
+        }
+    },
+    "1": {
+        "ProdModule": {
+            "AlternativeIdentifiers": [],
+            "Description": null,
+            "Dimension": {
+                "Height": {
+                    "Unit": null,
+                    "Value": -1
+                },
+                "Length": {
+                    "Unit": "mm",
+                    "Value": 1200
+                },
+                "Mass": {
+                    "Unit": "kg",
+                    "Value": 12
+                },
+                "Weight": {
+                    "Unit": "lb",
+                    "Value": -1
+                },
+                "Width": {
+                    "Unit": "mm",
+                    "Value": 600
+                }
+            },
+            "FileFolderURL": null,
+            "ManufacturerUPC": null,
+            "Packages": [],
+            "ProdCertifications": [],
+            "ProdCode": "FS-4110-3",
+            "ProdDatasheet": null,
+            "ProdID": null,
+            "ProdInstructions": [],
+            "ProdMfr": null,
+            "ProdName": null,
+            "ProdSpecifications": [
+                {
+                    "Description": null,
+                    "SpecificationName": "Thickness",
+                    "SpecificationType": null,
+                    "SpecificationUnit": "mm",
+                    "SpecificationValue": "6.8"
+                },
+                {
+                    "Description": null,
+                    "SpecificationName": "Area",
+                    "SpecificationType": null,
+                    "SpecificationUnit": "m\u00b2",
+                    "SpecificationValue": "0.72"
+                },
+                {
+                    "Description": null,
+                    "SpecificationName": "Individual Leadwire",
+                    "SpecificationType": null,
+                    "SpecificationUnit": null,
+                    "SpecificationValue": "2.5mm\u00b2, 657mm"
+                },
+                {
+                    "Description": null,
+                    "SpecificationName": "Connectors",
+                    "SpecificationType": null,
+                    "SpecificationUnit": null,
+                    "SpecificationValue": "MC4 or MC4-EVO 29"
+                },
+                {
+                    "Description": null,
+                    "SpecificationName": "Bypass Diode",
+                    "SpecificationType": null,
+                    "SpecificationUnit": null,
+                    "SpecificationValue": "None"
+                },
+                {
+                    "Description": null,
+                    "SpecificationName": "Cell Type",
+                    "SpecificationType": null,
+                    "SpecificationUnit": null,
+                    "SpecificationValue": "Thin-film CdTe semiconductor, up to 216 cells"
+                },
+                {
+                    "Description": null,
+                    "SpecificationName": "Frame Material",
+                    "SpecificationType": null,
+                    "SpecificationUnit": null,
+                    "SpecificationValue": "None"
+                },
+                {
+                    "Description": null,
+                    "SpecificationName": "Front Glass",
+                    "SpecificationType": null,
+                    "SpecificationUnit": null,
+                    "SpecificationValue": "3.2mm heat strengthened"
+                },
+                {
+                    "Description": null,
+                    "SpecificationName": "Back Glass",
+                    "SpecificationType": null,
+                    "SpecificationUnit": null,
+                    "SpecificationValue": "3.2mm tempered"
+                },
+                {
+                    "Description": null,
+                    "SpecificationName": "Encapsulation",
+                    "SpecificationType": null,
+                    "SpecificationUnit": null,
+                    "SpecificationValue": "Laminate material with edge seal"
+                },
+                {
+                    "Description": null,
+                    "SpecificationName": "Load Rating",
+                    "SpecificationType": null,
+                    "SpecificationUnit": null,
+                    "SpecificationValue": "2400Pa 10"
+                },
+                {
+                    "Description": null,
+                    "SpecificationName": "Nominal Power (-0/+5W)",
+                    "SpecificationType": null,
+                    "SpecificationUnit": null,
+                    "SpecificationValue": "110.0"
+                },
+                {
+                    "Description": null,
+                    "SpecificationName": "Voltage at PMAX",
+                    "SpecificationType": null,
+                    "SpecificationUnit": null,
+                    "SpecificationValue": "63.5"
+                },
+                {
+                    "Description": null,
+                    "SpecificationName": "Current at PMAX",
+                    "SpecificationType": null,
+                    "SpecificationUnit": null,
+                    "SpecificationValue": "1.31"
+                },
+                {
+                    "Description": null,
+                    "SpecificationName": "Open Circuit Voltage",
+                    "SpecificationType": null,
+                    "SpecificationUnit": null,
+                    "SpecificationValue": "81.6"
+                },
+                {
+                    "Description": null,
+                    "SpecificationName": "Short Circuit Current",
+                    "SpecificationType": null,
+                    "SpecificationUnit": null,
+                    "SpecificationValue": "1.47"
+                },
+                {
+                    "Description": null,
+                    "SpecificationName": "Module Efficiency",
+                    "SpecificationType": null,
+                    "SpecificationUnit": null,
+                    "SpecificationValue": "15.3"
+                },
+                {
+                    "Description": null,
+                    "SpecificationName": "Maximum System Voltage",
+                    "SpecificationType": null,
+                    "SpecificationUnit": null,
+                    "SpecificationValue": "1500 7,8"
+                },
+                {
+                    "Description": null,
+                    "SpecificationName": "Limiting Reverse Current",
+                    "SpecificationType": null,
+                    "SpecificationUnit": null,
+                    "SpecificationValue": "4.0"
+                },
+                {
+                    "Description": null,
+                    "SpecificationName": "Maximum Series Fuse",
+                    "SpecificationType": null,
+                    "SpecificationUnit": null,
+                    "SpecificationValue": "4.0"
+                },
+                {
+                    "Description": null,
+                    "SpecificationName": "Nominal Power",
+                    "SpecificationType": null,
+                    "SpecificationUnit": null,
+                    "SpecificationValue": "83.2"
+                },
+                {
+                    "Description": null,
+                    "SpecificationName": "Module Operating Temperature Range",
+                    "SpecificationType": null,
+                    "SpecificationUnit": null,
+                    "SpecificationValue": "-40 to +85"
+                },
+                {
+                    "Description": null,
+                    "SpecificationName": "Temperature Coefficient of PMPP",
+                    "SpecificationType": null,
+                    "SpecificationUnit": null,
+                    "SpecificationValue": "-0.28%/\u00b0C"
+                },
+                {
+                    "Description": null,
+                    "SpecificationName": "Temperature Coefficient of Voc",
+                    "SpecificationType": null,
+                    "SpecificationUnit": null,
+                    "SpecificationValue": "-0.28%/\u00b0C"
+                },
+                {
+                    "Description": null,
+                    "SpecificationName": "Temperature Coefficient of Isc",
+                    "SpecificationType": null,
+                    "SpecificationUnit": null,
+                    "SpecificationValue": "+0.04%/\u00b0C"
+                }
+            ],
+            "ProdType": "Module",
+            "SubstituteProducts": [],
+            "Warranties": []
+        },
+        "ProdGlazing": {
+            "Description": null,
+            "FileFolderURL": null,
+            "GlazingMaterial": null,
+            "Height": {
+                "Unit": "mm",
+                "Value": -1
+            }
+        },
+        "ShadeResponse": null,
+        "TemperatureCoefficientMaxPowerCurrent": null,
+        "TemperatureCoefficientMaxPowerVoltage": null,
+        "TemperatureCoefficientMaximumPower": null,
+        "TemperatureCoefficientOpenCircuitVoltage": null,
+        "TemperatureCoefficientShortCircuitCurrent": null,
+        "TemperatureMaximumOperating": {
+            "Unit": "Cel",
+            "Value": -1
+        },
+        "TemperatureMinimumOperating": {
+            "Unit": "Cel",
+            "Value": -1
+        },
+        "TemperatureNOCT": {
+            "Unit": "Cel",
+            "Value": -1
+        },
+        "VoltageMaximumSystem": {
+            "Unit": "V",
+            "Value": -1
+        }
+    }
+}
