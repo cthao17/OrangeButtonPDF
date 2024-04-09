@@ -131,8 +131,8 @@ function Home(props) {
                         </ul>
                     )}
             </div>
-            <div
-                id="form"
+            
+            <div id="form"
                 onDragEnter={preventBubbling}
                 onDragOver={preventBubbling}
                 onDrop={(e) => {
@@ -154,23 +154,27 @@ function Home(props) {
                 />
                 <button onClick={handleClick}>Choose Files</button>
             </div>
-            <button
-                onClick={(event) => {
-                    event.preventDefault();
-                    handleShow(true);
-                }}
-                disabled={files.length === 0}
-                >
-                preview
-            </button>
-            <PreviewModal 
-                show = {modalVisible}
-                onHide={handleClose}
-                pdfdata={pdfdata}
-            />
-            <button id="submit" onClick={handleSubmit}>
-                Submit
-            </button>
+            <div id="upload-bottom">
+                <button id="previewbtn"
+                    onClick={(event) => {
+                        event.preventDefault();
+                        handleShow(true);
+                    }}
+                    disabled={files.length === 0}
+                    >
+                    Preview
+                </button>
+                <PreviewModal 
+                    show = {modalVisible}
+                    onHide={handleClose}
+                    pdfdata={pdfdata}
+                />
+                <button id="submit" onClick={handleSubmit}>
+                    Submit
+                </button>
+            </div>
+            
+            
         </div>
         
        
