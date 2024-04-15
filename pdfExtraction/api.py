@@ -60,10 +60,21 @@ def runGemini(image_paths, successful: bool, project_id: str, location: str):
         vertexai.init(project=project_id, location=location)
         generation_config = GenerationConfig(temperature=0.3)
         multimodal_model = GenerativeModel("gemini-1.0-pro-vision", generation_config=generation_config)
-        query = '''extract the various tables from the document and convert them to json.
-                    if there are no tables, extract the company name, as well as any relevant data and structure it in JSON
-                    You are hallucinating some data. If 2 models are stacked on top of each other, they are the same.
-                    Seperate the JSON by model. Make the json look like this. If you are missing data, just leave it blank. '''
+        query = '''Process the document:
+                        Extract Tables:
+                            Identify and extract all tables within the document.
+                            Convert each table to a separate JSON object.
+                            If a table cell is empty, use null in the JSON.
+                        Extract Additional Data (if no tables):
+                            If no tables are found, extract the company name from the document (if present).
+                            Look for other relevant data points (specify desired data points if possible).
+                            Structure all extracted data (company name and other relevant data) into a single JSON object following the provided structure.
+                        Model Handling:
+                            Assume two stacked models are equivalent but keep them structured as seperate models.
+                            Provide separate JSON outputs for each model encountered (if applicable).
+                        Error Handling:
+                            If specific data points are missing, leave the corresponding field in the JSON object as null.
+                '''
         for image_path in image_paths:
             with open(image_path, 'rb') as image_file:
                 image_data = image_file.read()
@@ -92,9 +103,17 @@ def structureOutput(output, successful: bool, project_id: str, location: str):
         count = 0
         for out in output:
             prompt = f'''
-            Given this JSON, {output[out]}, structure it as closely to this as possible: {loaded_json_data} and return the structured JSON.
-            Use double quotes for the strings. Make the connection between the values in the orginal json and what it is supposed to correspond to
-            in the formatted JSON. If there is no corresponding value, leave it blank.
+            Restructure JSON based on Template:
+                Given two JSON objects:
+
+                    Input JSON: This is the output from the previous call and can be accessed through {output[out]}.
+                    Template JSON: This defines the desired structure for the output ({loaded_json_data}).
+                
+                Your task is to transform the input JSON to match the structure of the template JSON as closely as possible.
+
+                    Use double quotes for all strings in the output JSON.
+                Map corresponding values from the input JSON to the keys in the template JSON.
+                If a key from the template JSON is missing in the input JSON, use the value -1 as a placeholder.
             '''
             response = multimodal_model.generate_content(prompt)
             print(response.text)
