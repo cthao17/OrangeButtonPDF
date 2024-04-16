@@ -3,11 +3,18 @@ import "./styles.css";
 import { useState, useRef } from "react";
 import {Toast, ToastContainer} from "react-bootstrap";
 import {useNavigate} from 'react-router-dom'
-
+import PreviewModal from "./PreviewModal";
 function Home(props) {
     const [showSuccess, setShowSuccess] = useState(false);
     const [showInvalid, setShowInvalid] = useState(false);
     const [showDuplicate, setShowDuplicate] = useState(false);
+    const [pdfdata, setpdfdata] = useState(null);
+    // for popup preview modal
+    const [modalVisible, setModalVisible] = useState(false);
+    const handleClose = () => setModalVisible(false);
+    const handleShow = () => setModalVisible(true);
+    // response data from api
+    const [data, setData] = useState([]);
     const navigate = useNavigate();
 
     // https://www.npmjs.com/package/react-pdf
@@ -18,11 +25,14 @@ function Home(props) {
     const uploadFile = () => {
         // let file = fileState.selectedFile;
         let file = files[0]
+        console.log(typeof(file));
         console.log(file)
         const formData = new FormData();
         formData.append("file", file);
-        axios.post("http://127.0.0.1:5000/upload", formData) 
-            .then(res => console.log(res))
+        axios.post("http://127.0.0.1:5000/upload-default", formData) 
+            .then(res => () => {
+                setData(res.data);
+            })
             .catch(err => console.error(err));
     }
 
@@ -48,8 +58,6 @@ function Home(props) {
         }
     
         Array.from(fileList).forEach(file => {
-            console.log(file);
-            console.log(typeof(file));
             if (!file.name.toUpperCase().endsWith(".PDF")) {
                 setShowInvalid(true);
                 return;
@@ -79,6 +87,11 @@ function Home(props) {
     const preventBubbling = (e) => {
         e.stopPropagation()
         e.preventDefault()
+    }
+
+    const onFileLoad = (e) => {
+        const file = e.target.files[0];
+        setpdfdata(file);
     }
 
     return (<>
@@ -118,8 +131,8 @@ function Home(props) {
                         </ul>
                     )}
             </div>
-            <div
-                id="form"
+            
+            <div id="form"
                 onDragEnter={preventBubbling}
                 onDragOver={preventBubbling}
                 onDrop={(e) => {
@@ -134,14 +147,34 @@ function Home(props) {
                     type="file"
                     multiple
                     style={{ display: 'none' }}
-                    onChange={(e) => handleFiles(e.target.files, 'a')}
+                    onChange={(e) => {
+                        handleFiles(e.target.files, 'a');
+                        onFileLoad(e);
+                    }}
                 />
                 <button onClick={handleClick}>Choose Files</button>
             </div>
-
-            <button id="submit" onClick={handleSubmit}>
-                Submit
-            </button>
+            <div id="upload-bottom">
+                <button id="previewbtn"
+                    onClick={(event) => {
+                        event.preventDefault();
+                        handleShow(true);
+                    }}
+                    disabled={files.length === 0}
+                    >
+                    Preview
+                </button>
+                <PreviewModal 
+                    show = {modalVisible}
+                    onHide={handleClose}
+                    pdfdata={pdfdata}
+                />
+                <button id="submit" onClick={handleSubmit}>
+                    Submit
+                </button>
+            </div>
+            
+            
         </div>
         
        
