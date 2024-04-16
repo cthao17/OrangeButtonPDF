@@ -1,17 +1,27 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from google.cloud import storage
-from flask_cors import CORS, cross_origin
+from google.cloud import aiplatform
+import google.generativeai as genai
 import fitz
 import tempfile
 import os
-import vertexai
 import json
-from vertexai.generative_models import GenerativeModel, Part, GenerationConfig
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 
-CORS(app, resources={"/upload": {"origins": "*"}}) # https://flask-cors.readthedocs.io/en/latest/
+loaded_json_data = None
+
+
+load_dotenv()
+api_key = os.environ["GOOGLE_API_KEY"]
+location = os.environ['GOOGLE_LOCATION_ID']
+project = os.environ['GOOGLE_PROJECT_ID']
+
+aiplatform.init(project=project, location=location)
+genai.configure(api_key=api_key)
+
+CORS(app, resources={"/upload": {"origins": "*"}})
 
 @app.route("/upload-default", methods=["POST"])
 def upload_default():
@@ -33,56 +43,37 @@ def upload_default():
                 if type(d["ProdModule"][key]) == dict:
                     if "Value" in d["ProdModule"][key].keys() and (d["ProdModule"][key]["Value"] == "" or d["ProdModule"][key]["Value"] == -1):
                         del d["ProdModule"][key]["Value"]
-            # previous step leaves us with key: {<empty dictionary>}, remove those k:v pairs
-            not_needed = ["AlternativeIdentifiers","Packages", "ProdCertifications", "ProdInstructions", "ProdSpecifications", "SubstituteProducts", "Warranties", "FuseSeriesRating", "IsBIPV"]
+            # previous step leaves us with key: {<empty dictionary>}, we want to remove those k:v pairs
             for key in d["ProdModule"].copy():
-                 # if "not_needed" or if value is empty, delete from dict
-                if key in not_needed:
-                    del d["ProdModule"][key]
-                    continue
                 if d["ProdModule"][key] == {}:
                     del d["ProdModule"][key]
-                for cell_key in d["ProdModule"]["ProdCell"].copy():
-                    if cell_key in not_needed: # cleanup ProdCell fields that we don't plan on displaying to the user
-                        del d["ProdModule"]["ProdCell"][cell_key]
             data.append(d)
     return jsonify(data)
 
+
 @app.route('/upload', methods=['POST'])
 def pdf_to_images():
-    file = request.files.get("file") # https://werkzeug.palletsprojects.com/en/3.0.x/datastructures/#werkzeug.datastructures.FileStorage
-    print("filename: ", file.filename)
-    print("type of file obj: ", type(file))
-    if 'file' not in request.files: 
-        return jsonify({'error': 'No file part'}), 400
+    if 'pdf' not in request.files:
+        return jsonify({'error': 'No file part'})
 
-    pdf_file = file
-
-    file_name = pdf_file.filename
-    file_name = file_name.split('.')[0]
-
+    pdf_file = request.files['pdf']
     temp_pdf_path = tempfile.NamedTemporaryFile(suffix='.pdf', delete=False).name
     pdf_file.save(temp_pdf_path)
-    
+
     try:
         images_paths = convert_pdf_to_images(temp_pdf_path)
-        image_names = []
+        output = runGemini(images_paths, True)
 
-        bucket_name = 'sample-bucket-1234532'
-        for index, image_path in enumerate(images_paths):
-            print(image_path)
-            upload_blob(bucket_name, image_path, f"output_images/{file_name}_page{index + 1}.png")
-            image_names.append(f"{file_name}_page{index + 1}.png")
-
-        output, successful = runGemini(image_names, True, "enhanced-ward-415819", "us-central1")
-
-        if successful:
-            delete_from_blob(bucket_name)
-           
-        return jsonify({'message': 'Images uploaded successfully', 'images': image_names, 'output': output, 'successful': successful})
-
+        formatted = structureOutput(output, True)
+        write_json_to_file(formatted, 'output.json')
+        return jsonify({'message': 'Images uploaded successfully', 'output': formatted, 'successful': 'true'})
     finally:
         os.unlink(temp_pdf_path)
+
+
+def load_json_file(file_path):
+    with open(file_path, 'r') as file:
+        return json.load(file)
 
 def convert_pdf_to_images(pdf_path, resolution=300):
     pdf_document = fitz.open(pdf_path)
@@ -91,7 +82,6 @@ def convert_pdf_to_images(pdf_path, resolution=300):
     for page_number in range(len(pdf_document)):
         page = pdf_document.load_page(page_number)
         pixmap = page.get_pixmap(matrix=fitz.Matrix(resolution/72, resolution/72))
-
         temp_image_file = tempfile.NamedTemporaryFile(suffix='.png', delete=False)
         temp_image_path = temp_image_file.name
         pixmap.save(temp_image_path)
@@ -100,65 +90,89 @@ def convert_pdf_to_images(pdf_path, resolution=300):
     pdf_document.close()
 
     return images_paths
-
-def upload_blob(bucket_name, source_file_name, destination_blob_name):
-    storage_client = storage.Client()
-    bucket = storage_client.bucket(bucket_name)
-    blob = bucket.blob(destination_blob_name)
-
-    generation_match_precondition = 0
-
-    blob.upload_from_filename(source_file_name, if_generation_match=generation_match_precondition)
-
-    print(f"File {source_file_name} uploaded to {destination_blob_name}.")
-
-def delete_from_blob(bucket_name):
-    storage_client = storage.Client()
-    bucket = storage_client.get_bucket(bucket_name)
-
-    blobs = bucket.list_blobs(prefix="output_images")
-    for blob in blobs:
-        blob.delete()
-
-def runGemini(image_names, successful: bool, project_id: str, location: str):
+def runGemini(image_paths, successful: bool):
     if successful:
-        # Initialize Vertex AI
         gem_responses = {}
-        vertexai.init(project=project_id, location=location)
-        # Load the model
-        generation_config = GenerationConfig(temperature=0.3)
-        multimodal_model = GenerativeModel("gemini-1.0-pro-vision", generation_config=generation_config)
-        query = '''extract the various tables from the document and convert them to json. 
-                    if there are no tables, extract the company name, as well as any relevant data and structure it in JSON
-                    You are hallucinating some data. If 2 models are stacked on top of each other, they are the same.
-                    Seperate the JSON by model.
-        '''
-        
-        for image in image_names:
-            print(image)
-            url = "gs://sample-bucket-1234532/output_images/"  + image
+
+        generation_config = genai.GenerationConfig(temperature=0.3)
+        query = '''Process the document:
+                        Extract Tables:
+                            Identify and extract all tables within the document.
+                            Convert each table to a separate JSON object.
+                            If a table cell is empty, use null in the JSON.
+                        Extract Additional Data (if no tables):
+                            If no tables are found, extract the company name from the document (if present).
+                            Look for other relevant data points (specify desired data points if possible).
+                            Structure all extracted data (company name and other relevant data) into a single JSON object following the provided structure.
+                        Model Handling:
+                            Assume two stacked models are equivalent but keep them structured as seperate models.
+                            Provide separate JSON outputs for each model encountered (if applicable).
+                        Error Handling:
+                            If specific data points are missing, leave the corresponding field in the JSON object as null.
+                '''
+        for image_path in image_paths:
+            try:
+                genai.delete_file(name=image_path)
+            except:
+                file = genai.upload_file(path=image_path, display_name=image_path)
+
+            multimodal_model = genai.GenerativeModel("gemini-1.5-pro-latest", generation_config=generation_config)
             response = multimodal_model.generate_content(
-                [
-                    Part.from_uri(
-                        url, mime_type="image/png"
-                    ),
-                    query,
-                ]
+            [
+                file,
+                query,
+            ]
             )
            
             start_index = response.text.find('{')
             end_index = response.text.rfind('}') + 1
-
             json_text = response.text[start_index:end_index]
-            print("Response text:", response.text) 
             try:
                 decoded_text = json.loads(json_text)
-                gem_responses[image] = decoded_text
+                gem_responses[os.path.basename(image_path)] = decoded_text
             except json.JSONDecodeError as e:
-                print("Error decoding JSON:", e)
-                gem_responses[image] = {"error": "Failed to decode JSON response"}
-        
-        return gem_responses, True
+                gem_responses[os.path.basename(image_path)] = {"error": "Failed to decode JSON response"}
+        return gem_responses
+
+def structureOutput(output, successful: bool):
+    if successful:
+        gem_responses = {}
+        generation_config = genai.GenerationConfig(temperature=0.3)
+        count = 0
+        for out in output:
+            prompt = f'''
+            Restructure JSON based on Template:
+                Given two JSON objects:
+
+                    Input JSON: This is the output from the previous call and can be accessed through {output[out]}.
+                    Template JSON: This defines the desired structure for the output ({loaded_json_data}).
+                
+                Your task is to transform the input JSON to match the structure of the template JSON as closely as possible.
+                    For each model in the output JSON, structure it as its own model in the template JSON.
+                    Use double quotes for all strings in the output JSON.
+                Map corresponding values from the input JSON to the keys in the template JSON.
+                If a key from the template JSON is missing in the input JSON, use the value -1 as a placeholder.
+            '''
+            multimodal_model = genai.GenerativeModel("gemini-1.5-pro-latest", generation_config=generation_config)
+            response = multimodal_model.generate_content(prompt)
+
+            start_index = response.text.find('{')
+            end_index = response.text.rfind('}') + 1
+            json_text = response.text[start_index:end_index]
+            print(json_text)
+            try:
+                decoded_text = json.loads(json_text)
+                gem_responses[count] = decoded_text
+            except json.JSONDecodeError as e:
+                gem_responses[count] = {"error": "Failed to decode JSON response"}
+            count += 1
+        return gem_responses
+
+
+def write_json_to_file(data, filename):
+    with open(filename, "w") as f:
+        json.dump(data, f, indent=4)
 
 if __name__ == '__main__':
+    loaded_json_data = load_json_file("./datasheets/train_test/EmptyProdModule.json")
     app.run(debug=True)
