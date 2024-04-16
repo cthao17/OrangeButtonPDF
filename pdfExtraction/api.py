@@ -1,19 +1,54 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from google.cloud import storage
-from flask_cors import CORS, cross_origin
+from google.cloud import aiplatform
+import google.generativeai as genai
 import fitz
 import tempfile
 import os
-import vertexai
 import json
-from vertexai.generative_models import GenerativeModel, Part, GenerationConfig
-
-loaded_json_data = None
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 
-CORS(app, resources={"/upload": {"origins": "*"}}) # https://flask-cors.readthedocs.io/en/latest/
+loaded_json_data = None
+
+load_dotenv()
+api_key = os.environ["GOOGLE_API_KEY"]
+location = os.environ['GOOGLE_LOCATION_ID']
+project = os.environ['GOOGLE_PROJECT_ID']
+
+aiplatform.init(project=project, location=location)
+genai.configure(api_key=api_key)
+
+CORS(app, resources={"/upload": {"origins": "*"}})
+
+@app.route("/upload-default", methods=["POST"])
+def upload_default():
+    def getJSONFilePaths():
+        paths = []
+        for file in os.listdir("./datasheets/train_test/Sheet1/output"):
+            if file.endswith(".json"):
+                paths.append(f"./datasheets/train_test/Sheet1/output/{file}")
+        return paths
+
+    filepaths = getJSONFilePaths()
+
+    data = []
+    for file in filepaths:
+        with open(file, "r") as f:
+            d = json.load(f)
+            # removes the "Value" key from the dictionary if it is empty or -1
+            for key in d["ProdModule"]:
+                if type(d["ProdModule"][key]) == dict:
+                    if "Value" in d["ProdModule"][key].keys() and (d["ProdModule"][key]["Value"] == "" or d["ProdModule"][key]["Value"] == -1):
+                        del d["ProdModule"][key]["Value"]
+            # previous step leaves us with key: {<empty dictionary>}, we want to remove those k:v pairs
+            for key in d["ProdModule"].copy():
+                if d["ProdModule"][key] == {}:
+                    del d["ProdModule"][key]
+            data.append(d)
+    return jsonify(data)
+
 
 @app.route('/upload', methods=['POST'])
 def pdf_to_images():
@@ -26,9 +61,10 @@ def pdf_to_images():
 
     try:
         images_paths = convert_pdf_to_images(temp_pdf_path)
-        output = runGemini(images_paths, True, "enhanced-ward-415819", "us-central1")
+        output = runGemini(images_paths, True)
 
-        formatted = structureOutput(output, True, "enhanced-ward-415819", "us-central1")
+        formatted = structureOutput(output, True)
+        write_json_to_file(formatted, 'output.json')
         return jsonify({'message': 'Images uploaded successfully', 'output': formatted, 'successful': 'true'})
     finally:
         os.unlink(temp_pdf_path)
@@ -53,13 +89,11 @@ def convert_pdf_to_images(pdf_path, resolution=300):
     pdf_document.close()
 
     return images_paths
-
-def runGemini(image_paths, successful: bool, project_id: str, location: str):
+def runGemini(image_paths, successful: bool):
     if successful:
         gem_responses = {}
-        vertexai.init(project=project_id, location=location)
-        generation_config = GenerationConfig(temperature=0.3)
-        multimodal_model = GenerativeModel("gemini-1.0-pro-vision", generation_config=generation_config)
+
+        generation_config = genai.GenerationConfig(temperature=0.3)
         query = '''Process the document:
                         Extract Tables:
                             Identify and extract all tables within the document.
@@ -76,14 +110,19 @@ def runGemini(image_paths, successful: bool, project_id: str, location: str):
                             If specific data points are missing, leave the corresponding field in the JSON object as null.
                 '''
         for image_path in image_paths:
-            with open(image_path, 'rb') as image_file:
-                image_data = image_file.read()
+            try:
+                genai.delete_file(name=image_path)
+            except:
+                file = genai.upload_file(path=image_path, display_name=image_path)
+
+            multimodal_model = genai.GenerativeModel("gemini-1.5-pro-latest", generation_config=generation_config)
             response = multimodal_model.generate_content(
-                [
-                    Part.from_data(image_data, mime_type="image/png"),
-                    query,
-                ]
+            [
+                file,
+                query,
+            ]
             )
+           
             start_index = response.text.find('{')
             end_index = response.text.rfind('}') + 1
             json_text = response.text[start_index:end_index]
@@ -94,12 +133,10 @@ def runGemini(image_paths, successful: bool, project_id: str, location: str):
                 gem_responses[os.path.basename(image_path)] = {"error": "Failed to decode JSON response"}
         return gem_responses
 
-def structureOutput(output, successful: bool, project_id: str, location: str):
+def structureOutput(output, successful: bool):
     if successful:
         gem_responses = {}
-        vertexai.init(project=project_id, location=location)
-        generation_config = GenerationConfig(temperature=0.3)
-        multimodal_model = GenerativeModel("gemini-1.0-pro-vision", generation_config=generation_config)
+        generation_config = genai.GenerationConfig(temperature=0.3)
         count = 0
         for out in output:
             prompt = f'''
@@ -110,16 +147,18 @@ def structureOutput(output, successful: bool, project_id: str, location: str):
                     Template JSON: This defines the desired structure for the output ({loaded_json_data}).
                 
                 Your task is to transform the input JSON to match the structure of the template JSON as closely as possible.
-
+                    For each model in the output JSON, structure it as its own model in the template JSON.
                     Use double quotes for all strings in the output JSON.
                 Map corresponding values from the input JSON to the keys in the template JSON.
                 If a key from the template JSON is missing in the input JSON, use the value -1 as a placeholder.
             '''
+            multimodal_model = genai.GenerativeModel("gemini-1.5-pro-latest", generation_config=generation_config)
             response = multimodal_model.generate_content(prompt)
-            print(response.text)
+
             start_index = response.text.find('{')
             end_index = response.text.rfind('}') + 1
             json_text = response.text[start_index:end_index]
+            print(json_text)
             try:
                 decoded_text = json.loads(json_text)
                 gem_responses[count] = decoded_text
@@ -128,6 +167,11 @@ def structureOutput(output, successful: bool, project_id: str, location: str):
             count += 1
         return gem_responses
 
+
+def write_json_to_file(data, filename):
+    with open(filename, "w") as f:
+        json.dump(data, f, indent=4)
+
 if __name__ == '__main__':
-    loaded_json_data = load_json_file("./datasheets/train_test/emptyProdMod_modified.json")
+    loaded_json_data = load_json_file("emptyProdMod_modified.json")
     app.run(debug=True)
