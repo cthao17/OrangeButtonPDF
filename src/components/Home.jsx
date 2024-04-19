@@ -29,11 +29,22 @@ function Home(props) {
         console.log(file)
         const formData = new FormData();
         formData.append("file", file);
-        axios.post("http://127.0.0.1:5000/upload-default", formData) 
+        axios.defaults.timeout = 120000;
+        console.log("posting" + formData)
+        axios.post("http://127.0.0.1:5000/upload", formData) 
             .then(res => () => {
-                setData(res.data);
+                console.log("inside .then block");
+                if (res.status !== 200){
+                    console.error("Error uploading file");
+                }else{
+                    console.log(res.data)
+                    setData(res.data);
+                    console.log(res);
+                    navigate('/productList'); // navigate after response is received
+                }
             })
             .catch(err => console.error(err));
+        console.log("after post")
     }
 
     const handleSubmit = (e) => {
@@ -43,7 +54,7 @@ function Home(props) {
         // parse form, get results
         // redirect to results
         uploadFile();
-        navigate('/productList');
+        // TODO wait while getting response
     }
 
     const [files, setFiles] = useState([])
