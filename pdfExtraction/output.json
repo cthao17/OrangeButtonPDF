@@ -1,6 +1,170 @@
 {
     "0": {
-        "error": "Failed to decode JSON response"
+        "ProdModule": {
+            "Dimension": {
+                "Height": {
+                    "Unit": "mm",
+                    "Value": -1
+                },
+                "Length": {
+                    "Unit": "mm",
+                    "Value": -1
+                },
+                "Mass": {
+                    "Unit": "kg",
+                    "Value": -1
+                },
+                "Weight": {
+                    "Unit": "lb",
+                    "Value": -1
+                },
+                "Width": {
+                    "Unit": "mm",
+                    "Value": -1
+                }
+            },
+            "ProdType": {
+                "Value": "Module"
+            },
+            "CableCrossSectionArea": {
+                "Unit": "sqft"
+            },
+            "CableLength": {
+                "Unit": "mm"
+            },
+            "ModuleArea": {
+                "Unit": "sqm"
+            },
+            "ModuleEfficiency": {
+                "Unit": "decimal_percent",
+                "Value": 17.0
+            },
+            "ModuleElectRatings": [
+                {
+                    "CurrentAtMaximumPower": {
+                        "Unit": "A",
+                        "Value": -1
+                    },
+                    "CurrentShortCircuit": {
+                        "Unit": "A",
+                        "Value": -1
+                    },
+                    "ModuleRatingCondition": {
+                        "Value": "STC"
+                    },
+                    "PowerDC": {
+                        "Unit": "W",
+                        "Value": 122.5
+                    },
+                    "VoltageAtMaximumPower": {
+                        "Unit": "V",
+                        "Value": -1
+                    },
+                    "VoltageOpenCircuit": {
+                        "Unit": "V",
+                        "Value": -1
+                    }
+                }
+            ],
+            "PowerSTC": {
+                "Unit": "W",
+                "Value": 122.5
+            },
+            "PowerToleranceMax": {
+                "Unit": "decimal_percent"
+            },
+            "PowerToleranceMin": {
+                "Unit": "decimal_percent"
+            },
+            "ProdCell": {
+                "Description": {
+                    "Value": "Advanced Thin Film Solar Technology"
+                },
+                "Dimension": {
+                    "Height": {
+                        "Unit": "mm",
+                        "Value": -1
+                    },
+                    "Length": {
+                        "Unit": "mm",
+                        "Value": -1
+                    },
+                    "Mass": {
+                        "Unit": "kg",
+                        "Value": -1
+                    },
+                    "Weight": {
+                        "Unit": "lb",
+                        "Value": -1
+                    },
+                    "Width": {
+                        "Unit": "mm",
+                        "Value": -1
+                    }
+                },
+                "FileFolderURL": {
+                    "Value": ""
+                },
+                "ManufacturerUPC": {
+                    "Value": ""
+                },
+                "ProdCode": {
+                    "Value": ""
+                },
+                "ProdDatasheet": {
+                    "Value": ""
+                },
+                "ProdID": {
+                    "Value": ""
+                },
+                "ProdMfr": {
+                    "Value": "First Solar, Inc."
+                },
+                "ProdName": {
+                    "Value": "First Solar Series 4\u2122 PV Module"
+                },
+                "ProdType": {
+                    "Value": "Module"
+                },
+                "CellColor": {
+                    "Value": ""
+                },
+                "CellCutType": {
+                    "Value": ""
+                },
+                "CellTechnologyType": {
+                    "Value": "Thin Film"
+                }
+            },
+            "ProdGlazing": {
+                "Description": {
+                    "Value": "Anti-reflective coated glass"
+                },
+                "FileFolderURL": {
+                    "Value": ""
+                },
+                "GlazingMaterial": {
+                    "Value": "Glass"
+                },
+                "Height": {
+                    "Unit": "mm",
+                    "Value": -1
+                }
+            },
+            "TemperatureMaximumOperating": {
+                "Unit": "Cel"
+            },
+            "TemperatureMinimumOperating": {
+                "Unit": "Cel"
+            },
+            "TemperatureNOCT": {
+                "Unit": "Cel"
+            },
+            "VoltageMaximumSystem": {
+                "Unit": "V",
+                "Value": 1500
+            }
+        }
     },
     "1": {
         "error": "Failed to decode JSON response"

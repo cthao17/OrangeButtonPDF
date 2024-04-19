@@ -75,6 +75,7 @@ def pdf_to_images():
         print("returning success")
         return jsonify({'message': 'Images uploaded successfully', 'output': formatted, 'successful': 'true'})
     except Exception as e:
+        print(e)
         return jsonify({'error': str(e), 'successful': 'false'})
     finally:
         os.unlink(temp_pdf_path)

@@ -29,7 +29,7 @@ function Home(props) {
         console.log(file)
         const formData = new FormData();
         formData.append("file", file);
-        axios.defaults.timeout = 120000;
+        axios.defaults.timeout = 180000;
         console.log("posting" + formData)
         axios.post("http://127.0.0.1:5000/upload", formData) 
             .then(res => () => {
@@ -46,6 +46,29 @@ function Home(props) {
             .catch(err => console.error(err));
         console.log("after post")
     }
+    const uploadFile2 = async() => {
+        let file = files[0]
+        console.log(typeof(file));
+        console.log(file)
+        const formData = new FormData();
+        formData.append("file", file);
+        try {
+            const response = await fetch("http://127.0.0.1:5000/upload", {
+                method: "POST",
+                body: formData
+            });
+            console.log("inside try block");
+            if (!response.ok){
+                console.error("Error uploading file");
+            }else{
+                const data = await response.json();
+                console.log(data);
+                navigate('/productList'); // navigate after response is received
+            }
+        }catch(err){
+            console.error(err);
+        }
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -53,7 +76,7 @@ function Home(props) {
         console.log(files);
         // parse form, get results
         // redirect to results
-        uploadFile();
+        uploadFile2();
         // TODO wait while getting response
     }
 
