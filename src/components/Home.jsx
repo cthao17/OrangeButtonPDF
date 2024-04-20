@@ -16,6 +16,8 @@ function Home(props) {
     // response data from api
     const [data, setData] = useState([]);
     const navigate = useNavigate();
+    const [isLoading, setIsLoading] = useState(false);
+    const [isAxiosError, setIsAxiosError] = useState(false);
 
     // https://www.npmjs.com/package/react-pdf
     // find way to handle/view pdfs in react (look for good packages: well maintained with not too many dependencies)
@@ -60,13 +62,23 @@ function Home(props) {
             console.log("inside try block");
             if (!response.ok){
                 console.error("Error uploading file");
+                setIsLoading(false);
+                setIsAxiosError(true);
             }else{
                 const data = await response.json();
                 console.log(data);
-                navigate('/productList'); // navigate after response is received
+                console.log(data.output);
+                if(data.successful == "true"){
+                    navigate('/productList'); // navigate after response is received
+                } else {
+                    setIsLoading(false);
+                    setIsAxiosError(true);
+                }
             }
         }catch(err){
-            console.error(err);
+            console.error(err);                
+            setIsLoading(false);
+            setIsAxiosError(true);
         }
     }
 
@@ -74,6 +86,8 @@ function Home(props) {
         e.preventDefault();
         // console.log(e.target.files[0]);
         console.log(files);
+
+        setIsLoading(true);
         // parse form, get results
         // redirect to results
         uploadFile2();
@@ -136,7 +150,7 @@ function Home(props) {
             </Toast.Header>
             <Toast.Body className="text-white">File selected!</Toast.Body>
             </Toast>
-            <Toast onClose={() => setShowInvalid(false)} show={showInvalid} delay={3000} bg = "danger" animation={true} autohide>
+            <Toast onClose={() => setShowInvalid (false)} show={showInvalid} delay={3000} bg = "danger" animation={true} autohide>
             <Toast.Header>
                 <strong className="me-auto">Notification</strong>
             </Toast.Header>
@@ -148,6 +162,21 @@ function Home(props) {
                     </Toast.Header>
                     <Toast.Body className="text-white">Duplicate file detected!</Toast.Body>
                 </Toast>
+            <Toast onClose={() => setIsLoading(false)} show={isLoading} delay={0} bg="info" animation={false}>
+                <Toast.Header>
+                    <strong className="me-auto">Notification</strong>
+                </Toast.Header>
+                <Toast.Body className="text-white">
+                    <div className="loading-circle"></div>
+                    Loading...
+                </Toast.Body>
+            </Toast>
+            <Toast onClose={() => setIsAxiosError(false)} show={isAxiosError} delay={6000} bg="danger" animation autohide>
+                <Toast.Header>
+                    <strong className="me-auto">Notification</strong>
+                </Toast.Header>
+                <Toast.Body className="text-white">Error with converting file. Please try again or new file</Toast.Body>
+            </Toast>
         </ToastContainer>
         <div id = "wrapper">
             <div id="list">
