@@ -42,13 +42,13 @@ const ProductList = () => {
                             </tr>
                         );
                     })}
-                    {data[1]?.error && (
+                    {/* {data[1]?.error && (
                         <tr>
                             <td colSpan='5'>
                                 <h6>{data[1].error}</h6>
                             </td>
                         </tr>
-                    )}
+                    )} */}
                     {Object.keys(data).length === 0 && (
                         <tr>
                             <td colSpan='5'>

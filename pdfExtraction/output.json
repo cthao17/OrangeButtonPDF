@@ -67,8 +67,7 @@
                 }
             ],
             "PowerSTC": {
-                "Unit": "W",
-                "Value": 122.5
+                "Unit": "W"
             },
             "PowerToleranceMax": {
                 "Unit": "decimal_percent"
@@ -78,7 +77,7 @@
             },
             "ProdCell": {
                 "Description": {
-                    "Value": "Advanced Thin Film Solar Technology"
+                    "Value": ""
                 },
                 "Dimension": {
                     "Height": {
@@ -118,10 +117,10 @@
                     "Value": ""
                 },
                 "ProdMfr": {
-                    "Value": "First Solar, Inc."
+                    "Value": ""
                 },
                 "ProdName": {
-                    "Value": "First Solar Series 4\u2122 PV Module"
+                    "Value": ""
                 },
                 "ProdType": {
                     "Value": "Module"
@@ -133,18 +132,18 @@
                     "Value": ""
                 },
                 "CellTechnologyType": {
-                    "Value": "Thin Film"
+                    "Value": "Advanced Thin Film Solar Technology"
                 }
             },
             "ProdGlazing": {
                 "Description": {
-                    "Value": "Anti-reflective coated glass"
+                    "Value": ""
                 },
                 "FileFolderURL": {
                     "Value": ""
                 },
                 "GlazingMaterial": {
-                    "Value": "Glass"
+                    "Value": "Anti-reflective coated glass"
                 },
                 "Height": {
                     "Unit": "mm",

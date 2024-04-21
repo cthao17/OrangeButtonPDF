@@ -35,9 +35,11 @@ const FieldsTables = ({ form }) => {
                         </thead>
                         <tbody>
                             {Array.isArray(fieldNames) && fieldNames.map(fieldName => {
-                                const info = product.ProdModule[fieldName];
+                                const info = product?.ProdModule?.fieldName;
                                 const isExpanded = expandedFields[fieldName];
-                                
+                                if (info === undefined){
+                                    return null;
+                                }
                                 return (
                                     <React.Fragment key={fieldName}>
                                         <tr>

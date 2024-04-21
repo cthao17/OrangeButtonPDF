@@ -100,7 +100,7 @@ const ProductDetail = () => {
         <div>
             <div className='container'>
                 <h2>
-                    {product.ProdModule["ProdMfr"]?.Value}
+                    {product?.ProdModule?.ProdMfr?.Value}
                 </h2>
                 <h6>ProdCode: {product?.ProdModule?.ProdCode?.Value}</h6>
             </div>
