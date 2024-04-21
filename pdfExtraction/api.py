@@ -20,7 +20,16 @@ project = os.environ['GOOGLE_PROJECT_ID']
 aiplatform.init(project=project, location=location)
 genai.configure(api_key=api_key)
 
-CORS(app, resources={"/upload": {"origins": "*"}})
+CORS(app, resources={"/*": {"origins": "*"}})
+
+@app.route("/upload-demo-test", methods=["POST"])
+def getOutput():
+    # this function will return in the same format that our /upload endpoint returns in the case of succes
+    # instead of fomratted we will take the output.json file and return that as output
+    # this is for testing purposes
+    # get output.json to send to frontend
+    formatted = load_json_file("output.json")
+    return jsonify({'message': 'Images uploaded successfully', 'output': formatted, 'successful': 'true'})
 
 @app.route("/upload-default", methods=["POST"])
 def upload_default():
