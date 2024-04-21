@@ -35,15 +35,15 @@ const FieldsTables = ({ form }) => {
                         </thead>
                         <tbody>
                             {Array.isArray(fieldNames) && fieldNames.map(fieldName => {
-                                const fieldValue = product[fieldName];
+                                const info = product.ProdModule[fieldName];
                                 const isExpanded = expandedFields[fieldName];
-
+                                
                                 return (
                                     <React.Fragment key={fieldName}>
                                         <tr>
                                             <th scope='row'>{fieldName}</th>
-                                            <td>{fieldValue}</td>
-                                            <td>{/* Add unit if available */}</td>
+                                            <td>{info?.Value}</td>
+                                            <td>{info?.Unit}</td>
                                             <td>
                                                 <button 
                                                     className='btn btn-secondary' 
@@ -58,7 +58,7 @@ const FieldsTables = ({ form }) => {
                                             <tr>
                                                 <td colSpan='4'>
                                                     <div className='card'>
-                                                        <MultiWidget />
+                                                        <MultiWidget form={info}/>
                                                     </div>
                                                 </td>
                                             </tr>

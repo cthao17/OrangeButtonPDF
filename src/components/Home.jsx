@@ -69,7 +69,7 @@ function Home(props) {
                 console.log(data);
                 console.log(data.output);
                 if(data.successful == "true"){
-                    navigate('/productList'); // navigate after response is received
+                    navigate('/productList', { state: { data: data.output } }); // navigate after response is received
                 } else {
                     setIsLoading(false);
                     setIsAxiosError(true);
@@ -194,7 +194,6 @@ function Home(props) {
                         </ul>
                     )}
             </div>
-            
             <div id="form"
                 onDragEnter={preventBubbling}
                 onDragOver={preventBubbling}
@@ -236,13 +235,7 @@ function Home(props) {
                     Submit
                 </button>
             </div>
-            
-            
         </div>
-        
-       
-        
-
     </>);
 }
 export default Home;

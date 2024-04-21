@@ -12,6 +12,24 @@ const ProductDetail = () => {
         return <div>Loading...</div>;
     }
 
+    const template = [
+        {
+            fieldNames: [
+                'Dimension',
+                'ProdCell',
+                'ProdGlazing',
+                'ModuleElecRatings',
+                'AlternativeIdentifiers',
+                'Packages',
+                'ProdCertifications',
+                'ProdInstructions',
+                'ProdSpecifications',
+                'Warranties'
+            ]
+
+        }
+    ]
+
     const form = [
         {
             groupName: 'Product Information',
@@ -82,10 +100,9 @@ const ProductDetail = () => {
         <div>
             <div className='container'>
                 <h2>
-                    {product.ProdMfr}
-                    {product.ProdName && `: ${product.ProdName}`}
+                    {product.ProdModule["ProdMfr"]?.Value}
                 </h2>
-                <h6>ProdCode: {product.ProdCode}</h6>
+                <h6>ProdCode: {product?.ProdModule?.ProdCode?.Value}</h6>
             </div>
             <div className='container' style={{ marginTop: '2rem' }}>
                 <FieldsTables form={form} />

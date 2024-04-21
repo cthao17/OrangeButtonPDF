@@ -1,16 +1,11 @@
 import React from 'react';
 
-const MultiWidget = (widgetForm) => {
-    const widget = {
-        subwidgets_dict: {
-            Value: 'Value Field',
-            StartTime: 'Start Time Field',
-            Decimals: 'Decimals Field',
-            Unit: 'Unit Field',
-            EndTime: 'End Time Field',
-            Precision: 'Precision Field'
-        }
-    };
+const MultiWidget = (widget) => {
+    // Destructure widget to access the form property directly
+    const { form } = widget;
+
+    // If form is undefined or null, initialize it as an empty object
+    const formValues = form || {};
 
     return (
         <div className='card-body'>
@@ -27,24 +22,24 @@ const MultiWidget = (widgetForm) => {
             </div>
             <div className='row'>
                 <div className='col'>
-                    {widget.subwidgets_dict.Value && (
-                        <>
-                            <label htmlFor='Value'>{widget.subwidgets_dict.Value}</label>
-                        </>
+                    {formValues.Value ? (
+                        <label htmlFor='Value'>{formValues.Value}</label>
+                    ) : (
+                        <div className="placeholder"></div>
                     )}
                 </div>
                 <div className='col'>
-                    {widget.subwidgets_dict.StartTime && (
-                        <>
-                            <label htmlFor='StartTime'>{widget.subwidgets_dict.StartTime}</label>
-                        </>
+                    {formValues.StartTime ? (
+                        <label htmlFor='StartTime'>{formValues.StartTime}</label>
+                    ) : (
+                        <div className="placeholder"></div>
                     )}
                 </div>
                 <div className='col'>
-                    {widget.subwidgets_dict.Decimals && (
-                        <>
-                            <label htmlFor='Decimals'>{widget.subwidgets_dict.Decimals}</label>
-                        </>
+                    {formValues.Decimals ? (
+                        <label htmlFor='Decimals'>{formValues.Decimals}</label>
+                    ) : (
+                        <div className="placeholder"></div>
                     )}
                 </div>
             </div>
@@ -61,27 +56,28 @@ const MultiWidget = (widgetForm) => {
             </div>
             <div className='row'>
                 <div className='col'>
-                    {widget.subwidgets_dict.Unit && (
-                        <>
-                            <label htmlFor='Unit'>{widget.subwidgets_dict.Unit}</label>
-                        </>
+                    {formValues.Unit ? (
+                        <label htmlFor='Unit'>{formValues.Unit}</label>
+                    ) : (
+                        <div className="placeholder"></div>
                     )}
                 </div>
                 <div className='col'>
-                    {widget.subwidgets_dict.EndTime && (
-                        <>
-                            <label htmlFor='EndTime'>{widget.subwidgets_dict.EndTime}</label>
-                        </>
+                    {formValues.EndTime ? (
+                        <label htmlFor='EndTime'>{formValues.EndTime}</label>
+                    ) : (
+                        <div className="placeholder"></div>
                     )}
                 </div>
                 <div className='col'>
-                    {widget.subwidgets_dict.Precision && (
-                        <>
-                            <label htmlFor='Precision'>{widget.subwidgets_dict.Precision}</label>
-                        </>
+                    {formValues.Precision ? (
+                        <label htmlFor='Precision'>{formValues.Precision}</label>
+                    ) : (
+                        <div className="placeholder"></div>
                     )}
                 </div>
             </div>
+            {/* Add similar rows for other properties */}
         </div>
     );
 };
