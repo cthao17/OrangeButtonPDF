@@ -18,7 +18,7 @@ const FieldsTables = ({ form }) => {
     if (!product) {
         return <div>Loading...</div>;
     }
-
+    console.log(product)
     return (
         <div>
             {form.map(({ groupName, fieldNames }) => (
@@ -35,7 +35,8 @@ const FieldsTables = ({ form }) => {
                         </thead>
                         <tbody>
                             {Array.isArray(fieldNames) && fieldNames.map(fieldName => {
-                                const info = product?.fieldName;
+                                //const info = product?.fieldName;
+                                const info = product[fieldName]
                                 const isExpanded = expandedFields[fieldName];
                                 return (
                                     <React.Fragment key={fieldName}>
