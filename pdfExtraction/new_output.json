@@ -67,7 +67,8 @@
                 }
             ],
             "PowerSTC": {
-                "Unit": "W"
+                "Unit": "W",
+                "Value": 122.5
             },
             "PowerToleranceMax": {
                 "Unit": "decimal_percent"
@@ -132,7 +133,7 @@
                     "Value": ""
                 },
                 "CellTechnologyType": {
-                    "Value": "thin film"
+                    "Value": "Thin Film"
                 }
             },
             "ProdGlazing": {
@@ -143,7 +144,7 @@
                     "Value": ""
                 },
                 "GlazingMaterial": {
-                    "Value": "glass"
+                    "Value": "Anti-reflective coated glass"
                 },
                 "Height": {
                     "Unit": "mm",
@@ -205,7 +206,7 @@
             },
             "ModuleEfficiency": {
                 "Unit": "decimal_percent",
-                "Value": 17.0
+                "Value": 17
             },
             "ModuleElectRatings": [
                 {
@@ -222,7 +223,7 @@
                     },
                     "PowerDC": {
                         "Unit": "W",
-                        "Value": 110.0
+                        "Value": 110
                     },
                     "VoltageAtMaximumPower": {
                         "Unit": "V",
@@ -255,7 +256,7 @@
                     },
                     "VoltageOpenCircuit": {
                         "Unit": "V",
-                        "Value": 87.0
+                        "Value": 87
                     }
                 },
                 {
@@ -272,7 +273,7 @@
                     },
                     "PowerDC": {
                         "Unit": "W",
-                        "Value": 115.0
+                        "Value": 115
                     },
                     "VoltageAtMaximumPower": {
                         "Unit": "V",
@@ -322,7 +323,7 @@
                     },
                     "PowerDC": {
                         "Unit": "W",
-                        "Value": 120.0
+                        "Value": 120
                     },
                     "VoltageAtMaximumPower": {
                         "Unit": "V",
@@ -360,15 +361,16 @@
                 }
             ],
             "PowerSTC": {
-                "Unit": "W"
+                "Unit": "W",
+                "Value": 122.5
             },
             "PowerToleranceMax": {
                 "Unit": "decimal_percent",
-                "Value": 5.0
+                "Value": 5
             },
             "PowerToleranceMin": {
                 "Unit": "decimal_percent",
-                "Value": -0.0
+                "Value": 0
             },
             "ProdCell": {
                 "Description": {
