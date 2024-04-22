@@ -80,9 +80,10 @@ def structureOutput(output, successful: bool):
                 Map corresponding values from the input JSON to the keys in the template JSON.
                 If a key from the template JSON is missing in the input JSON, use the value -1 as a placeholder.
             '''
+        print(prompt)
         multimodal_model = genai.GenerativeModel("gemini-1.5-pro-latest", generation_config=generation_config)
-        response = multimodal_model.generate_content(prompt)
-
+        response = multimodal_model.generate_content(prompt, request_options={"timeout": 100})
+        print(multimodal_model.count_tokens(prompt))
         start_index = response.text.find('{')
         end_index = response.text.rfind('}') + 1
         json_text = response.text[start_index:end_index]
@@ -99,5 +100,5 @@ def write_json_to_file(data, filename):
         json.dump(data, f, indent=4)
 
 if __name__ == '__main__':
-    loaded_json_data = load_json_file("emptyProdMod_modified.json")
+    loaded_json_data = load_json_file("./datasheets/train_test/EmptyProdModule.json")
     app.run(debug=True)
