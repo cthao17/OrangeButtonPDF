@@ -80,10 +80,8 @@ def structureOutput(output, successful: bool):
                 Map corresponding values from the input JSON to the keys in the template JSON.
                 If a key from the template JSON is missing in the input JSON, use the value -1 as a placeholder.
             '''
-        print(prompt)
         multimodal_model = genai.GenerativeModel("gemini-1.5-pro-latest", generation_config=generation_config)
         response = multimodal_model.generate_content(prompt, request_options={"timeout": 100})
-        print(multimodal_model.count_tokens(prompt))
         start_index = response.text.find('{')
         end_index = response.text.rfind('}') + 1
         json_text = response.text[start_index:end_index]
