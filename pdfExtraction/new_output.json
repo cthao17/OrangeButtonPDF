@@ -1,0 +1,469 @@
+{
+    "0": {
+        "ProdModule": {
+            "Dimension": {
+                "Height": {
+                    "Unit": "mm",
+                    "Value": -1
+                },
+                "Length": {
+                    "Unit": "mm",
+                    "Value": -1
+                },
+                "Mass": {
+                    "Unit": "kg",
+                    "Value": -1
+                },
+                "Weight": {
+                    "Unit": "lb",
+                    "Value": -1
+                },
+                "Width": {
+                    "Unit": "mm",
+                    "Value": -1
+                }
+            },
+            "ProdType": {
+                "Value": "Module"
+            },
+            "CableCrossSectionArea": {
+                "Unit": "sqft"
+            },
+            "CableLength": {
+                "Unit": "mm"
+            },
+            "ModuleArea": {
+                "Unit": "sqm"
+            },
+            "ModuleEfficiency": {
+                "Unit": "decimal_percent",
+                "Value": 17.0
+            },
+            "ModuleElectRatings": [
+                {
+                    "CurrentAtMaximumPower": {
+                        "Unit": "A",
+                        "Value": -1
+                    },
+                    "CurrentShortCircuit": {
+                        "Unit": "A",
+                        "Value": -1
+                    },
+                    "ModuleRatingCondition": {
+                        "Value": "STC"
+                    },
+                    "PowerDC": {
+                        "Unit": "W",
+                        "Value": 122.5
+                    },
+                    "VoltageAtMaximumPower": {
+                        "Unit": "V",
+                        "Value": -1
+                    },
+                    "VoltageOpenCircuit": {
+                        "Unit": "V",
+                        "Value": -1
+                    }
+                }
+            ],
+            "PowerSTC": {
+                "Unit": "W"
+            },
+            "PowerToleranceMax": {
+                "Unit": "decimal_percent"
+            },
+            "PowerToleranceMin": {
+                "Unit": "decimal_percent"
+            },
+            "ProdCell": {
+                "Description": {
+                    "Value": ""
+                },
+                "Dimension": {
+                    "Height": {
+                        "Unit": "mm",
+                        "Value": -1
+                    },
+                    "Length": {
+                        "Unit": "mm",
+                        "Value": -1
+                    },
+                    "Mass": {
+                        "Unit": "kg",
+                        "Value": -1
+                    },
+                    "Weight": {
+                        "Unit": "lb",
+                        "Value": -1
+                    },
+                    "Width": {
+                        "Unit": "mm",
+                        "Value": -1
+                    }
+                },
+                "FileFolderURL": {
+                    "Value": ""
+                },
+                "ManufacturerUPC": {
+                    "Value": ""
+                },
+                "ProdCode": {
+                    "Value": ""
+                },
+                "ProdDatasheet": {
+                    "Value": ""
+                },
+                "ProdID": {
+                    "Value": ""
+                },
+                "ProdMfr": {
+                    "Value": "First Solar, Inc."
+                },
+                "ProdName": {
+                    "Value": "First Solar Series 4\u2122"
+                },
+                "ProdType": {
+                    "Value": "Module"
+                },
+                "CellColor": {
+                    "Value": ""
+                },
+                "CellCutType": {
+                    "Value": ""
+                },
+                "CellTechnologyType": {
+                    "Value": "thin film"
+                }
+            },
+            "ProdGlazing": {
+                "Description": {
+                    "Value": ""
+                },
+                "FileFolderURL": {
+                    "Value": ""
+                },
+                "GlazingMaterial": {
+                    "Value": "glass"
+                },
+                "Height": {
+                    "Unit": "mm",
+                    "Value": -1
+                }
+            },
+            "TemperatureMaximumOperating": {
+                "Unit": "Cel"
+            },
+            "TemperatureMinimumOperating": {
+                "Unit": "Cel"
+            },
+            "TemperatureNOCT": {
+                "Unit": "Cel"
+            },
+            "VoltageMaximumSystem": {
+                "Unit": "V",
+                "Value": 1500
+            }
+        }
+    },
+    "1": {
+        "ProdModule": {
+            "Dimension": {
+                "Height": {
+                    "Unit": "mm",
+                    "Value": 600
+                },
+                "Length": {
+                    "Unit": "mm",
+                    "Value": 1200
+                },
+                "Mass": {
+                    "Unit": "kg",
+                    "Value": 12
+                },
+                "Weight": {
+                    "Unit": "lb",
+                    "Value": -1
+                },
+                "Width": {
+                    "Unit": "mm",
+                    "Value": 6.8
+                }
+            },
+            "ProdType": {
+                "Value": "Module"
+            },
+            "CableCrossSectionArea": {
+                "Unit": "sqft"
+            },
+            "CableLength": {
+                "Unit": "mm",
+                "Value": 657
+            },
+            "ModuleArea": {
+                "Unit": "sqm",
+                "Value": 0.72
+            },
+            "ModuleEfficiency": {
+                "Unit": "decimal_percent",
+                "Value": 17.0
+            },
+            "ModuleElectRatings": [
+                {
+                    "CurrentAtMaximumPower": {
+                        "Unit": "A",
+                        "Value": 1.62
+                    },
+                    "CurrentShortCircuit": {
+                        "Unit": "A",
+                        "Value": 1.82
+                    },
+                    "ModuleRatingCondition": {
+                        "Value": "STC"
+                    },
+                    "PowerDC": {
+                        "Unit": "W",
+                        "Value": 110.0
+                    },
+                    "VoltageAtMaximumPower": {
+                        "Unit": "V",
+                        "Value": 67.8
+                    },
+                    "VoltageOpenCircuit": {
+                        "Unit": "V",
+                        "Value": 86.4
+                    }
+                },
+                {
+                    "CurrentAtMaximumPower": {
+                        "Unit": "A",
+                        "Value": 1.64
+                    },
+                    "CurrentShortCircuit": {
+                        "Unit": "A",
+                        "Value": 1.83
+                    },
+                    "ModuleRatingCondition": {
+                        "Value": "STC"
+                    },
+                    "PowerDC": {
+                        "Unit": "W",
+                        "Value": 112.5
+                    },
+                    "VoltageAtMaximumPower": {
+                        "Unit": "V",
+                        "Value": 68.5
+                    },
+                    "VoltageOpenCircuit": {
+                        "Unit": "V",
+                        "Value": 87.0
+                    }
+                },
+                {
+                    "CurrentAtMaximumPower": {
+                        "Unit": "A",
+                        "Value": 1.66
+                    },
+                    "CurrentShortCircuit": {
+                        "Unit": "A",
+                        "Value": 1.83
+                    },
+                    "ModuleRatingCondition": {
+                        "Value": "STC"
+                    },
+                    "PowerDC": {
+                        "Unit": "W",
+                        "Value": 115.0
+                    },
+                    "VoltageAtMaximumPower": {
+                        "Unit": "V",
+                        "Value": 69.3
+                    },
+                    "VoltageOpenCircuit": {
+                        "Unit": "V",
+                        "Value": 87.6
+                    }
+                },
+                {
+                    "CurrentAtMaximumPower": {
+                        "Unit": "A",
+                        "Value": 1.68
+                    },
+                    "CurrentShortCircuit": {
+                        "Unit": "A",
+                        "Value": 1.83
+                    },
+                    "ModuleRatingCondition": {
+                        "Value": "STC"
+                    },
+                    "PowerDC": {
+                        "Unit": "W",
+                        "Value": 117.5
+                    },
+                    "VoltageAtMaximumPower": {
+                        "Unit": "V",
+                        "Value": 70.1
+                    },
+                    "VoltageOpenCircuit": {
+                        "Unit": "V",
+                        "Value": 88.1
+                    }
+                },
+                {
+                    "CurrentAtMaximumPower": {
+                        "Unit": "A",
+                        "Value": 1.7
+                    },
+                    "CurrentShortCircuit": {
+                        "Unit": "A",
+                        "Value": 1.84
+                    },
+                    "ModuleRatingCondition": {
+                        "Value": "STC"
+                    },
+                    "PowerDC": {
+                        "Unit": "W",
+                        "Value": 120.0
+                    },
+                    "VoltageAtMaximumPower": {
+                        "Unit": "V",
+                        "Value": 70.8
+                    },
+                    "VoltageOpenCircuit": {
+                        "Unit": "V",
+                        "Value": 88.7
+                    }
+                },
+                {
+                    "CurrentAtMaximumPower": {
+                        "Unit": "A",
+                        "Value": 1.71
+                    },
+                    "CurrentShortCircuit": {
+                        "Unit": "A",
+                        "Value": 1.85
+                    },
+                    "ModuleRatingCondition": {
+                        "Value": "STC"
+                    },
+                    "PowerDC": {
+                        "Unit": "W",
+                        "Value": 122.5
+                    },
+                    "VoltageAtMaximumPower": {
+                        "Unit": "V",
+                        "Value": 71.5
+                    },
+                    "VoltageOpenCircuit": {
+                        "Unit": "V",
+                        "Value": 88.7
+                    }
+                }
+            ],
+            "PowerSTC": {
+                "Unit": "W"
+            },
+            "PowerToleranceMax": {
+                "Unit": "decimal_percent",
+                "Value": 5.0
+            },
+            "PowerToleranceMin": {
+                "Unit": "decimal_percent",
+                "Value": -0.0
+            },
+            "ProdCell": {
+                "Description": {
+                    "Value": "Thin-film CdTe  \nsemiconductor,  \nup to 216 cells"
+                },
+                "Dimension": {
+                    "Height": {
+                        "Unit": "mm",
+                        "Value": -1
+                    },
+                    "Length": {
+                        "Unit": "mm",
+                        "Value": -1
+                    },
+                    "Mass": {
+                        "Unit": "kg",
+                        "Value": -1
+                    },
+                    "Weight": {
+                        "Unit": "lb",
+                        "Value": -1
+                    },
+                    "Width": {
+                        "Unit": "mm",
+                        "Value": -1
+                    }
+                },
+                "FileFolderURL": {
+                    "Value": ""
+                },
+                "ManufacturerUPC": {
+                    "Value": ""
+                },
+                "ProdCode": {
+                    "Value": ""
+                },
+                "ProdDatasheet": {
+                    "Value": ""
+                },
+                "ProdID": {
+                    "Value": ""
+                },
+                "ProdMfr": {
+                    "Value": "First Solar"
+                },
+                "ProdName": {
+                    "Value": ""
+                },
+                "ProdType": {
+                    "Value": "Module"
+                },
+                "CellColor": {
+                    "Value": ""
+                },
+                "CellCutType": {
+                    "Value": ""
+                },
+                "CellTechnologyType": {
+                    "Value": "CdTe"
+                }
+            },
+            "ProdGlazing": {
+                "Description": {
+                    "Value": "3.2mm heat  \nstrengthened \nSeries 4ATM includes \nanti-reflective coating"
+                },
+                "FileFolderURL": {
+                    "Value": ""
+                },
+                "GlazingMaterial": {
+                    "Value": "Glass"
+                },
+                "Height": {
+                    "Unit": "mm",
+                    "Value": 3.2
+                }
+            },
+            "TemperatureMaximumOperating": {
+                "Unit": "Cel",
+                "Value": 85
+            },
+            "TemperatureMinimumOperating": {
+                "Unit": "Cel",
+                "Value": -40
+            },
+            "TemperatureNOCT": {
+                "Unit": "Cel",
+                "Value": 45
+            },
+            "VoltageMaximumSystem": {
+                "Unit": "V",
+                "Value": 1500
+            }
+        }
+    },
+    "2": {
+        "error": "Failed to decode JSON response"
+    }
+}
