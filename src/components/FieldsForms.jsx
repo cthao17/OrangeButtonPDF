@@ -51,7 +51,7 @@ const FieldsForms = () => {
       {template.map((item, index) => (
         <div className='accordion-item' key={index}>
           {item.fieldNames.map((fieldName, fieldIndex) => {
-            let info = product && product.ProdModule[fieldName];
+            let info = product && product[fieldName];
             if(Array.isArray(info)) {
               info = info[0]; //gets the first object that contains all the JSON data for that field
             }

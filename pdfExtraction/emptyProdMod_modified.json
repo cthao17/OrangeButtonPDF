@@ -65,7 +65,8 @@
         }
       ],
       "PowerSTC": {
-        "Unit": "W"
+        "Unit": "W",
+        "Value": -1
       },
       "PowerToleranceMax": {
         "Unit": "decimal_percent"

@@ -26,8 +26,6 @@ const ProductList = () => {
                 <tbody>
                     {Object.keys(data).map((key) => {
                         const product = data[key]?.ProdModule;
-                        if (!product) return null;
-
                         return (
                             <tr key={key}>
                                 <td>{product?.ProdType?.Value}</td>
@@ -42,13 +40,6 @@ const ProductList = () => {
                             </tr>
                         );
                     })}
-                    {/* {data[1]?.error && (
-                        <tr>
-                            <td colSpan='5'>
-                                <h6>{data[1].error}</h6>
-                            </td>
-                        </tr>
-                    )} */}
                     {Object.keys(data).length === 0 && (
                         <tr>
                             <td colSpan='5'>
