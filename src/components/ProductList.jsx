@@ -26,10 +26,13 @@ const ProductList = () => {
                 <tbody>
                     {Object.keys(data).map((key) => {
                         const product = data[key]?.ProdModule;
+                        if (!product) {
+                            return null;
+                        }
                         return (
                             <tr key={key}>
                                 <td>{product?.ProdType?.Value}</td>
-                                <td>{product?.ProdMfr?.Value}</td>
+                                <td>{product?.ProdCell?.ProdMfr?.Value}</td>
                                 <td>{product?.ProdName?.Value}</td>
                                 <td>{product?.ProdCode?.Value}</td>
                                 <td>

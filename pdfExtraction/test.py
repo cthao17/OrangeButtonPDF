@@ -35,7 +35,6 @@ def pdf_to_images():
     pdf_file.save(temp_pdf_path)
 
     try:
-        
         #images_paths = convert_pdf_to_images(temp_pdf_path)
         output = pdf_to_text(temp_pdf_path)
         #output = runGemini(images_paths, True)
@@ -65,12 +64,14 @@ def structureOutput(output, successful: bool):
         gem_responses = {}
         generation_config = genai.GenerationConfig(temperature=0.3)
         count = 0
+        combined = ""
         for out in output:
-            prompt = f'''
+            combined += out.page_content
+        prompt = f'''
             Restructure JSON based on Template:
                 Given two JSON objects:
 
-                    Input JSON: This is the output from the previous call and can be accessed through {out.page_content}.
+                    Input JSON: This is the output from the previous call and can be accessed through {combined}.
                     Template JSON: This defines the desired structure for the output ({loaded_json_data}).
                 
                 Your task is to transform the input JSON to match the structure of the template JSON as closely as possible.
@@ -79,19 +80,17 @@ def structureOutput(output, successful: bool):
                 Map corresponding values from the input JSON to the keys in the template JSON.
                 If a key from the template JSON is missing in the input JSON, use the value -1 as a placeholder.
             '''
-            multimodal_model = genai.GenerativeModel("gemini-1.5-pro-latest", generation_config=generation_config)
-            response = multimodal_model.generate_content(prompt)
+        multimodal_model = genai.GenerativeModel("gemini-1.5-pro-latest", generation_config=generation_config)
+        response = multimodal_model.generate_content(prompt)
 
-            start_index = response.text.find('{')
-            end_index = response.text.rfind('}') + 1
-            json_text = response.text[start_index:end_index]
-            print(json_text)
-            try:
-                decoded_text = json.loads(json_text)
-                gem_responses[count] = decoded_text
-            except json.JSONDecodeError as e:
-                gem_responses[count] = {"error": "Failed to decode JSON response"}
-            count += 1
+        start_index = response.text.find('{')
+        end_index = response.text.rfind('}') + 1
+        json_text = response.text[start_index:end_index]
+        try:
+            decoded_text = json.loads(json_text)
+            gem_responses[count] = decoded_text
+        except json.JSONDecodeError as e:
+            gem_responses[count] = {"error": "Failed to decode JSON response"}
         return gem_responses
 
 
