@@ -1,173 +1,10 @@
 {
     "0": {
         "ProdModule": {
-            "Dimension": {
-                "Height": {
-                    "Unit": "mm",
-                    "Value": -1
-                },
-                "Length": {
-                    "Unit": "mm",
-                    "Value": -1
-                },
-                "Mass": {
-                    "Unit": "kg",
-                    "Value": -1
-                },
-                "Weight": {
-                    "Unit": "lb",
-                    "Value": -1
-                },
-                "Width": {
-                    "Unit": "mm",
-                    "Value": -1
-                }
+            "AlternativeIdentifiers": [],
+            "Description": {
+                "Value": "As a global leader in PV energy, First Solar\u2019s advanced thin film solar modules have set the industry benchmark with over 17 gigawatts (GW) installed worldwide and a proven performance advantage over conventional crystalline silicon solar modules. Generating more energy than competing modules with the same power rating, First Solar\u2019s Series 4\u2122 and Series 4A\u2122 PV Modules deliver superior performance and reliability to our customers."
             },
-            "ProdType": {
-                "Value": "Module"
-            },
-            "CableCrossSectionArea": {
-                "Unit": "sqft"
-            },
-            "CableLength": {
-                "Unit": "mm"
-            },
-            "ModuleArea": {
-                "Unit": "sqm"
-            },
-            "ModuleEfficiency": {
-                "Unit": "decimal_percent",
-                "Value": 17.0
-            },
-            "ModuleElectRatings": [
-                {
-                    "CurrentAtMaximumPower": {
-                        "Unit": "A",
-                        "Value": -1
-                    },
-                    "CurrentShortCircuit": {
-                        "Unit": "A",
-                        "Value": -1
-                    },
-                    "ModuleRatingCondition": {
-                        "Value": "STC"
-                    },
-                    "PowerDC": {
-                        "Unit": "W",
-                        "Value": 122.5
-                    },
-                    "VoltageAtMaximumPower": {
-                        "Unit": "V",
-                        "Value": -1
-                    },
-                    "VoltageOpenCircuit": {
-                        "Unit": "V",
-                        "Value": -1
-                    }
-                }
-            ],
-            "PowerSTC": {
-                "Unit": "W",
-                "Value": 122.5
-            },
-            "PowerToleranceMax": {
-                "Unit": "decimal_percent"
-            },
-            "PowerToleranceMin": {
-                "Unit": "decimal_percent"
-            },
-            "ProdCell": {
-                "Description": {
-                    "Value": ""
-                },
-                "Dimension": {
-                    "Height": {
-                        "Unit": "mm",
-                        "Value": -1
-                    },
-                    "Length": {
-                        "Unit": "mm",
-                        "Value": -1
-                    },
-                    "Mass": {
-                        "Unit": "kg",
-                        "Value": -1
-                    },
-                    "Weight": {
-                        "Unit": "lb",
-                        "Value": -1
-                    },
-                    "Width": {
-                        "Unit": "mm",
-                        "Value": -1
-                    }
-                },
-                "FileFolderURL": {
-                    "Value": ""
-                },
-                "ManufacturerUPC": {
-                    "Value": ""
-                },
-                "ProdCode": {
-                    "Value": ""
-                },
-                "ProdDatasheet": {
-                    "Value": ""
-                },
-                "ProdID": {
-                    "Value": ""
-                },
-                "ProdMfr": {
-                    "Value": "First Solar, Inc."
-                },
-                "ProdName": {
-                    "Value": "First Solar Series 4\u2122"
-                },
-                "ProdType": {
-                    "Value": "Module"
-                },
-                "CellColor": {
-                    "Value": ""
-                },
-                "CellCutType": {
-                    "Value": ""
-                },
-                "CellTechnologyType": {
-                    "Value": "Thin Film"
-                }
-            },
-            "ProdGlazing": {
-                "Description": {
-                    "Value": ""
-                },
-                "FileFolderURL": {
-                    "Value": ""
-                },
-                "GlazingMaterial": {
-                    "Value": "Anti-reflective coated glass"
-                },
-                "Height": {
-                    "Unit": "mm",
-                    "Value": -1
-                }
-            },
-            "TemperatureMaximumOperating": {
-                "Unit": "Cel"
-            },
-            "TemperatureMinimumOperating": {
-                "Unit": "Cel"
-            },
-            "TemperatureNOCT": {
-                "Unit": "Cel"
-            },
-            "VoltageMaximumSystem": {
-                "Unit": "V",
-                "Value": 1500
-            }
-        }
-    },
-    "1": {
-        "ProdModule": {
             "Dimension": {
                 "Height": {
                     "Unit": "mm",
@@ -190,23 +27,234 @@
                     "Value": 6.8
                 }
             },
+            "FileFolderURL": {
+                "Value": ""
+            },
+            "ManufacturerUPC": {
+                "Value": ""
+            },
+            "Packages": [],
+            "ProdCertifications": [
+                {
+                    "CertificateValue": {
+                        "Value": ""
+                    },
+                    "CertificationAgency": {
+                        "Addresses": [],
+                        "CertificationAgencyName": {
+                            "Value": "IEC"
+                        },
+                        "Contacts": []
+                    },
+                    "CertificationDate": {
+                        "Value": ""
+                    },
+                    "CertificationExpirationDate": {
+                        "Value": ""
+                    },
+                    "CertificationName": {
+                        "Value": "IEC 61215/61646 1500V, IEC 61730 1500V, CE"
+                    },
+                    "CertificationStandard": {
+                        "Value": ""
+                    },
+                    "Description": {
+                        "Value": ""
+                    },
+                    "FileFolderURL": {
+                        "Value": ""
+                    },
+                    "Firmware": {
+                        "Checksum": {
+                            "ChecksumDetail": {},
+                            "ChecksumKey": {
+                                "Value": ""
+                            },
+                            "ChecksumType": {
+                                "Value": ""
+                            }
+                        },
+                        "FirmwareVersion": {
+                            "Value": ""
+                        }
+                    }
+                },
+                {
+                    "CertificateValue": {
+                        "Value": ""
+                    },
+                    "CertificationAgency": {
+                        "Addresses": [],
+                        "CertificationAgencyName": {
+                            "Value": "UL"
+                        },
+                        "Contacts": []
+                    },
+                    "CertificationDate": {
+                        "Value": ""
+                    },
+                    "CertificationExpirationDate": {
+                        "Value": ""
+                    },
+                    "CertificationName": {
+                        "Value": "UL 1703 Listed Fire Performance PV Module Type 102"
+                    },
+                    "CertificationStandard": {
+                        "Value": ""
+                    },
+                    "Description": {
+                        "Value": ""
+                    },
+                    "FileFolderURL": {
+                        "Value": ""
+                    },
+                    "Firmware": {
+                        "Checksum": {
+                            "ChecksumDetail": {},
+                            "ChecksumKey": {
+                                "Value": ""
+                            },
+                            "ChecksumType": {
+                                "Value": ""
+                            }
+                        },
+                        "FirmwareVersion": {
+                            "Value": ""
+                        }
+                    }
+                }
+            ],
+            "ProdCode": {
+                "Value": "FS Series 4V3"
+            },
+            "ProdDatasheet": {
+                "Value": ""
+            },
+            "ProdID": {
+                "Value": ""
+            },
+            "ProdInstructions": [],
+            "ProdMfr": {
+                "Value": "First Solar, Inc."
+            },
+            "ProdName": {
+                "Value": "First Solar Series 4\u2122 PV Module"
+            },
+            "ProdSpecifications": [],
             "ProdType": {
                 "Value": "Module"
             },
+            "SubstituteProducts": [],
+            "Warranties": [
+                {
+                    "Description": {
+                        "Value": "25-Year Linear Performance Warranty4"
+                    },
+                    "FileFolderURL": {
+                        "Value": ""
+                    },
+                    "WarrantyDuration": {
+                        "Value": "25",
+                        "Unit": "Y"
+                    },
+                    "WarrantyEffectiveDate": {
+                        "Value": ""
+                    },
+                    "WarrantyExpirationDate": {
+                        "Value": ""
+                    },
+                    "WarrantyID": {
+                        "Value": ""
+                    },
+                    "WarrantyName": {
+                        "Value": "Linear Performance Warranty"
+                    },
+                    "WarrantyType": {
+                        "Value": "Performance"
+                    }
+                },
+                {
+                    "Description": {
+                        "Value": "10-Year Limited Product Warranty"
+                    },
+                    "FileFolderURL": {
+                        "Value": ""
+                    },
+                    "WarrantyDuration": {
+                        "Value": "10",
+                        "Unit": "Y"
+                    },
+                    "WarrantyEffectiveDate": {
+                        "Value": ""
+                    },
+                    "WarrantyExpirationDate": {
+                        "Value": ""
+                    },
+                    "WarrantyID": {
+                        "Value": ""
+                    },
+                    "WarrantyName": {
+                        "Value": "Limited Product Warranty"
+                    },
+                    "WarrantyType": {
+                        "Value": "Product"
+                    }
+                }
+            ],
+            "BacksheetColor": {
+                "Value": ""
+            },
+            "BacksheetMaterial": {
+                "Value": ""
+            },
+            "BypassDiodeQuantity": {},
+            "CECListingDate": {
+                "Value": ""
+            },
+            "CECNotes": {},
+            "CableConnector": {
+                "Value": "MC4 or MC4-EVO 2"
+            },
             "CableCrossSectionArea": {
-                "Unit": "sqft"
+                "Unit": "sqft",
+                "Value": -1
             },
             "CableLength": {
                 "Unit": "mm",
                 "Value": 657
             },
+            "CellCount": {
+                "Value": 216
+            },
+            "CellStringsParallelQuantity": {},
+            "CellsInSeries": {},
+            "FrameColor": {
+                "Value": ""
+            },
+            "FrameMaterialType": {
+                "Value": "None"
+            },
+            "FuseSeriesRating": {
+                "Unit": "A",
+                "Value": 4.0
+            },
+            "IsBIPV": {
+                "Value": true
+            },
+            "IsBifacial": {},
+            "JunctionBoxProtectionCertification": {
+                "Value": ""
+            },
             "ModuleArea": {
-                "Unit": "sqm",
-                "Value": 0.72
+                "Value": 0.72,
+                "Unit": "sqm"
+            },
+            "ModuleBusbarDescription": {
+                "Value": ""
             },
             "ModuleEfficiency": {
                 "Unit": "decimal_percent",
-                "Value": 17
+                "Value": 17.0
             },
             "ModuleElectRatings": [
                 {
@@ -223,7 +271,7 @@
                     },
                     "PowerDC": {
                         "Unit": "W",
-                        "Value": 110
+                        "Value": 110.0
                     },
                     "VoltageAtMaximumPower": {
                         "Unit": "V",
@@ -256,7 +304,7 @@
                     },
                     "VoltageOpenCircuit": {
                         "Unit": "V",
-                        "Value": 87
+                        "Value": 87.0
                     }
                 },
                 {
@@ -273,7 +321,7 @@
                     },
                     "PowerDC": {
                         "Unit": "W",
-                        "Value": 115
+                        "Value": 115.0
                     },
                     "VoltageAtMaximumPower": {
                         "Unit": "V",
@@ -323,7 +371,7 @@
                     },
                     "PowerDC": {
                         "Unit": "W",
-                        "Value": 120
+                        "Value": 120.0
                     },
                     "VoltageAtMaximumPower": {
                         "Unit": "V",
@@ -361,20 +409,21 @@
                 }
             ],
             "PowerSTC": {
-                "Unit": "W",
-                "Value": 122.5
+                "Value": 122.5,
+                "Unit": "W"
             },
             "PowerToleranceMax": {
                 "Unit": "decimal_percent",
-                "Value": 5
+                "Value": 5.0
             },
             "PowerToleranceMin": {
                 "Unit": "decimal_percent",
-                "Value": 0
+                "Value": -0.0
             },
             "ProdCell": {
+                "AlternativeIdentifiers": [],
                 "Description": {
-                    "Value": "Thin-film CdTe  \nsemiconductor,  \nup to 216 cells"
+                    "Value": "Thin-film CdTe semiconductor, up to 216 cells"
                 },
                 "Dimension": {
                     "Height": {
@@ -404,6 +453,8 @@
                 "ManufacturerUPC": {
                     "Value": ""
                 },
+                "Packages": [],
+                "ProdCertifications": [],
                 "ProdCode": {
                     "Value": ""
                 },
@@ -413,15 +464,19 @@
                 "ProdID": {
                     "Value": ""
                 },
+                "ProdInstructions": [],
                 "ProdMfr": {
-                    "Value": "First Solar"
+                    "Value": ""
                 },
                 "ProdName": {
                     "Value": ""
                 },
+                "ProdSpecifications": [],
                 "ProdType": {
                     "Value": "Module"
                 },
+                "SubstituteProducts": [],
+                "Warranties": [],
                 "CellColor": {
                     "Value": ""
                 },
@@ -434,7 +489,7 @@
             },
             "ProdGlazing": {
                 "Description": {
-                    "Value": "3.2mm heat  \nstrengthened \nSeries 4ATM includes \nanti-reflective coating"
+                    "Value": "3.2mm heat strengthened\nSeries 4ATM includes anti-reflective coating"
                 },
                 "FileFolderURL": {
                     "Value": ""
@@ -446,6 +501,24 @@
                     "Unit": "mm",
                     "Value": 3.2
                 }
+            },
+            "ShadeResponse": {
+                "Value": ""
+            },
+            "TemperatureCoefficientMaxPowerCurrent": {
+                "Value": 0.04
+            },
+            "TemperatureCoefficientMaxPowerVoltage": {
+                "Value": -0.28
+            },
+            "TemperatureCoefficientMaximumPower": {
+                "Value": -0.28
+            },
+            "TemperatureCoefficientOpenCircuitVoltage": {
+                "Value": -0.28
+            },
+            "TemperatureCoefficientShortCircuitCurrent": {
+                "Value": 0.04
             },
             "TemperatureMaximumOperating": {
                 "Unit": "Cel",
@@ -464,8 +537,5 @@
                 "Value": 1500
             }
         }
-    },
-    "2": {
-        "error": "Failed to decode JSON response"
     }
 }

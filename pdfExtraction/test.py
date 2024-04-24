@@ -75,13 +75,13 @@ def structureOutput(output, successful: bool):
                     Template JSON: This defines the desired structure for the output ({loaded_json_data}).
                 
                 Your task is to transform the input JSON to match the structure of the template JSON as closely as possible.
-                    For each model in the output JSON, structure it as its own model in the template JSON.
+                    For each model in the output JSON, structure it as its own model in the template JSON under moduleElecRatings aka make it an array.
                     Use double quotes for all strings in the output JSON.
                 Map corresponding values from the input JSON to the keys in the template JSON.
                 If a key from the template JSON is missing in the input JSON, use the value -1 as a placeholder.
             '''
         multimodal_model = genai.GenerativeModel("gemini-1.5-pro-latest", generation_config=generation_config)
-        response = multimodal_model.generate_content(prompt, request_options={"timeout": 100})
+        response = multimodal_model.generate_content(prompt, request_options={"timeout": 120})
         start_index = response.text.find('{')
         end_index = response.text.rfind('}') + 1
         json_text = response.text[start_index:end_index]
