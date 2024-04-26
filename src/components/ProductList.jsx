@@ -7,7 +7,7 @@ const ProductList = () => {
     const navigate = useNavigate();
 
     const handleViewDetails = (product) => {
-        navigate(`/product/${product?.ProdModule?.ProdMfr?.Value}${product?.ProdModule?.PowerSTC?.Unit}`, { state: { product } });
+        navigate(`/product/${product?.ProdMfr?.Value}${product?.PowerSTC?.Unit}`, { state: { product } });
     };
 
     return (
@@ -32,7 +32,7 @@ const ProductList = () => {
                         return (
                             <tr key={key}>
                                 <td>{product?.ProdType?.Value}</td>
-                                <td>{product?.ProdCell?.ProdMfr?.Value}</td>
+                                <td>{product?.ProdMfr?.Value}</td>
                                 <td>{product?.ProdName?.Value}</td>
                                 <td>{product?.ProdCode?.Value}</td>
                                 <td>
