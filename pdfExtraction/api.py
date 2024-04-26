@@ -20,7 +20,16 @@ project = os.environ['GOOGLE_PROJECT_ID']
 aiplatform.init(project=project, location=location)
 genai.configure(api_key=api_key)
 
-CORS(app, resources={"/upload": {"origins": "*"}})
+CORS(app, resources={"/*": {"origins": "*"}})
+
+@app.route("/upload-demo-test", methods=["POST"])
+def getOutput():
+    # this function will return in the same format that our /upload endpoint returns in the case of succes
+    # instead of fomratted we will take the output.json file and return that as output
+    # this is for testing purposes
+    # get output.json to send to frontend
+    formatted = load_json_file("output.json")
+    return jsonify({'message': 'Images uploaded successfully', 'output': formatted, 'successful': 'true'})
 
 @app.route("/upload-default", methods=["POST"])
 def upload_default():
@@ -52,20 +61,31 @@ def upload_default():
 
 @app.route('/upload', methods=['POST'])
 def pdf_to_images():
-    if 'pdf' not in request.files:
-        return jsonify({'error': 'No file part'})
 
-    pdf_file = request.files['pdf']
+    file = request.files.get("file") # https://werkzeug.palletsprojects.com/en/3.0.x/datastructures/#werkzeug.datastructures.FileStorage
+    print("filename: ", file.filename)
+    print("type of file obj: ", type(file))
+    if 'file' not in request.files: 
+        return jsonify({'error': 'No file part'}), 400
+    
+    pdf_file = file
+    # pdf_file = request.files['pdf']
     temp_pdf_path = tempfile.NamedTemporaryFile(suffix='.pdf', delete=False).name
     pdf_file.save(temp_pdf_path)
+    print("saved temp file")
 
     try:
         images_paths = convert_pdf_to_images(temp_pdf_path)
+        print("gemini running...")
         output = runGemini(images_paths, True)
-
+        print("structuring output...")
         formatted = structureOutput(output, True)
         write_json_to_file(formatted, 'output.json')
+        print("returning success")
         return jsonify({'message': 'Images uploaded successfully', 'output': formatted, 'successful': 'true'})
+    except Exception as e:
+        print(e)
+        return jsonify({'error': str(e), 'successful': 'false'})
     finally:
         os.unlink(temp_pdf_path)
 

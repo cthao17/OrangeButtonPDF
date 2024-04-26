@@ -16,6 +16,8 @@ function Home(props) {
     // response data from api
     const [data, setData] = useState([]);
     const navigate = useNavigate();
+    const [isLoading, setIsLoading] = useState(false);
+    const [isAxiosError, setIsAxiosError] = useState(false);
 
     // https://www.npmjs.com/package/react-pdf
     // find way to handle/view pdfs in react (look for good packages: well maintained with not too many dependencies)
@@ -29,21 +31,67 @@ function Home(props) {
         console.log(file)
         const formData = new FormData();
         formData.append("file", file);
-        axios.post("http://127.0.0.1:5000/upload-default", formData) 
+        axios.defaults.timeout = 180000;
+        console.log("posting" + formData)
+        axios.post("http://127.0.0.1:5000/upload", formData) 
             .then(res => () => {
-                setData(res.data);
+                console.log("inside .then block");
+                if (res.status !== 200){
+                    console.error("Error uploading file");
+                }else{
+                    console.log(res.data)
+                    setData(res.data);
+                    console.log(res);
+                    navigate('/productList'); // navigate after response is received
+                }
             })
             .catch(err => console.error(err));
+        console.log("after post")
+    }
+    const uploadFile2 = async() => {
+        let file = files[0]
+        console.log(typeof(file));
+        console.log(file)
+        const formData = new FormData();
+        formData.append("file", file);
+        try {
+            const response = await fetch("http://127.0.0.1:5000/upload", {
+                method: "POST",
+                body: formData
+            });
+            console.log("inside try block");
+            if (!response.ok){
+                console.error("Error uploading file");
+                setIsLoading(false);
+                setIsAxiosError(true);
+            }else{
+                const data = await response.json();
+                console.log(data);
+                console.log(data.output);
+                if(data.successful == "true"){
+                    navigate('/productList', { state: { data: data.output } }); // navigate after response is received
+                } else {
+                    setIsLoading(false);
+                    setIsAxiosError(true);
+                }
+            }
+        }catch(err){
+            console.error(err);                
+            setIsLoading(false);
+            setIsAxiosError(true);
+        }
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
         // console.log(e.target.files[0]);
         console.log(files);
+
+        setIsLoading(true);
         // parse form, get results
         // redirect to results
-        uploadFile();
-        navigate('/productList');
+        uploadFile2();
+        // TODO wait while getting response
     }
 
     const [files, setFiles] = useState([])
@@ -102,7 +150,7 @@ function Home(props) {
             </Toast.Header>
             <Toast.Body className="text-white">File selected!</Toast.Body>
             </Toast>
-            <Toast onClose={() => setShowInvalid(false)} show={showInvalid} delay={3000} bg = "danger" animation={true} autohide>
+            <Toast onClose={() => setShowInvalid (false)} show={showInvalid} delay={3000} bg = "danger" animation={true} autohide>
             <Toast.Header>
                 <strong className="me-auto">Notification</strong>
             </Toast.Header>
@@ -114,6 +162,21 @@ function Home(props) {
                     </Toast.Header>
                     <Toast.Body className="text-white">Duplicate file detected!</Toast.Body>
                 </Toast>
+            <Toast onClose={() => setIsLoading(false)} show={isLoading} delay={0} bg="info" animation={false}>
+                <Toast.Header>
+                    <strong className="me-auto">Notification</strong>
+                </Toast.Header>
+                <Toast.Body className="text-white">
+                    <div className="loading-circle"></div>
+                    Loading...
+                </Toast.Body>
+            </Toast>
+            <Toast onClose={() => setIsAxiosError(false)} show={isAxiosError} delay={6000} bg="danger" animation autohide>
+                <Toast.Header>
+                    <strong className="me-auto">Notification</strong>
+                </Toast.Header>
+                <Toast.Body className="text-white">Error with converting file. Please try again or new file</Toast.Body>
+            </Toast>
         </ToastContainer>
         <div id = "wrapper">
             <div id="list">
@@ -131,7 +194,6 @@ function Home(props) {
                         </ul>
                     )}
             </div>
-            
             <div id="form"
                 onDragEnter={preventBubbling}
                 onDragOver={preventBubbling}
@@ -173,13 +235,7 @@ function Home(props) {
                     Submit
                 </button>
             </div>
-            
-            
         </div>
-        
-       
-        
-
     </>);
 }
 export default Home;

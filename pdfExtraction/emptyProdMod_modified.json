@@ -1,0 +1,165 @@
+{
+    "ProdModule": {
+      "Dimension": {
+        "Height": {
+          "Unit": "mm",
+          "Value": -1
+        },
+        "Length": {
+          "Unit": "mm",
+          "Value": -1
+        },
+        "Mass": {
+          "Unit": "kg",
+          "Value": -1
+        },
+        "Weight": {
+          "Unit": "lb",
+          "Value": -1
+        },
+        "Width": {
+          "Unit": "mm",
+          "Value": -1
+        }
+      },
+      "ProdType": {
+        "Value": "Module"
+      },
+      "CableCrossSectionArea": {
+        "Unit": "sqft"
+      },
+      "CableLength": {
+        "Unit": "mm"
+      },
+      "ModuleArea": {
+        "Unit": "sqm"
+      },
+      "ModuleEfficiency": {
+        "Unit": "decimal_percent"
+      },
+      "ModuleElectRatings": [
+        {
+          "CurrentAtMaximumPower": {
+            "Unit": "A",
+            "Value": -1
+          },
+          "CurrentShortCircuit": {
+            "Unit": "A",
+            "Value": -1
+          },
+          "ModuleRatingCondition": {
+            "Value": "STC"
+          },
+          "PowerDC": {
+            "Unit": "W",
+            "Value": -1
+          },
+          "VoltageAtMaximumPower": {
+            "Unit": "V",
+            "Value": -1
+          },
+          "VoltageOpenCircuit": {
+            "Unit": "V",
+            "Value": -1
+          }
+        }
+      ],
+      "PowerSTC": {
+        "Unit": "W",
+        "Value": -1
+      },
+      "PowerToleranceMax": {
+        "Unit": "decimal_percent"
+      },
+      "PowerToleranceMin": {
+        "Unit": "decimal_percent"
+      },
+      "ProdCell": {
+        "Description": {
+          "Value": ""
+        },
+        "Dimension": {
+          "Height": {
+            "Unit": "mm",
+            "Value": -1
+          },
+          "Length": {
+            "Unit": "mm",
+            "Value": -1
+          },
+          "Mass": {
+            "Unit": "kg",
+            "Value": -1
+          },
+          "Weight": {
+            "Unit": "lb",
+            "Value": -1
+          },
+          "Width": {
+            "Unit": "mm",
+            "Value": -1
+          }
+        },
+        "FileFolderURL": {
+          "Value": ""
+        },
+        "ManufacturerUPC": {
+          "Value": ""
+        },
+        "ProdCode": {
+          "Value": ""
+        },
+        "ProdDatasheet": {
+          "Value": ""
+        },
+        "ProdID": {
+          "Value": ""
+        },
+        "ProdMfr": {
+          "Value": ""
+        },
+        "ProdName": {
+          "Value": ""
+        },
+        "ProdType": {
+          "Value": "Module"
+        },
+        "CellColor": {
+          "Value": ""
+        },
+        "CellCutType": {
+          "Value": ""
+        },
+        "CellTechnologyType": {
+          "Value": ""
+        }
+      },
+      "ProdGlazing": {
+        "Description": {
+          "Value": ""
+        },
+        "FileFolderURL": {
+          "Value": ""
+        },
+        "GlazingMaterial": {
+          "Value": ""
+        },
+        "Height": {
+          "Unit": "mm",
+          "Value": -1
+        }
+      },
+      "TemperatureMaximumOperating": {
+        "Unit": "Cel"
+      },
+      "TemperatureMinimumOperating": {
+        "Unit": "Cel"
+      },
+      "TemperatureNOCT": {
+        "Unit": "Cel"
+      },
+      "VoltageMaximumSystem": {
+        "Unit": "V"
+      }
+    }
+  }

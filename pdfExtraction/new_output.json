@@ -1,0 +1,541 @@
+{
+    "0": {
+        "ProdModule": {
+            "AlternativeIdentifiers": [],
+            "Description": {
+                "Value": "As a global leader in PV energy, First Solar\u2019s advanced thin film solar modules have set the industry benchmark with over 17 gigawatts (GW) installed worldwide and a proven performance advantage over conventional crystalline silicon solar modules. Generating more energy than competing modules with the same power rating, First Solar\u2019s Series 4\u2122 and Series 4A\u2122 PV Modules deliver superior performance and reliability to our customers."
+            },
+            "Dimension": {
+                "Height": {
+                    "Unit": "mm",
+                    "Value": 600
+                },
+                "Length": {
+                    "Unit": "mm",
+                    "Value": 1200
+                },
+                "Mass": {
+                    "Unit": "kg",
+                    "Value": 12
+                },
+                "Weight": {
+                    "Unit": "lb",
+                    "Value": -1
+                },
+                "Width": {
+                    "Unit": "mm",
+                    "Value": 6.8
+                }
+            },
+            "FileFolderURL": {
+                "Value": ""
+            },
+            "ManufacturerUPC": {
+                "Value": ""
+            },
+            "Packages": [],
+            "ProdCertifications": [
+                {
+                    "CertificateValue": {
+                        "Value": ""
+                    },
+                    "CertificationAgency": {
+                        "Addresses": [],
+                        "CertificationAgencyName": {
+                            "Value": "IEC"
+                        },
+                        "Contacts": []
+                    },
+                    "CertificationDate": {
+                        "Value": ""
+                    },
+                    "CertificationExpirationDate": {
+                        "Value": ""
+                    },
+                    "CertificationName": {
+                        "Value": "IEC 61215/61646 1500V, IEC 61730 1500V, CE"
+                    },
+                    "CertificationStandard": {
+                        "Value": ""
+                    },
+                    "Description": {
+                        "Value": ""
+                    },
+                    "FileFolderURL": {
+                        "Value": ""
+                    },
+                    "Firmware": {
+                        "Checksum": {
+                            "ChecksumDetail": {},
+                            "ChecksumKey": {
+                                "Value": ""
+                            },
+                            "ChecksumType": {
+                                "Value": ""
+                            }
+                        },
+                        "FirmwareVersion": {
+                            "Value": ""
+                        }
+                    }
+                },
+                {
+                    "CertificateValue": {
+                        "Value": ""
+                    },
+                    "CertificationAgency": {
+                        "Addresses": [],
+                        "CertificationAgencyName": {
+                            "Value": "UL"
+                        },
+                        "Contacts": []
+                    },
+                    "CertificationDate": {
+                        "Value": ""
+                    },
+                    "CertificationExpirationDate": {
+                        "Value": ""
+                    },
+                    "CertificationName": {
+                        "Value": "UL 1703 Listed Fire Performance PV Module Type 102"
+                    },
+                    "CertificationStandard": {
+                        "Value": ""
+                    },
+                    "Description": {
+                        "Value": ""
+                    },
+                    "FileFolderURL": {
+                        "Value": ""
+                    },
+                    "Firmware": {
+                        "Checksum": {
+                            "ChecksumDetail": {},
+                            "ChecksumKey": {
+                                "Value": ""
+                            },
+                            "ChecksumType": {
+                                "Value": ""
+                            }
+                        },
+                        "FirmwareVersion": {
+                            "Value": ""
+                        }
+                    }
+                }
+            ],
+            "ProdCode": {
+                "Value": "FS Series 4V3"
+            },
+            "ProdDatasheet": {
+                "Value": ""
+            },
+            "ProdID": {
+                "Value": ""
+            },
+            "ProdInstructions": [],
+            "ProdMfr": {
+                "Value": "First Solar, Inc."
+            },
+            "ProdName": {
+                "Value": "First Solar Series 4\u2122 PV Module"
+            },
+            "ProdSpecifications": [],
+            "ProdType": {
+                "Value": "Module"
+            },
+            "SubstituteProducts": [],
+            "Warranties": [
+                {
+                    "Description": {
+                        "Value": "25-Year Linear Performance Warranty4"
+                    },
+                    "FileFolderURL": {
+                        "Value": ""
+                    },
+                    "WarrantyDuration": {
+                        "Value": "25",
+                        "Unit": "Y"
+                    },
+                    "WarrantyEffectiveDate": {
+                        "Value": ""
+                    },
+                    "WarrantyExpirationDate": {
+                        "Value": ""
+                    },
+                    "WarrantyID": {
+                        "Value": ""
+                    },
+                    "WarrantyName": {
+                        "Value": "Linear Performance Warranty"
+                    },
+                    "WarrantyType": {
+                        "Value": "Performance"
+                    }
+                },
+                {
+                    "Description": {
+                        "Value": "10-Year Limited Product Warranty"
+                    },
+                    "FileFolderURL": {
+                        "Value": ""
+                    },
+                    "WarrantyDuration": {
+                        "Value": "10",
+                        "Unit": "Y"
+                    },
+                    "WarrantyEffectiveDate": {
+                        "Value": ""
+                    },
+                    "WarrantyExpirationDate": {
+                        "Value": ""
+                    },
+                    "WarrantyID": {
+                        "Value": ""
+                    },
+                    "WarrantyName": {
+                        "Value": "Limited Product Warranty"
+                    },
+                    "WarrantyType": {
+                        "Value": "Product"
+                    }
+                }
+            ],
+            "BacksheetColor": {
+                "Value": ""
+            },
+            "BacksheetMaterial": {
+                "Value": ""
+            },
+            "BypassDiodeQuantity": {},
+            "CECListingDate": {
+                "Value": ""
+            },
+            "CECNotes": {},
+            "CableConnector": {
+                "Value": "MC4 or MC4-EVO 2"
+            },
+            "CableCrossSectionArea": {
+                "Unit": "sqft",
+                "Value": -1
+            },
+            "CableLength": {
+                "Unit": "mm",
+                "Value": 657
+            },
+            "CellCount": {
+                "Value": 216
+            },
+            "CellStringsParallelQuantity": {},
+            "CellsInSeries": {},
+            "FrameColor": {
+                "Value": ""
+            },
+            "FrameMaterialType": {
+                "Value": "None"
+            },
+            "FuseSeriesRating": {
+                "Unit": "A",
+                "Value": 4.0
+            },
+            "IsBIPV": {
+                "Value": true
+            },
+            "IsBifacial": {},
+            "JunctionBoxProtectionCertification": {
+                "Value": ""
+            },
+            "ModuleArea": {
+                "Value": 0.72,
+                "Unit": "sqm"
+            },
+            "ModuleBusbarDescription": {
+                "Value": ""
+            },
+            "ModuleEfficiency": {
+                "Unit": "decimal_percent",
+                "Value": 17.0
+            },
+            "ModuleElectRatings": [
+                {
+                    "CurrentAtMaximumPower": {
+                        "Unit": "A",
+                        "Value": 1.62
+                    },
+                    "CurrentShortCircuit": {
+                        "Unit": "A",
+                        "Value": 1.82
+                    },
+                    "ModuleRatingCondition": {
+                        "Value": "STC"
+                    },
+                    "PowerDC": {
+                        "Unit": "W",
+                        "Value": 110.0
+                    },
+                    "VoltageAtMaximumPower": {
+                        "Unit": "V",
+                        "Value": 67.8
+                    },
+                    "VoltageOpenCircuit": {
+                        "Unit": "V",
+                        "Value": 86.4
+                    }
+                },
+                {
+                    "CurrentAtMaximumPower": {
+                        "Unit": "A",
+                        "Value": 1.64
+                    },
+                    "CurrentShortCircuit": {
+                        "Unit": "A",
+                        "Value": 1.83
+                    },
+                    "ModuleRatingCondition": {
+                        "Value": "STC"
+                    },
+                    "PowerDC": {
+                        "Unit": "W",
+                        "Value": 112.5
+                    },
+                    "VoltageAtMaximumPower": {
+                        "Unit": "V",
+                        "Value": 68.5
+                    },
+                    "VoltageOpenCircuit": {
+                        "Unit": "V",
+                        "Value": 87.0
+                    }
+                },
+                {
+                    "CurrentAtMaximumPower": {
+                        "Unit": "A",
+                        "Value": 1.66
+                    },
+                    "CurrentShortCircuit": {
+                        "Unit": "A",
+                        "Value": 1.83
+                    },
+                    "ModuleRatingCondition": {
+                        "Value": "STC"
+                    },
+                    "PowerDC": {
+                        "Unit": "W",
+                        "Value": 115.0
+                    },
+                    "VoltageAtMaximumPower": {
+                        "Unit": "V",
+                        "Value": 69.3
+                    },
+                    "VoltageOpenCircuit": {
+                        "Unit": "V",
+                        "Value": 87.6
+                    }
+                },
+                {
+                    "CurrentAtMaximumPower": {
+                        "Unit": "A",
+                        "Value": 1.68
+                    },
+                    "CurrentShortCircuit": {
+                        "Unit": "A",
+                        "Value": 1.83
+                    },
+                    "ModuleRatingCondition": {
+                        "Value": "STC"
+                    },
+                    "PowerDC": {
+                        "Unit": "W",
+                        "Value": 117.5
+                    },
+                    "VoltageAtMaximumPower": {
+                        "Unit": "V",
+                        "Value": 70.1
+                    },
+                    "VoltageOpenCircuit": {
+                        "Unit": "V",
+                        "Value": 88.1
+                    }
+                },
+                {
+                    "CurrentAtMaximumPower": {
+                        "Unit": "A",
+                        "Value": 1.7
+                    },
+                    "CurrentShortCircuit": {
+                        "Unit": "A",
+                        "Value": 1.84
+                    },
+                    "ModuleRatingCondition": {
+                        "Value": "STC"
+                    },
+                    "PowerDC": {
+                        "Unit": "W",
+                        "Value": 120.0
+                    },
+                    "VoltageAtMaximumPower": {
+                        "Unit": "V",
+                        "Value": 70.8
+                    },
+                    "VoltageOpenCircuit": {
+                        "Unit": "V",
+                        "Value": 88.7
+                    }
+                },
+                {
+                    "CurrentAtMaximumPower": {
+                        "Unit": "A",
+                        "Value": 1.71
+                    },
+                    "CurrentShortCircuit": {
+                        "Unit": "A",
+                        "Value": 1.85
+                    },
+                    "ModuleRatingCondition": {
+                        "Value": "STC"
+                    },
+                    "PowerDC": {
+                        "Unit": "W",
+                        "Value": 122.5
+                    },
+                    "VoltageAtMaximumPower": {
+                        "Unit": "V",
+                        "Value": 71.5
+                    },
+                    "VoltageOpenCircuit": {
+                        "Unit": "V",
+                        "Value": 88.7
+                    }
+                }
+            ],
+            "PowerSTC": {
+                "Value": 122.5,
+                "Unit": "W"
+            },
+            "PowerToleranceMax": {
+                "Unit": "decimal_percent",
+                "Value": 5.0
+            },
+            "PowerToleranceMin": {
+                "Unit": "decimal_percent",
+                "Value": -0.0
+            },
+            "ProdCell": {
+                "AlternativeIdentifiers": [],
+                "Description": {
+                    "Value": "Thin-film CdTe semiconductor, up to 216 cells"
+                },
+                "Dimension": {
+                    "Height": {
+                        "Unit": "mm",
+                        "Value": -1
+                    },
+                    "Length": {
+                        "Unit": "mm",
+                        "Value": -1
+                    },
+                    "Mass": {
+                        "Unit": "kg",
+                        "Value": -1
+                    },
+                    "Weight": {
+                        "Unit": "lb",
+                        "Value": -1
+                    },
+                    "Width": {
+                        "Unit": "mm",
+                        "Value": -1
+                    }
+                },
+                "FileFolderURL": {
+                    "Value": ""
+                },
+                "ManufacturerUPC": {
+                    "Value": ""
+                },
+                "Packages": [],
+                "ProdCertifications": [],
+                "ProdCode": {
+                    "Value": ""
+                },
+                "ProdDatasheet": {
+                    "Value": ""
+                },
+                "ProdID": {
+                    "Value": ""
+                },
+                "ProdInstructions": [],
+                "ProdMfr": {
+                    "Value": ""
+                },
+                "ProdName": {
+                    "Value": ""
+                },
+                "ProdSpecifications": [],
+                "ProdType": {
+                    "Value": "Module"
+                },
+                "SubstituteProducts": [],
+                "Warranties": [],
+                "CellColor": {
+                    "Value": ""
+                },
+                "CellCutType": {
+                    "Value": ""
+                },
+                "CellTechnologyType": {
+                    "Value": "CdTe"
+                }
+            },
+            "ProdGlazing": {
+                "Description": {
+                    "Value": "3.2mm heat strengthened\nSeries 4ATM includes anti-reflective coating"
+                },
+                "FileFolderURL": {
+                    "Value": ""
+                },
+                "GlazingMaterial": {
+                    "Value": "Glass"
+                },
+                "Height": {
+                    "Unit": "mm",
+                    "Value": 3.2
+                }
+            },
+            "ShadeResponse": {
+                "Value": ""
+            },
+            "TemperatureCoefficientMaxPowerCurrent": {
+                "Value": 0.04
+            },
+            "TemperatureCoefficientMaxPowerVoltage": {
+                "Value": -0.28
+            },
+            "TemperatureCoefficientMaximumPower": {
+                "Value": -0.28
+            },
+            "TemperatureCoefficientOpenCircuitVoltage": {
+                "Value": -0.28
+            },
+            "TemperatureCoefficientShortCircuitCurrent": {
+                "Value": 0.04
+            },
+            "TemperatureMaximumOperating": {
+                "Unit": "Cel",
+                "Value": 85
+            },
+            "TemperatureMinimumOperating": {
+                "Unit": "Cel",
+                "Value": -40
+            },
+            "TemperatureNOCT": {
+                "Unit": "Cel",
+                "Value": 45
+            },
+            "VoltageMaximumSystem": {
+                "Unit": "V",
+                "Value": 1500
+            }
+        }
+    }
+}
