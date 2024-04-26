@@ -134,7 +134,7 @@ const FieldsForms = () => {
                                         <tr>
                                           <td colSpan='4'>
                                             <div className='card'>
-                                              <MultiWidget />
+                                              <MultiWidget form={fieldData}/>
                                             </div>
                                           </td>
                                         </tr>
@@ -202,7 +202,7 @@ const FieldsForms = () => {
                                 <tr>
                                   <td colSpan='4'>
                                     <div className='card'>
-                                      <MultiWidget />
+                                      <MultiWidget form={fieldData}/>
                                     </div>
                                   </td>
                                 </tr>
