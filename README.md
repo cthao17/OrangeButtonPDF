@@ -5,12 +5,13 @@
 __Installs__:
 Node.js 18+ or 20+: <https://nodejs.org/en/download/current>
 
+### Running the frontend locally
 1) Clone the repo to your machine: `git clone https://github.com/cthao17/OrangeButtonPDF.git`
 2) Run `npm install` inside the frontend directory (directory with node_modules, public, src, etc) to install dependencies
 3) Run `npm run dev` to run the frontend locally
 
 Non-functional
-- Windows compatability with requirements are
+- Windows compatability with requirements.txt for flask backend
 - Some data fields may not be filled out because of the prompt
 
 Next Steps
