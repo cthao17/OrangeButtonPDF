@@ -1,13 +1,13 @@
-# React + Vite
+# Orange Button PDF Datasheet Converter
 
-Clone the repo to your machine. Inside the frontend directory (directory with node_modules, public, src, etc) 
-run: npm install
+## Frontend
 
-run the app locally: npm run dev 
+__Installs__:
+Node.js 18+ or 20+: <https://nodejs.org/en/download/current>
 
-TODO:
-- deal with PDF
-- hardcoded outputs/results
+1) Clone the repo to your machine: `git clone https://github.com/cthao17/OrangeButtonPDF.git`
+2) Run `npm install` inside the frontend directory (directory with node_modules, public, src, etc) to install dependencies
+3) Run `npm run dev` to run the frontend locally
 
 Non-functional
 - Windows compatability with requirements are
