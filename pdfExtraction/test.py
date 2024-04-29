@@ -30,16 +30,12 @@ def pdf_to_images():
         return jsonify({'error': 'No file part'}), 400
     
     pdf_file = file
-    # pdf_file = request.files['pdf']
     temp_pdf_path = tempfile.NamedTemporaryFile(suffix='.pdf', delete=False).name
     pdf_file.save(temp_pdf_path)
 
     try:
-        #images_paths = convert_pdf_to_images(temp_pdf_path)
         output = pdf_to_text(temp_pdf_path)
-        #output = runGemini(images_paths, True)
         formatted = structureOutput(output, True)
-        print(formatted)
         write_json_to_file(formatted, 'new_output.json')
         return jsonify({'message': 'Images uploaded successfully', 'output': formatted, 'successful': 'true'})
     except Exception as e:
@@ -81,7 +77,7 @@ def structureOutput(output, successful: bool):
                 If a key from the template JSON is missing in the input JSON, use the value -1 as a placeholder.
             '''
         multimodal_model = genai.GenerativeModel("gemini-1.5-pro-latest", generation_config=generation_config)
-        response = multimodal_model.generate_content(prompt, request_options={"timeout": 120})
+        response = multimodal_model.generate_content(prompt, request_options={"timeout": 180})
         start_index = response.text.find('{')
         end_index = response.text.rfind('}') + 1
         json_text = response.text[start_index:end_index]
