@@ -4,6 +4,7 @@
 ### Install dependencies 
 We recommend that you setup the API within a `python venv` to ensure you only have the modules needed and there are not circular imports.
 
+Along with that, use a python version between 3.10.3 - 3.11 to ensure the modules work as expected.
 
 Currently, the requirements.txt only works for MacOS 
 - [requirements.txt](https://github.com/cthao17/OrangeButtonPDF/blob/main/pdfExtraction/requirements.txt)
